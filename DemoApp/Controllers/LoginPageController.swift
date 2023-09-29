@@ -33,6 +33,13 @@ class LoginPageController: UIViewController ,UITextFieldDelegate {
          self.hideKeyboardWhenTappedAround()
          setHeightOfImageView(imageView)
           debugPrint(" the height of the logo image is \(imageHeight)")
+        
+        let value = UserDefaults.standard.string(forKey: "Email")
+          if value != nil
+          {
+            navigation()
+             
+          }
         //setHeightOfImageView(imageView)
         
         //emailView.endEditing(true)
@@ -85,7 +92,7 @@ class LoginPageController: UIViewController ,UITextFieldDelegate {
         
         if let error = invalidEmail(emailTextField.text!)
         {
-           createAlert("Error", "Enter a valid password", "else")
+           createAlert("Error", "Enter a valid Email", "else")
         }
         
         if passwordTextField.text?.count == 0 {
@@ -93,8 +100,8 @@ class LoginPageController: UIViewController ,UITextFieldDelegate {
         }
         else{
         createAlert("Saving","Do you want to Save Login Details", "Saving")
-    
     }
+        
     }
     
     func  createAlert(_ title: String,_ message: String,_ sender: String)
@@ -110,10 +117,12 @@ class LoginPageController: UIViewController ,UITextFieldDelegate {
                 defaults.set(self.passwordTextField.text!,forKey: "Password")
                 print(defaults.object(forKey: "Email"))
                 print(defaults.object(forKey: "Password"))
+                self.navigation()
             }
             
             let noButton = UIAlertAction(title: "No", style: .default) { (action) in
                  print("You have not saved login details")
+                self.navigation()
             }
             alert.addAction(yesButton)
             alert.addAction(noButton)
@@ -126,6 +135,11 @@ class LoginPageController: UIViewController ,UITextFieldDelegate {
             alert.addAction(okayButton)
           }
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func navigation(){
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "dashboardVC") as? DashboardViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
 }
 extension UIViewController {
