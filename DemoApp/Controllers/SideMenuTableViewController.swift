@@ -1,49 +1,15 @@
 //
-//  DashboardViewController.swift
+//  SideMenuTableViewController.swift
 //  DemoApp
 //
-//  Created by Bellubis-WS29 on 28/09/23.
+//  Created by Bellubis-WS29 on 29/09/23.
 //  Copyright © 2023 Bellubis-WS29. All rights reserved.
 //
-import SideMenu
+
 import UIKit
 
-class DashboardViewController: UIViewController {
-    
-    var menu : SideMenuNavigationController?
-    @IBOutlet var navView: UIView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationItem.hidesBackButton  = true
-        navigationItem.accessibilityElementsHidden = true
-       // navigationItem.titleView = navView
-        // Do any additional setup after loading the view.
-        menu = SideMenuNavigationController(rootViewController: MenuListController())
-        menu?.leftSide = true
-        menu?.presentationStyle = .menuSlideIn
-        
-        
-    }
-    
-    @IBAction func hamburgerMenu(_ sender: Any) {
-        present(menu!,animated: true)
+class SideMenuTableViewController: UITableViewController {
 
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-class MenuListController: UITableViewController {
-    
     var list = ["Dashboard","My Profile","Employee Profile","Events","Calendar","Apps","Job Feed Help","Log Out"]
      
 
@@ -81,6 +47,4 @@ class MenuListController: UITableViewController {
         }
     
     }
-
 }
-
