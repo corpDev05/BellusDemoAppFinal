@@ -15,11 +15,16 @@ class SideMenuTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+
+    }
+    
+    func setupTableView()
+    {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
-
     }
 
     // MARK: - Table view data source
@@ -39,11 +44,16 @@ class SideMenuTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        if cell.textLabel?.text == "Log out"
+        if  list[indexPath.row] == "Log Out"
         {
-            
-            self.navigationController?.popToRootViewController(animated: true)
+            //invoke removeObject(forKey:)
+            UserDefaults.standard.removeObject(forKey: "Email")
+            UserDefaults.standard.removeObject(forKey: "Password")
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "loginPageVC") as? LoginPageController
+             self.navigationController?.pushViewController(vc!, animated: true)
+          
+            //UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "dashboardVC") as? DashboardViewController
+            //self.navigationController?.pushViewController(vc!, animated: true)
         }
     
     }

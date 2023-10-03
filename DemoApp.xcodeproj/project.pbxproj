@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		8326ADFE2AC6FF9100AA0CEC /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */; };
 		836518732AC580660077EA52 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836518722AC580660077EA52 /* DashboardViewController.swift */; };
+		83B5AC982ACBE08D00F10593 /* UserLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5AC972ACBE08D00F10593 /* UserLoginModel.swift */; };
+		83B5AC9B2ACBF4DD00F10593 /* DashboardViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5AC9A2ACBF4DD00F10593 /* DashboardViewController+TableView.swift */; };
+		83B5ACA12ACC207200F10593 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5ACA02ACC207200F10593 /* DashboardViewModel.swift */; };
+		83B5ACA62ACC29B700F10593 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5ACA42ACC29B700F10593 /* DashboardTableViewCell.swift */; };
+		83B5ACA72ACC29B700F10593 /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83B5ACA52ACC29B700F10593 /* DashboardTableViewCell.xib */; };
 		83F82B352AC19999001A9116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F82B342AC19999001A9116 /* AppDelegate.swift */; };
 		83F82B372AC19999001A9116 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F82B362AC19999001A9116 /* SceneDelegate.swift */; };
 		83F82B392AC19999001A9116 /* LoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F82B382AC19999001A9116 /* LoginPageController.swift */; };
@@ -42,6 +47,11 @@
 		8390F0B92AC42A4E007F3E26 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		8390F0BA2AC42A4F007F3E26 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		8390F0BB2AC42A4F007F3E26 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		83B5AC972ACBE08D00F10593 /* UserLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginModel.swift; sourceTree = "<group>"; };
+		83B5AC9A2ACBF4DD00F10593 /* DashboardViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardViewController+TableView.swift"; sourceTree = "<group>"; };
+		83B5ACA02ACC207200F10593 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		83B5ACA42ACC29B700F10593 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		83B5ACA52ACC29B700F10593 /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
 		83F82B312AC19998001A9116 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F82B342AC19999001A9116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83F82B362AC19999001A9116 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +103,8 @@
 		8365186E2AC57E510077EA52 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				83B5AC972ACBE08D00F10593 /* UserLoginModel.swift */,
+				83B5ACA02ACC207200F10593 /* DashboardViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -188,6 +200,8 @@
 			children = (
 				83F82B382AC19999001A9116 /* LoginPageController.swift */,
 				836518722AC580660077EA52 /* DashboardViewController.swift */,
+				83B5AC9A2ACBF4DD00F10593 /* DashboardViewController+TableView.swift */,
+				83B5ACA42ACC29B700F10593 /* DashboardTableViewCell.swift */,
 				8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */,
 			);
 			path = Controllers;
@@ -203,6 +217,7 @@
 		83F82B4D2AC19A21001A9116 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				83B5ACA52ACC29B700F10593 /* DashboardTableViewCell.xib */,
 				83F82B3A2AC19999001A9116 /* Main.storyboard */,
 			);
 			path = View;
@@ -270,6 +285,7 @@
 			files = (
 				83F82B442AC1999D001A9116 /* LaunchScreen.storyboard in Resources */,
 				83F82B412AC1999D001A9116 /* Assets.xcassets in Resources */,
+				83B5ACA72ACC29B700F10593 /* DashboardTableViewCell.xib in Resources */,
 				83F82B3C2AC19999001A9116 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,9 +342,13 @@
 				83F82B392AC19999001A9116 /* LoginPageController.swift in Sources */,
 				8326ADFE2AC6FF9100AA0CEC /* SideMenuTableViewController.swift in Sources */,
 				83F82B352AC19999001A9116 /* AppDelegate.swift in Sources */,
+				83B5ACA12ACC207200F10593 /* DashboardViewModel.swift in Sources */,
+				83B5ACA62ACC29B700F10593 /* DashboardTableViewCell.swift in Sources */,
 				836518732AC580660077EA52 /* DashboardViewController.swift in Sources */,
 				83F82B3F2AC19999001A9116 /* DemoApp.xcdatamodeld in Sources */,
+				83B5AC982ACBE08D00F10593 /* UserLoginModel.swift in Sources */,
 				83F82B372AC19999001A9116 /* SceneDelegate.swift in Sources */,
+				83B5AC9B2ACBF4DD00F10593 /* DashboardViewController+TableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

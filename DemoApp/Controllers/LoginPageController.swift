@@ -26,23 +26,30 @@ class LoginPageController: UIViewController ,UITextFieldDelegate {
         // Do any additional setup after loading the view.
         
        // emailTextField.layer.cornerRadius = 4.0
-       
-        loginBtn.layer.cornerRadius = 4.0
-        emailTextField.layer.cornerRadius = 24.0
-        passwordTextField.layer.cornerRadius = 24.0
-         self.hideKeyboardWhenTappedAround()
-         setHeightOfImageView(imageView)
-          debugPrint(" the height of the logo image is \(imageHeight)")
-        
+        setup()
         let value = UserDefaults.standard.string(forKey: "Email")
           if value != nil
           {
             navigation()
              
           }
+        
+         
         //setHeightOfImageView(imageView)
         
         //emailView.endEditing(true)
+    }
+    
+    func setup(){
+        
+        loginBtn.layer.cornerRadius = 4.0
+        emailTextField.layer.cornerRadius = 24.0
+        passwordTextField.layer.cornerRadius = 24.0
+        navigationItem.hidesBackButton = true
+         self.hideKeyboardWhenTappedAround()
+         setHeightOfImageView(imageView)
+          debugPrint(" the height of the logo image is \(imageHeight)")
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -111,6 +118,7 @@ class LoginPageController: UIViewController ,UITextFieldDelegate {
           if(sender == "Saving")
           {
             let yesButton = UIAlertAction(title: "Yes", style: .default) { (action) in
+                
                 
                 let defaults = UserDefaults.standard
                 defaults.set(self.emailTextField.text!,forKey: "Email")

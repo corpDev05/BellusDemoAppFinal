@@ -8,21 +8,25 @@
 import SideMenu
 import UIKit
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: UIViewController{
     
     var menu : SideMenuNavigationController?
     @IBOutlet var navView: UIView!
-    
+    @IBOutlet var dashboardTableView: UITableView!
+    var dashboardViewModel : DashboardViewModel = DashboardViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+        setupSideControllerMenu()
+    }
+    
+    func setupSideControllerMenu(){
+        
         navigationItem.hidesBackButton  = true
         navigationItem.accessibilityElementsHidden = true
-       // navigationItem.titleView = navView
-        // Do any additional setup after loading the view.
-        menu = SideMenuNavigationController(rootViewController: MenuListController())
+        menu = SideMenuNavigationController(rootViewController: SideMenuTableViewController())
         menu?.leftSide = true
         menu?.presentationStyle = .menuSlideIn
-        
         
     }
     
@@ -42,7 +46,7 @@ class DashboardViewController: UIViewController {
     */
 
 }
-class MenuListController: UITableViewController {
+/*class MenuListController: UITableViewController {
     
     var list = ["Dashboard","My Profile","Employee Profile","Events","Calendar","Apps","Job Feed Help","Log Out"]
      
@@ -83,4 +87,4 @@ class MenuListController: UITableViewController {
     }
 
 }
-
+*/
