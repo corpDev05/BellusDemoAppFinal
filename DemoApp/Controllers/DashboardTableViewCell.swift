@@ -10,6 +10,8 @@ import UIKit
 
 class DashboardTableViewCell: UITableViewCell {
     @IBOutlet var tblView: UIView!
+  //  @IBOutlet var postView: UIView!
+    @IBOutlet var tblPostView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,7 +21,7 @@ class DashboardTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        tblPostView.layer.cornerRadius = 12.0
         // Configure the view for the selected state
     }
     

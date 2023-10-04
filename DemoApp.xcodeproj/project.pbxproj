@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832374B12ACD98E900A73272 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832374B02ACD98E900A73272 /* PostModel.swift */; };
 		8326ADFE2AC6FF9100AA0CEC /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */; };
 		836518732AC580660077EA52 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836518722AC580660077EA52 /* DashboardViewController.swift */; };
 		83B5AC982ACBE08D00F10593 /* UserLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5AC972ACBE08D00F10593 /* UserLoginModel.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		07C6377B2AD0502C7796230F /* Pods-DemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.debug.xcconfig"; path = "Target Support Files/Pods-DemoApp/Pods-DemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		30B7B157E30A710977E0D5CA /* Pods_DemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		832374B02ACD98E900A73272 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		836518722AC580660077EA52 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		8390F0AA2AC42A4D007F3E26 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 		83F82B4C2AC19A01001A9116 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				832374B02ACD98E900A73272 /* PostModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				83B5AC982ACBE08D00F10593 /* UserLoginModel.swift in Sources */,
 				83F82B372AC19999001A9116 /* SceneDelegate.swift in Sources */,
 				83B5AC9B2ACBF4DD00F10593 /* DashboardViewController+TableView.swift in Sources */,
+				832374B12ACD98E900A73272 /* PostModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

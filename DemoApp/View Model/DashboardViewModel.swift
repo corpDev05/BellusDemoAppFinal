@@ -10,11 +10,12 @@ import Foundation
 
 class DashboardViewModel {
     
+    
     func numberOfSection()-> Int {
-        return 0
+        return 1
     }
     
     func numberOfRows(in section : Int) -> Int{
-        return 0
+        return 1
     }
 }

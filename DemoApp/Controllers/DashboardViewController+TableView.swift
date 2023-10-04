@@ -10,8 +10,10 @@ import Foundation
 import UIKit
 
 extension  DashboardViewController : UITableViewDelegate,UITableViewDataSource {
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dashboardViewModel.numberOfRows(in: 1)
+        return dashboardViewModel.numberOfRows(in: 0)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -19,23 +21,33 @@ extension  DashboardViewController : UITableViewDelegate,UITableViewDataSource {
     }
     
     
+ 
+    
+    
     func setupTableView(){
+        self.view.addSubview(dashboardTableView)
         dashboardTableView.delegate = self
         dashboardTableView.dataSource = self
         dashboardTableView.backgroundColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 0.8)
-       dashboardTableView.estimatedRowHeight = 480.0
+      //dashboardTableView.estimatedRowHeight = 480.0
         self.registerCells()
     }
     
     func registerCells(){
-        dashboardTableView.register(UITableViewCell.self, forCellReuseIdentifier: "dashBoardTblCell")
+        
+       // dashboardTableView.register(DashboardTableViewCell.self, forCellReuseIdentifier: "dashBoardTblCell")
+      
+        let customTableViewCellNib = UINib(nibName: "DashboardTableViewCell", bundle: nil)
+           dashboardTableView.register(customTableViewCellNib, forCellReuseIdentifier: "dashBoardTblCell")
+        //dashboardTableView.register(UITableViewCell.self, forCellReuseIdentifier: "dashBoardTblCell")
     }
     
 
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-        let cell = dashboardTableView.dequeueReusableCell(withIdentifier: "dashBoardTblCell", for: indexPath)
+        let cell = dashboardTableView.dequeueReusableCell(withIdentifier: "dashBoardTblCell", for: indexPath) as! DashboardTableViewCell
+        // browseTableViewCell.rightInset = 20
         return cell
     }
     

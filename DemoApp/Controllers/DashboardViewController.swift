@@ -10,20 +10,23 @@ import UIKit
 
 class DashboardViewController: UIViewController{
     
+    var postModel : [PostModel] = []
     var menu : SideMenuNavigationController?
     @IBOutlet var navView: UIView!
     @IBOutlet var dashboardTableView: UITableView!
     var dashboardViewModel : DashboardViewModel = DashboardViewModel()
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
         setupTableView()
         setupSideControllerMenu()
+        
+        
     }
     
     func setupSideControllerMenu(){
         
         navigationItem.hidesBackButton  = true
-        navigationItem.accessibilityElementsHidden = true
+      //navigationItem.accessibilityElementsHidden = true
         menu = SideMenuNavigationController(rootViewController: SideMenuTableViewController())
         menu?.leftSide = true
         menu?.presentationStyle = .menuSlideIn
