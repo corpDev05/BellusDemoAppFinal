@@ -12,6 +12,7 @@ import UIKit
 extension  DashboardViewController : UITableViewDelegate,UITableViewDataSource {
     
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dashboardViewModel.numberOfRows(in: 0)
     }
@@ -21,7 +22,7 @@ extension  DashboardViewController : UITableViewDelegate,UITableViewDataSource {
     }
     
     
- 
+   
     
     
     func setupTableView(){
@@ -45,9 +46,22 @@ extension  DashboardViewController : UITableViewDelegate,UITableViewDataSource {
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        
-        let cell = dashboardTableView.dequeueReusableCell(withIdentifier: "dashBoardTblCell", for: indexPath) as! DashboardTableViewCell
-        // browseTableViewCell.rightInset = 20
+        let cell =  dashboardTableView.dequeueReusableCell(withIdentifier: "dashBoardTblCell", for: indexPath) as! DashboardTableViewCell
+        if indexPath.row == 0{
+            cell.userName.text = dashboardViewModel.cellData(indexPath).name
+            cell.userDesignation.text = dashboardViewModel.cellData(indexPath).designation
+           // return cell
+        }
+        else if indexPath.row == 1{
+            cell.userName.text = dashboardViewModel.cellData(indexPath).name
+            cell.userDesignation.text = dashboardViewModel.cellData(indexPath).designation
+           // return cell
+        }
+        else if indexPath.row == 2{
+            cell.userName.text = dashboardViewModel.cellData(indexPath).name
+            cell.userDesignation.text = dashboardViewModel.cellData(indexPath).designation
+           // return cell
+        }
         return cell
     }
     

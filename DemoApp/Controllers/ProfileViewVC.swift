@@ -1,32 +1,31 @@
 //
-//  DashboardViewController.swift
+//  ProfileViewVC.swift
 //  DemoApp
 //
-//  Created by Bellubis-WS29 on 28/09/23.
+//  Created by Bellubis-WS29 on 05/10/23.
 //  Copyright © 2023 Bellubis-WS29. All rights reserved.
 //
 import SideMenu
 import UIKit
 
-class DashboardViewController: UIViewController{
- 
+class ProfileViewVC: UIViewController {
     var menu : SideMenuNavigationController?
-   
-    @IBOutlet var dashboardTableView: UITableView!
-    var dashboardViewModel : DashboardViewModel = DashboardViewModel()
-    override func viewDidLoad(){
+
+    override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
-        setupSideControllerMenu()
         setupNavBar()
-        
-        
+        setupSideControllerMenu()
+
+        // Do any additional setup after loading the view.
     }
+    
+
     
     func setupNavBar(){
         
+        self.navigationItem.hidesBackButton = true
         self.view.backgroundColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 1.0)
-        self.navigationItem.title = "Dashboard"
+        self.navigationItem.title = "Profile"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(imageLiteralResourceName: "hamburgerMenu"), style: .plain, target: self, action: #selector(presentSideMenu))
         self.navigationItem.compactAppearance?.backgroundColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 1.0)
         
@@ -62,6 +61,14 @@ class DashboardViewController: UIViewController{
         menu?.presentationStyle = .menuSlideIn
         
     }
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
-    
-  

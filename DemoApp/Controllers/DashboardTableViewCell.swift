@@ -12,7 +12,14 @@ class DashboardTableViewCell: UITableViewCell {
     @IBOutlet var tblView: UIView!
   //  @IBOutlet var postView: UIView!
     @IBOutlet var tblPostView: UIView!
+    @IBOutlet var userImage: UIImageView!
+    @IBOutlet var userName: UILabel!
+    @IBOutlet var userDesignation: UILabel!
+    @IBOutlet var uploadedImage: UIImageView!
+    @IBOutlet var postLabel: UILabel!
     
+    @IBOutlet var timeOfPost: UILabel!
+    @IBOutlet var dateOfPost: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

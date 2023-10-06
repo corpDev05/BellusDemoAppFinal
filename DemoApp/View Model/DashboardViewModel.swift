@@ -10,12 +10,19 @@ import Foundation
 
 class DashboardViewModel {
     
+    var postModel : [PostModel] = [PostModel(name: "John Doe", designation: "HR"),PostModel(name: "Devesh Pandey", designation: "iOS Developer"),PostModel(name: "Manmohan Pandey", designation: "Backend Developer"),PostModel(name: "Himani Pandey", designation: "Sap Developer")]
+    
+    func cellData(_ indexPath : IndexPath) -> PostModel{
+        return postModel[indexPath.row]
+    }
     
     func numberOfSection()-> Int {
         return 1
     }
     
     func numberOfRows(in section : Int) -> Int{
-        return 1
+        return postModel.count
     }
+    
 }
+
