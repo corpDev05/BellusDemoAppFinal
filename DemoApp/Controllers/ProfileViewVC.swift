@@ -8,13 +8,18 @@
 import SideMenu
 import UIKit
 
-class ProfileViewVC: UIViewController {
+class ProfileViewVC : UIViewController {
+    
+    var profileViewModel : ProfileViewModel = ProfileViewModel()
+    
     var menu : SideMenuNavigationController?
-
+    @IBOutlet var profileTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
         setupSideControllerMenu()
+        setupTableView()
 
         // Do any additional setup after loading the view.
     }
@@ -31,7 +36,7 @@ class ProfileViewVC: UIViewController {
         
         UINavigationBar.appearance().backgroundColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 1.0)
         
-        let appearence = UINavigationBarAppearance()
+      /*  let appearence = UINavigationBarAppearance()
         appearence.configureWithOpaqueBackground()
         let nav  = UINavigationController(rootViewController: DashboardViewController())
         appearence.backgroundColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 1.0)
@@ -42,7 +47,7 @@ class ProfileViewVC: UIViewController {
         
         nav.navigationBar.tintColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 1.0)
         nav.navigationBar.barTintColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 1.0)
-    
+    */
         
         
         

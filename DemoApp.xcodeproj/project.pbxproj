@@ -10,6 +10,11 @@
 		832374B12ACD98E900A73272 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832374B02ACD98E900A73272 /* PostModel.swift */; };
 		8326ADFE2AC6FF9100AA0CEC /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */; };
 		836518732AC580660077EA52 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836518722AC580660077EA52 /* DashboardViewController.swift */; };
+		83A0EDAB2ACFCA4A001CB1A3 /* SideMenuSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0EDAA2ACFCA4A001CB1A3 /* SideMenuSetup.swift */; };
+		83A0EDAF2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0EDAD2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift */; };
+		83A0EDB02ACFE731001CB1A3 /* ProfileVCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A0EDAE2ACFE731001CB1A3 /* ProfileVCTableViewCell.xib */; };
+		83A0EDB82AD01188001CB1A3 /* ProfileViewVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0EDB72AD01188001CB1A3 /* ProfileViewVC+TableView.swift */; };
+		83A0EDBC2AD01642001CB1A3 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0EDBB2AD01642001CB1A3 /* ProfileViewModel.swift */; };
 		83AAA9A42ACEDA4E00DA58B7 /* ProfileViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AAA9A32ACEDA4E00DA58B7 /* ProfileViewVC.swift */; };
 		83B5AC982ACBE08D00F10593 /* UserLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5AC972ACBE08D00F10593 /* UserLoginModel.swift */; };
 		83B5AC9B2ACBF4DD00F10593 /* DashboardViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5AC9A2ACBF4DD00F10593 /* DashboardViewController+TableView.swift */; };
@@ -50,6 +55,11 @@
 		8390F0B92AC42A4E007F3E26 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		8390F0BA2AC42A4F007F3E26 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		8390F0BB2AC42A4F007F3E26 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		83A0EDAA2ACFCA4A001CB1A3 /* SideMenuSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuSetup.swift; sourceTree = "<group>"; };
+		83A0EDAD2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCTableViewCell.swift; sourceTree = "<group>"; };
+		83A0EDAE2ACFE731001CB1A3 /* ProfileVCTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVCTableViewCell.xib; sourceTree = "<group>"; };
+		83A0EDB72AD01188001CB1A3 /* ProfileViewVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewVC+TableView.swift"; sourceTree = "<group>"; };
+		83A0EDBB2AD01642001CB1A3 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		83AAA9A32ACEDA4E00DA58B7 /* ProfileViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewVC.swift; sourceTree = "<group>"; };
 		83B5AC972ACBE08D00F10593 /* UserLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginModel.swift; sourceTree = "<group>"; };
 		83B5AC9A2ACBF4DD00F10593 /* DashboardViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardViewController+TableView.swift"; sourceTree = "<group>"; };
@@ -109,6 +119,7 @@
 			children = (
 				83B5AC972ACBE08D00F10593 /* UserLoginModel.swift */,
 				83B5ACA02ACC207200F10593 /* DashboardViewModel.swift */,
+				83A0EDBB2AD01642001CB1A3 /* ProfileViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -124,6 +135,7 @@
 		836518702AC57EDA0077EA52 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				83A0EDAA2ACFCA4A001CB1A3 /* SideMenuSetup.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -208,6 +220,8 @@
 				83B5ACA42ACC29B700F10593 /* DashboardTableViewCell.swift */,
 				8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */,
 				83AAA9A32ACEDA4E00DA58B7 /* ProfileViewVC.swift */,
+				83A0EDAD2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift */,
+				83A0EDB72AD01188001CB1A3 /* ProfileViewVC+TableView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -223,6 +237,7 @@
 		83F82B4D2AC19A21001A9116 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				83A0EDAE2ACFE731001CB1A3 /* ProfileVCTableViewCell.xib */,
 				83B5ACA52ACC29B700F10593 /* DashboardTableViewCell.xib */,
 				83F82B3A2AC19999001A9116 /* Main.storyboard */,
 			);
@@ -291,6 +306,7 @@
 			files = (
 				83F82B442AC1999D001A9116 /* LaunchScreen.storyboard in Resources */,
 				83F82B412AC1999D001A9116 /* Assets.xcassets in Resources */,
+				83A0EDB02ACFE731001CB1A3 /* ProfileVCTableViewCell.xib in Resources */,
 				83B5ACA72ACC29B700F10593 /* DashboardTableViewCell.xib in Resources */,
 				83F82B3C2AC19999001A9116 /* Main.storyboard in Resources */,
 			);
@@ -350,12 +366,16 @@
 				83F82B352AC19999001A9116 /* AppDelegate.swift in Sources */,
 				83AAA9A42ACEDA4E00DA58B7 /* ProfileViewVC.swift in Sources */,
 				83B5ACA12ACC207200F10593 /* DashboardViewModel.swift in Sources */,
+				83A0EDBC2AD01642001CB1A3 /* ProfileViewModel.swift in Sources */,
+				83A0EDAB2ACFCA4A001CB1A3 /* SideMenuSetup.swift in Sources */,
 				83B5ACA62ACC29B700F10593 /* DashboardTableViewCell.swift in Sources */,
 				836518732AC580660077EA52 /* DashboardViewController.swift in Sources */,
 				83F82B3F2AC19999001A9116 /* DemoApp.xcdatamodeld in Sources */,
 				83B5AC982ACBE08D00F10593 /* UserLoginModel.swift in Sources */,
+				83A0EDB82AD01188001CB1A3 /* ProfileViewVC+TableView.swift in Sources */,
 				83F82B372AC19999001A9116 /* SceneDelegate.swift in Sources */,
 				83B5AC9B2ACBF4DD00F10593 /* DashboardViewController+TableView.swift in Sources */,
+				83A0EDAF2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift in Sources */,
 				832374B12ACD98E900A73272 /* PostModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
