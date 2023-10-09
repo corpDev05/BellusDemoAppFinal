@@ -298,6 +298,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="VuT-5A-CML" firstAttribute="trailing" secondItem="c1N-Zv-9m3" secondAttribute="trailing" id="0oC-rT-fSG"/>
+                            <constraint firstItem="u5l-Mp-Yna" firstAttribute="top" secondItem="VuT-5A-CML" secondAttribute="top" id="CBR-bS-KBT"/>
                             <constraint firstItem="c1N-Zv-9m3" firstAttribute="top" secondItem="u5l-Mp-Yna" secondAttribute="bottom" id="IV8-jr-612"/>
                             <constraint firstItem="u5l-Mp-Yna" firstAttribute="top" secondItem="VuT-5A-CML" secondAttribute="top" id="Lo3-6o-Fz7"/>
                             <constraint firstItem="u5l-Mp-Yna" firstAttribute="leading" secondItem="VuT-5A-CML" secondAttribute="leading" id="YpJ-oY-JWm"/>

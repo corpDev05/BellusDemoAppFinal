@@ -10,6 +10,7 @@
 		832374B12ACD98E900A73272 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832374B02ACD98E900A73272 /* PostModel.swift */; };
 		8326ADFE2AC6FF9100AA0CEC /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */; };
 		836518732AC580660077EA52 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836518722AC580660077EA52 /* DashboardViewController.swift */; };
+		837827E42AD404560084F044 /* ProfileCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837827E32AD404560084F044 /* ProfileCellModel.swift */; };
 		83A0EDAB2ACFCA4A001CB1A3 /* SideMenuSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0EDAA2ACFCA4A001CB1A3 /* SideMenuSetup.swift */; };
 		83A0EDAF2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0EDAD2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift */; };
 		83A0EDB02ACFE731001CB1A3 /* ProfileVCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A0EDAE2ACFE731001CB1A3 /* ProfileVCTableViewCell.xib */; };
@@ -37,6 +38,7 @@
 		832374B02ACD98E900A73272 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		836518722AC580660077EA52 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		837827E32AD404560084F044 /* ProfileCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellModel.swift; sourceTree = "<group>"; };
 		8390F0AA2AC42A4D007F3E26 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		8390F0AB2AC42A4D007F3E26 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
 		8390F0AC2AC42A4D007F3E26 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				832374B02ACD98E900A73272 /* PostModel.swift */,
+				837827E32AD404560084F044 /* ProfileCellModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837827E42AD404560084F044 /* ProfileCellModel.swift in Sources */,
 				83F82B392AC19999001A9116 /* LoginPageController.swift in Sources */,
 				8326ADFE2AC6FF9100AA0CEC /* SideMenuTableViewController.swift in Sources */,
 				83F82B352AC19999001A9116 /* AppDelegate.swift in Sources */,

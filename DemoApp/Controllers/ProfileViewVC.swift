@@ -13,6 +13,7 @@ class ProfileViewVC : UIViewController {
     var profileViewModel : ProfileViewModel = ProfileViewModel()
     
     var menu : SideMenuNavigationController?
+   // var  profileViewModel : ProfileCellModel
     @IBOutlet var profileTable: UITableView!
     
     override func viewDidLoad() {
@@ -23,7 +24,11 @@ class ProfileViewVC : UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+      //  profileTable.estimatedRowHeight = 100
+        profileTable.rowHeight = UITableView.automaticDimension
+      //  profileTable.autoresizesSubviews = true
+        }
 
     
     func setupNavBar(){
