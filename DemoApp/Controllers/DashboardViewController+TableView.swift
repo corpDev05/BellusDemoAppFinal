@@ -50,19 +50,24 @@ extension  DashboardViewController : UITableViewDelegate,UITableViewDataSource {
         if indexPath.row == 0{
             cell.userName.text = dashboardViewModel.cellData(indexPath).name
             cell.userDesignation.text = dashboardViewModel.cellData(indexPath).designation
-           // return cell
+           return cell
         }
         else if indexPath.row == 1{
             cell.userName.text = dashboardViewModel.cellData(indexPath).name
             cell.userDesignation.text = dashboardViewModel.cellData(indexPath).designation
-           // return cell
+           return cell
         }
         else if indexPath.row == 2{
             cell.userName.text = dashboardViewModel.cellData(indexPath).name
             cell.userDesignation.text = dashboardViewModel.cellData(indexPath).designation
-           // return cell
+            return cell
         }
-        return cell
+        else if indexPath.row == 3{
+            cell.userName.text = dashboardViewModel.cellData(indexPath).name
+            cell.userDesignation.text = dashboardViewModel.cellData(indexPath).designation
+            return cell
+        }
+        return UITableViewCell()
     }
     
     

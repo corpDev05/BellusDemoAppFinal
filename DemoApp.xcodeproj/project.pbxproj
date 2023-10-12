@@ -11,6 +11,7 @@
 		8326ADFE2AC6FF9100AA0CEC /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */; };
 		836518732AC580660077EA52 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836518722AC580660077EA52 /* DashboardViewController.swift */; };
 		837827E42AD404560084F044 /* ProfileCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837827E32AD404560084F044 /* ProfileCellModel.swift */; };
+		838D4D532AD57E8700B29DCF /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D4D522AD57E8700B29DCF /* Protocols.swift */; };
 		83A0EDAB2ACFCA4A001CB1A3 /* SideMenuSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0EDAA2ACFCA4A001CB1A3 /* SideMenuSetup.swift */; };
 		83A0EDAF2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0EDAD2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift */; };
 		83A0EDB02ACFE731001CB1A3 /* ProfileVCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A0EDAE2ACFE731001CB1A3 /* ProfileVCTableViewCell.xib */; };
@@ -39,6 +40,7 @@
 		8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		836518722AC580660077EA52 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		837827E32AD404560084F044 /* ProfileCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellModel.swift; sourceTree = "<group>"; };
+		838D4D522AD57E8700B29DCF /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		8390F0AA2AC42A4D007F3E26 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		8390F0AB2AC42A4D007F3E26 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
 		8390F0AC2AC42A4D007F3E26 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -142,6 +144,14 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		838D4D512AD57E5400B29DCF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				838D4D522AD57E8700B29DCF /* Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		8390F0A72AC40CBC007F3E26 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,11 +207,11 @@
 		83F82B332AC19998001A9116 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				838D4D512AD57E5400B29DCF /* Protocols */,
 				8390F0A72AC40CBC007F3E26 /* Delegates */,
 				8390F0A92AC429F9007F3E26 /* Font */,
 				8365186F2AC57EB70077EA52 /* Resources */,
 				8365186D2AC57E1E0077EA52 /* Networking */,
-				836518702AC57EDA0077EA52 /* Classes */,
 				8365186E2AC57E510077EA52 /* View Model */,
 				83F82B4C2AC19A01001A9116 /* Model */,
 				83F82B4B2AC199D2001A9116 /* Controllers */,
@@ -217,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				83F82B382AC19999001A9116 /* LoginPageController.swift */,
+				836518702AC57EDA0077EA52 /* Classes */,
 				836518722AC580660077EA52 /* DashboardViewController.swift */,
 				83B5AC9A2ACBF4DD00F10593 /* DashboardViewController+TableView.swift */,
 				83B5ACA42ACC29B700F10593 /* DashboardTableViewCell.swift */,
@@ -372,6 +383,7 @@
 				83B5ACA12ACC207200F10593 /* DashboardViewModel.swift in Sources */,
 				83A0EDBC2AD01642001CB1A3 /* ProfileViewModel.swift in Sources */,
 				83A0EDAB2ACFCA4A001CB1A3 /* SideMenuSetup.swift in Sources */,
+				838D4D532AD57E8700B29DCF /* Protocols.swift in Sources */,
 				83B5ACA62ACC29B700F10593 /* DashboardTableViewCell.swift in Sources */,
 				836518732AC580660077EA52 /* DashboardViewController.swift in Sources */,
 				83F82B3F2AC19999001A9116 /* DemoApp.xcdatamodeld in Sources */,

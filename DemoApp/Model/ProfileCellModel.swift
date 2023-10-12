@@ -13,5 +13,12 @@ struct ProfileCellModel {
     var description : String?
     var placeholder : String?
     var imgPlaceholder : String?
-    //var isExpandable : Bool?
+}
+
+struct NewProfileCellModel {
+    var isExpandable : Bool?
+    var  array : [ProfileCellModel]
+}
+struct ProfileVCModel {
+    var data : [NewProfileCellModel]
 }

@@ -8,9 +8,12 @@
 import SideMenu
 import UIKit
 
-class ProfileViewVC : UIViewController {
+class ProfileViewVC : UIViewController , ProfileTVCellDelegate{
     
     var profileViewModel : ProfileViewModel = ProfileViewModel()
+    
+    
+  //  var cellVC = ProfileVCTableViewCell()
     
     var menu : SideMenuNavigationController?
    // var  profileViewModel : ProfileCellModel
@@ -21,11 +24,11 @@ class ProfileViewVC : UIViewController {
         setupNavBar()
         setupSideControllerMenu()
         setupTableView()
-
+       // cellVC.delegate = self
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-      //  profileTable.estimatedRowHeight = 100
+        profileTable.estimatedRowHeight = 100
         profileTable.rowHeight = UITableView.automaticDimension
       //  profileTable.autoresizesSubviews = true
         }

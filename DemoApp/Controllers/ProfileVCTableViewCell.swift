@@ -8,15 +8,31 @@
 
 import UIKit
 
-class ProfileVCTableViewCell: UITableViewCell {
 
+class ProfileVCTableViewCell: UITableViewCell {
+    @IBOutlet var cellTopDistConst: NSLayoutConstraint!
+    
+    @IBOutlet var editBttn: UIView!
+    @IBOutlet var cellBottomDistConst: NSLayoutConstraint!
+    
+    @IBOutlet var shadowTopConst: NSLayoutConstraint!
+    
+    @IBOutlet var cellbtnHeight: NSLayoutConstraint!
+    
+    @IBOutlet var cellBtnWidth: NSLayoutConstraint!
+    @IBOutlet var shadowBttmConst: NSLayoutConstraint!
+    
+    @IBOutlet var cellBtn: UIButton!
+    
     @IBOutlet var shadowView: UIView!
     @IBOutlet var contView: UIView!
     @IBOutlet var mainView: UIView!
     
+    @IBOutlet var infoView: UITextField!
     @IBOutlet var cellHeight : NSLayoutConstraint!
     @IBOutlet var descriptionBottmConst : NSLayoutConstraint!
     
+    @IBOutlet var editBtnLabel: UILabel!
     
     @IBOutlet var titleText: UILabel!
     
@@ -24,11 +40,14 @@ class ProfileVCTableViewCell: UITableViewCell {
     
     @IBOutlet var  infoTextField: UITextField!
     
-   
+    @IBOutlet var editBtnTitle: UILabel!
+    
     
 
-    var drop  = true
-    
+    var drop  = false
+    var  profileViewModel : ProfileViewModel = ProfileViewModel()
+    var delegate : ProfileTVCellDelegate?
+    var section : Int = 0
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -38,18 +57,23 @@ class ProfileVCTableViewCell: UITableViewCell {
     }
     
     func setUp(){
-        
+        editBttn.isOpaque = true
+        editBttn.isHidden = true
         shadowView.layer.cornerRadius = 8.0
         contView.layer.cornerRadius = 8.0
         
         //tblBotmCost.isActive = false
         //innerViewBotmCost.isActive = false
     }
+
     
     
     @IBAction func dropDownClk(_ sender : AnyObject){
         drop.toggle()
-
+        print(drop)
+       // weak var delegate : ProfileTVCellDelegate?
+        delegate?.profileTVCell(section,drop)
+        
     }
 
 
