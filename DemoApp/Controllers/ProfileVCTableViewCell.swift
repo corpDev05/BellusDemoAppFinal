@@ -12,7 +12,7 @@ import UIKit
 class ProfileVCTableViewCell: UITableViewCell {
     @IBOutlet var cellTopDistConst: NSLayoutConstraint!
     
-    @IBOutlet var editBttn: UIView!
+  
     @IBOutlet var cellBottomDistConst: NSLayoutConstraint!
     
     @IBOutlet var shadowTopConst: NSLayoutConstraint!
@@ -32,15 +32,16 @@ class ProfileVCTableViewCell: UITableViewCell {
     @IBOutlet var cellHeight : NSLayoutConstraint!
     @IBOutlet var descriptionBottmConst : NSLayoutConstraint!
     
-    @IBOutlet var editBtnLabel: UILabel!
+    
+    @IBOutlet var editBtn: UIButton!
     
     @IBOutlet var titleText: UILabel!
     
     @IBOutlet var  dropButton: UIButton!
     
-    @IBOutlet var  infoTextField: UITextField!
+    @IBOutlet var  infoTextField: UITextView!
     
-    @IBOutlet var editBtnTitle: UILabel!
+
     
     
 
@@ -55,10 +56,9 @@ class ProfileVCTableViewCell: UITableViewCell {
        setUp()
         
     }
-    
+   
     func setUp(){
-        editBttn.isOpaque = true
-        editBttn.isHidden = true
+     
         shadowView.layer.cornerRadius = 8.0
         contView.layer.cornerRadius = 8.0
         

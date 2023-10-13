@@ -27,11 +27,11 @@ class ProfileViewVC : UIViewController , ProfileTVCellDelegate{
        // cellVC.delegate = self
         // Do any additional setup after loading the view.
     }
-    override func viewWillAppear(_ animated: Bool) {
+   /* override func viewWillAppear(_ animated: Bool) {
         profileTable.estimatedRowHeight = 100
         profileTable.rowHeight = UITableView.automaticDimension
       //  profileTable.autoresizesSubviews = true
-        }
+        }*/
 
     
     func setupNavBar(){
