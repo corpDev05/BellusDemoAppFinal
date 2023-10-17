@@ -55,6 +55,11 @@ class SideMenuTableViewController: UITableViewController {
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: "profileVC") as? ProfileViewVC
             self.navigationController?.pushViewController(vc!, animated: true)
         }
+        else if list[indexPath.row] == "Employee Profile"
+        {
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: "searchEmpVC") as? SearchEmpViewController
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
         else if  list[indexPath.row] == "Log Out"
         {
             let alert = UIAlertController(title: "Do you want to log out?", message: "", preferredStyle: .alert)

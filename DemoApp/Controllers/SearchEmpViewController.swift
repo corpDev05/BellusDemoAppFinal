@@ -1,30 +1,23 @@
 //
-//  ProfileViewVC.swift
+//  SearchEmpViewController.swift
 //  DemoApp
 //
-//  Created by Bellubis-WS29 on 05/10/23.
+//  Created by Bellubis-WS29 on 17/10/23.
 //  Copyright © 2023 Bellubis-WS29. All rights reserved.
 //
-import SideMenu
-import UIKit
 
-class ProfileViewVC : UIViewController , ProfileTVCellDelegate ,ProfileVCCellEditDelegate{
-    
-    var profileViewModel : ProfileViewModel = ProfileViewModel()
-    
-    
-  //  var cellVC = ProfileVCTableViewCell()
-    
+import UIKit
+import SideMenu
+class SearchEmpViewController: UIViewController {
     var menu : SideMenuNavigationController?
     var edit : Bool  = false
    // var  profileViewModel : ProfileCellModel
-    @IBOutlet var profileTable: UITableView!
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
         setupSideControllerMenu()
-        setupTableView()
        // cellVC.delegate = self
         // Do any additional setup after loading the view.
     }
@@ -39,7 +32,7 @@ class ProfileViewVC : UIViewController , ProfileTVCellDelegate ,ProfileVCCellEdi
         
         self.navigationItem.hidesBackButton = true
         self.view.backgroundColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 1.0)
-        self.navigationItem.title = "Profile"
+        self.navigationItem.title = "Search Employee"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(imageLiteralResourceName: "hamburgerMenu"), style: .plain, target: self, action: #selector(presentSideMenu))
         self.navigationItem.compactAppearance?.backgroundColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 1.0)
         

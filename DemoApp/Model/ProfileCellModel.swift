@@ -16,6 +16,7 @@ struct ProfileCellModel {
 }
 
 struct NewProfileCellModel {
+    var isEditable : Bool?
     var isExpandable : Bool?
     var  array : [ProfileCellModel]
 }

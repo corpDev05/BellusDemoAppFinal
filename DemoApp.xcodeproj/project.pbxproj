@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		832374B12ACD98E900A73272 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832374B02ACD98E900A73272 /* PostModel.swift */; };
 		8326ADFE2AC6FF9100AA0CEC /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */; };
+		835887C92ADE569A00C07C02 /* SearchEmpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835887C82ADE569A00C07C02 /* SearchEmpViewController.swift */; };
 		836518732AC580660077EA52 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836518722AC580660077EA52 /* DashboardViewController.swift */; };
+		8376FA3A2ADD6F2100D1F188 /* SecondProfileVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8376FA382ADD6F2100D1F188 /* SecondProfileVCTableViewCell.swift */; };
+		8376FA3B2ADD6F2100D1F188 /* SecondProfileVCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8376FA392ADD6F2100D1F188 /* SecondProfileVCTableViewCell.xib */; };
 		837827E42AD404560084F044 /* ProfileCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837827E32AD404560084F044 /* ProfileCellModel.swift */; };
 		838D4D532AD57E8700B29DCF /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D4D522AD57E8700B29DCF /* Protocols.swift */; };
 		83A0EDAB2ACFCA4A001CB1A3 /* SideMenuSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0EDAA2ACFCA4A001CB1A3 /* SideMenuSetup.swift */; };
@@ -38,7 +41,10 @@
 		30B7B157E30A710977E0D5CA /* Pods_DemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		832374B02ACD98E900A73272 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		835887C82ADE569A00C07C02 /* SearchEmpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEmpViewController.swift; sourceTree = "<group>"; };
 		836518722AC580660077EA52 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		8376FA382ADD6F2100D1F188 /* SecondProfileVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondProfileVCTableViewCell.swift; sourceTree = "<group>"; };
+		8376FA392ADD6F2100D1F188 /* SecondProfileVCTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondProfileVCTableViewCell.xib; sourceTree = "<group>"; };
 		837827E32AD404560084F044 /* ProfileCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellModel.swift; sourceTree = "<group>"; };
 		838D4D522AD57E8700B29DCF /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		8390F0AA2AC42A4D007F3E26 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				83A0EDAA2ACFCA4A001CB1A3 /* SideMenuSetup.swift */,
+				8376FA382ADD6F2100D1F188 /* SecondProfileVCTableViewCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -235,6 +242,7 @@
 				83AAA9A32ACEDA4E00DA58B7 /* ProfileViewVC.swift */,
 				83A0EDAD2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift */,
 				83A0EDB72AD01188001CB1A3 /* ProfileViewVC+TableView.swift */,
+				835887C82ADE569A00C07C02 /* SearchEmpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -251,6 +259,7 @@
 		83F82B4D2AC19A21001A9116 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8376FA392ADD6F2100D1F188 /* SecondProfileVCTableViewCell.xib */,
 				83A0EDAE2ACFE731001CB1A3 /* ProfileVCTableViewCell.xib */,
 				83B5ACA52ACC29B700F10593 /* DashboardTableViewCell.xib */,
 				83F82B3A2AC19999001A9116 /* Main.storyboard */,
@@ -320,6 +329,7 @@
 			files = (
 				83F82B442AC1999D001A9116 /* LaunchScreen.storyboard in Resources */,
 				83F82B412AC1999D001A9116 /* Assets.xcassets in Resources */,
+				8376FA3B2ADD6F2100D1F188 /* SecondProfileVCTableViewCell.xib in Resources */,
 				83A0EDB02ACFE731001CB1A3 /* ProfileVCTableViewCell.xib in Resources */,
 				83B5ACA72ACC29B700F10593 /* DashboardTableViewCell.xib in Resources */,
 				83F82B3C2AC19999001A9116 /* Main.storyboard in Resources */,
@@ -383,12 +393,14 @@
 				83B5ACA12ACC207200F10593 /* DashboardViewModel.swift in Sources */,
 				83A0EDBC2AD01642001CB1A3 /* ProfileViewModel.swift in Sources */,
 				83A0EDAB2ACFCA4A001CB1A3 /* SideMenuSetup.swift in Sources */,
+				8376FA3A2ADD6F2100D1F188 /* SecondProfileVCTableViewCell.swift in Sources */,
 				838D4D532AD57E8700B29DCF /* Protocols.swift in Sources */,
 				83B5ACA62ACC29B700F10593 /* DashboardTableViewCell.swift in Sources */,
 				836518732AC580660077EA52 /* DashboardViewController.swift in Sources */,
 				83F82B3F2AC19999001A9116 /* DemoApp.xcdatamodeld in Sources */,
 				83B5AC982ACBE08D00F10593 /* UserLoginModel.swift in Sources */,
 				83A0EDB82AD01188001CB1A3 /* ProfileViewVC+TableView.swift in Sources */,
+				835887C92ADE569A00C07C02 /* SearchEmpViewController.swift in Sources */,
 				83F82B372AC19999001A9116 /* SceneDelegate.swift in Sources */,
 				83B5AC9B2ACBF4DD00F10593 /* DashboardViewController+TableView.swift in Sources */,
 				83A0EDAF2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift in Sources */,

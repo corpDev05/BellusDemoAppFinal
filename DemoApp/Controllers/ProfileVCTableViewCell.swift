@@ -31,7 +31,9 @@ class ProfileVCTableViewCell: UITableViewCell {
     @IBOutlet var infoView: UITextField!
     @IBOutlet var cellHeight : NSLayoutConstraint!
     @IBOutlet var descriptionBottmConst : NSLayoutConstraint!
+    @IBOutlet var saveBtn: UIButton!
     
+    @IBOutlet var cancelBtn: UIButton!
     
     @IBOutlet var editBtn: UIButton!
     
@@ -42,12 +44,15 @@ class ProfileVCTableViewCell: UITableViewCell {
     @IBOutlet var  infoTextField: UITextView!
     
 
+    @IBOutlet var shadowTrailingConst: NSLayoutConstraint!
     
+    @IBOutlet var shadowLeadingConst: NSLayoutConstraint!
     
-
+    var editable = false
     var drop  = false
     var  profileViewModel : ProfileViewModel = ProfileViewModel()
     var delegate : ProfileTVCellDelegate?
+    var editDelegate : ProfileVCCellEditDelegate?
     var section : Int = 0
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -61,16 +66,26 @@ class ProfileVCTableViewCell: UITableViewCell {
      
         shadowView.layer.cornerRadius = 8.0
         contView.layer.cornerRadius = 8.0
+        cancelBtn.isHidden = true
+        saveBtn.isHidden = true
         
         //tblBotmCost.isActive = false
         //innerViewBotmCost.isActive = false
     }
 
+    @IBAction func editBtnTap(_ sender: Any) {
+        editable.toggle()
+      //  var edit = editable
+       // print(editable)
+        self.editDelegate?.isEditable(section ,editable)
+        
+        
+    }
     
     
     @IBAction func dropDownClk(_ sender : AnyObject){
         drop.toggle()
-        print(drop)
+       // print(drop)
        // weak var delegate : ProfileTVCellDelegate?
         delegate?.profileTVCell(section,drop)
         

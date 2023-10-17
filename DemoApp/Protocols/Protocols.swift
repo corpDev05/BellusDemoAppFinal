@@ -11,3 +11,7 @@ import Foundation
 protocol ProfileTVCellDelegate: AnyObject {
     func profileTVCell(_ section : Int, _ boolDrop: Bool)
 }
+
+protocol ProfileVCCellEditDelegate: AnyObject {
+    func isEditable(_ section : Int ,_ editable : Bool)
+}
