@@ -12,12 +12,21 @@ class SearchEmpViewController: UIViewController {
     var menu : SideMenuNavigationController?
     var edit : Bool  = false
    // var  profileViewModel : ProfileCellModel
-  
+    var searchEmployeeViewModel : SearchEmployeeViewModel = SearchEmployeeViewModel()
+    @IBOutlet var searchView: UIView!
+    @IBOutlet var topView: UIView!
+    
+    @IBOutlet var searchResultTbl: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tblSetup()
         setupNavBar()
         setupSideControllerMenu()
+        searchView.layer.cornerRadius = 4.0
+        topView.layer.cornerRadius = 8.0
+        topView.layer.borderColor = CGColor(srgbRed: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
+        topView.layer.borderWidth = 2.0
        // cellVC.delegate = self
         // Do any additional setup after loading the view.
     }
@@ -26,6 +35,10 @@ class SearchEmpViewController: UIViewController {
         profileTable.rowHeight = UITableView.automaticDimension
       //  profileTable.autoresizesSubviews = true
         }*/
+    
+    override func viewDidAppear(_ animated: Bool) {
+     //   print("\(searchEmployeeViewModel.getData())")
+    }
 
     
     func setupNavBar(){

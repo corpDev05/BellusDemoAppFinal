@@ -11,7 +11,9 @@ import UIKit
 class DashboardViewController: UIViewController{
  
     var menu : SideMenuNavigationController?
-   
+   // @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    var cellDataSource : [Movie] = []
+    
     @IBOutlet var dashboardTableView: UITableView!
     var dashboardViewModel : DashboardViewModel = DashboardViewModel()
     override func viewDidLoad(){
@@ -19,8 +21,31 @@ class DashboardViewController: UIViewController{
         setupTableView()
         setupSideControllerMenu()
         setupNavBar()
+        bindViewModel()
         
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        dashboardViewModel.getData()
+    }
+    
+    func bindViewModel(){
+        dashboardViewModel.isLoading.bind { [weak self](isLoading) in
+            guard let self = self ,let isLoading = isLoading else
+            {
+                return
+            }
+            
+        }
+        dashboardViewModel.cellDataSource.bind { [weak self](movies) in
+            guard let self = self ,let movies = movies else {
+                return
+            }
+            self.cellDataSource = movies
+            self.reloadTableView()
+        }
     }
     
     func setupNavBar(){

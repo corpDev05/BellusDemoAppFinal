@@ -22,7 +22,11 @@ extension  DashboardViewController : UITableViewDelegate,UITableViewDataSource {
     }
     
     
-   
+    func reloadTableView(){
+        DispatchQueue.main.async {
+            self.dashboardTableView.reloadData()
+        }
+    }
     
     
     func setupTableView(){
@@ -47,7 +51,11 @@ extension  DashboardViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell =  dashboardTableView.dequeueReusableCell(withIdentifier: "dashBoardTblCell", for: indexPath) as! DashboardTableViewCell
-        if indexPath.row == 0{
+        
+        cell.userName.text = cellDataSource[indexPath.row].originalTitle ?? cellDataSource[indexPath.row].title
+        cell.postLabel.text = cellDataSource[indexPath.row].overview
+        
+        /*if indexPath.row == 0{
             cell.userName.text = dashboardViewModel.cellData(indexPath).name
             cell.userDesignation.text = dashboardViewModel.cellData(indexPath).designation
            return cell
@@ -66,8 +74,8 @@ extension  DashboardViewController : UITableViewDelegate,UITableViewDataSource {
             cell.userName.text = dashboardViewModel.cellData(indexPath).name
             cell.userDesignation.text = dashboardViewModel.cellData(indexPath).designation
             return cell
-        }
-        return UITableViewCell()
+        }*/
+        return cell
     }
     
     

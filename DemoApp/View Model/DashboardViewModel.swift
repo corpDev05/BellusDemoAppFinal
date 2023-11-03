@@ -9,7 +9,9 @@
 import Foundation
 
 class DashboardViewModel {
-    
+    var isLoading : Observable<Bool> = Observable(false)
+    var dataSource : APIResultModel?
+    var cellDataSource : Observable<[Movie]> = Observable(nil)
     var postModel : [PostModel] = [PostModel(name: "John Doe", designation: "HR"),PostModel(name: "Devesh Pandey", designation: "iOS Developer"),PostModel(name: "Manmohan Pandey", designation: "Backend Developer"),PostModel(name: "Himani Pandey", designation: "Sap Developer")]
     
     func cellData(_ indexPath : IndexPath) -> PostModel{
@@ -21,8 +23,32 @@ class DashboardViewModel {
     }
     
     func numberOfRows(in section : Int) -> Int{
-        return postModel.count
+        return dataSource?.results.count ?? 0
     }
     
+    func getData(){
+        if isLoading.value ?? true {
+            return
+        }
+        isLoading.value = true
+        APICaller.getTrendingMovies { [weak self] (result) in
+            //DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            //    self?.isLoading.value  = false
+            //}
+            //self?.isLoading.value  = false
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let data):
+                self?.dataSource = data
+                self?.mapCellData()
+                print("Top Trending Counts: \(data.results.count)")
+            }
+        }
+         
+    }
+    func mapCellData(){
+        self.cellDataSource.value = self.dataSource?.results ?? []
+    }
 }
 
