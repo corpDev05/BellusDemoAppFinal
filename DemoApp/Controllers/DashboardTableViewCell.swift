@@ -32,4 +32,15 @@ class DashboardTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setupCell(viewModel: DashboardTblCellViewModel){
+          self.userName.text = viewModel.title
+          self.userDesignation.text  = viewModel.rating
+          self.postLabel.text = viewModel.overview
+         // self.uploadedImage.sd_setImage(with: viewModel.imageUrl, completed: nil)
+          //self.uploadedImage.sd_setImage(with: viewModel.imageUrl, completed: nil)
+          
+      }
+
+
+    
 }

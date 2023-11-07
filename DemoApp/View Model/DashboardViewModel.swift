@@ -11,7 +11,7 @@ import Foundation
 class DashboardViewModel {
     var isLoading : Observable<Bool> = Observable(false)
     var dataSource : APIResultModel?
-    var cellDataSource : Observable<[Movie]> = Observable(nil)
+    var cellDataSource : Observable<[DashboardTblCellViewModel]> = Observable(nil)
     var postModel : [PostModel] = [PostModel(name: "John Doe", designation: "HR"),PostModel(name: "Devesh Pandey", designation: "iOS Developer"),PostModel(name: "Manmohan Pandey", designation: "Backend Developer"),PostModel(name: "Himani Pandey", designation: "Sap Developer")]
     
     func cellData(_ indexPath : IndexPath) -> PostModel{
@@ -48,7 +48,8 @@ class DashboardViewModel {
          
     }
     func mapCellData(){
-        self.cellDataSource.value = self.dataSource?.results ?? []
+        //self.cellDataSource.value = self.dataSource?.results ?? []
+        self.cellDataSource.value = self.dataSource?.results.compactMap({DashboardTblCellViewModel(movie: $0)})
     }
 }
 

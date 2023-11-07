@@ -12,7 +12,7 @@ class DashboardViewController: UIViewController{
  
     var menu : SideMenuNavigationController?
    // @IBOutlet var activityIndicator: UIActivityIndicatorView!
-    var cellDataSource : [Movie] = []
+    var cellDataSource : [DashboardTblCellViewModel] = []
     
     @IBOutlet var dashboardTableView: UITableView!
     var dashboardViewModel : DashboardViewModel = DashboardViewModel()

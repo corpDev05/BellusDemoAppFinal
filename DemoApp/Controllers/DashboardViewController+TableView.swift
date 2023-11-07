@@ -51,9 +51,10 @@ extension  DashboardViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell =  dashboardTableView.dequeueReusableCell(withIdentifier: "dashBoardTblCell", for: indexPath) as! DashboardTableViewCell
-        
-        cell.userName.text = cellDataSource[indexPath.row].originalTitle ?? cellDataSource[indexPath.row].title
-        cell.postLabel.text = cellDataSource[indexPath.row].overview
+        let cellViewModel = cellDataSource[indexPath.row]
+        cell.setupCell(viewModel: cellViewModel)
+        //cell.userName.text = cellDataSource[indexPath.row]. ?? cellDataSource[indexPath.row].title
+        //cell.postLabel.text = cellDataSource[indexPath.row].overview
         
         /*if indexPath.row == 0{
             cell.userName.text = dashboardViewModel.cellData(indexPath).name
