@@ -15,7 +15,7 @@ class DashboardTableViewCell: UITableViewCell {
     @IBOutlet var userImage: UIImageView!
     @IBOutlet var userName: UILabel!
     @IBOutlet var userDesignation: UILabel!
-    @IBOutlet var uploadedImage: UIImageView!
+    @IBOutlet var uploadedImage: LazyImageView!
     @IBOutlet var postLabel: UILabel!
     
     @IBOutlet var timeOfPost: UILabel!
@@ -36,6 +36,9 @@ class DashboardTableViewCell: UITableViewCell {
           self.userName.text = viewModel.title
           self.userDesignation.text  = viewModel.rating
           self.postLabel.text = viewModel.overview
+        self.dateOfPost.text = viewModel.date
+        self.timeOfPost.text = viewModel.language
+        self.uploadedImage.loadImage(fromURL: viewModel.imageUrl ?? URL(fileURLWithPath: ""), placeholderImage: "uploadPlaceholderImage")
          // self.uploadedImage.sd_setImage(with: viewModel.imageUrl, completed: nil)
           //self.uploadedImage.sd_setImage(with: viewModel.imageUrl, completed: nil)
           

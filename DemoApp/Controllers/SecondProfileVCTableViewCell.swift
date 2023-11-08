@@ -9,6 +9,15 @@
 import UIKit
 
 class SecondProfileVCTableViewCell: UITableViewCell {
+    public static var identifier : String {
+        get {
+            return "ProfileView2ndCell"
+        }
+    }
+    
+    public static func register() -> UINib {
+        UINib(nibName: "ProfileView2ndCell" , bundle: nil)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

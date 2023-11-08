@@ -11,9 +11,10 @@ class DashboardTblCellViewModel {
     var id : Int
     var title : String
     var date : String
-    var rating : String
+    var rating : String 
     var imageUrl : URL?
     var overview : String
+    var language : String
     
     init(movie : Movie)
     {
@@ -22,11 +23,12 @@ class DashboardTblCellViewModel {
         self.title = movie.title ?? movie.name ?? ""
         self.date = movie.releaseDate ?? movie.firstAirDate ?? ""
         self.rating =  "\(movie.voteAverage)/10"
+        self.language = "\(movie.originalLanguage)"
         self.imageUrl = makeImageURL(movie.posterPath ?? "")
     }
     
     private func makeImageURL(_ imageCode:String)->URL?
     {
-        return URL(string: "\(NetworkConstant.shared.imageServerAddress) \(imageCode)")
+        return URL(string: "\(NetworkConstant.shared.imageServerAddress)\(imageCode)")
     }
 }

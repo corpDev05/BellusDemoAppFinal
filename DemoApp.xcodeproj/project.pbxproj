@@ -14,6 +14,7 @@
 		835EDFBE2AEB9E3200B9A5D1 /* SearchResTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EDFBC2AEB9E3200B9A5D1 /* SearchResTblViewCell.swift */; };
 		835EDFBF2AEB9E3200B9A5D1 /* SearchResTblViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835EDFBD2AEB9E3200B9A5D1 /* SearchResTblViewCell.xib */; };
 		835EEDCE2AFA14F5006C4881 /* DashboardTblCellViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EEDCD2AFA14F5006C4881 /* DashboardTblCellViewModel .swift */; };
+		835EEDD52AFA2226006C4881 /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EEDD42AFA2226006C4881 /* LazyImageView.swift */; };
 		8360B2822AF11D8B00206C72 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360B2812AF11D8B00206C72 /* NetworkConstant.swift */; };
 		8360B2852AF121B000206C72 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360B2842AF121B000206C72 /* ApiCaller.swift */; };
 		8360B2882AF1235600206C72 /* DashboardTblCellApiResponseModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360B2872AF1235600206C72 /* DashboardTblCellApiResponseModal.swift */; };
@@ -57,6 +58,7 @@
 		835EDFBC2AEB9E3200B9A5D1 /* SearchResTblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResTblViewCell.swift; sourceTree = "<group>"; };
 		835EDFBD2AEB9E3200B9A5D1 /* SearchResTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResTblViewCell.xib; sourceTree = "<group>"; };
 		835EEDCD2AFA14F5006C4881 /* DashboardTblCellViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardTblCellViewModel .swift"; sourceTree = "<group>"; };
+		835EEDD42AFA2226006C4881 /* LazyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyImageView.swift; sourceTree = "<group>"; };
 		8360B2812AF11D8B00206C72 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		8360B2842AF121B000206C72 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		8360B2872AF1235600206C72 /* DashboardTblCellApiResponseModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTblCellApiResponseModal.swift; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		835EEDD32AFA2208006C4881 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				835EEDD42AFA2226006C4881 /* LazyImageView.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		8365186D2AC57E1E0077EA52 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				83A0EDAA2ACFCA4A001CB1A3 /* SideMenuSetup.swift */,
-				8376FA382ADD6F2100D1F188 /* SecondProfileVCTableViewCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -240,6 +249,7 @@
 		83F82B332AC19998001A9116 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				835EEDD32AFA2208006C4881 /* Constants */,
 				838D4D512AD57E5400B29DCF /* Protocols */,
 				8390F0A72AC40CBC007F3E26 /* Delegates */,
 				8390F0A92AC429F9007F3E26 /* Font */,
@@ -262,6 +272,7 @@
 				83F82B382AC19999001A9116 /* LoginPageController.swift */,
 				836518702AC57EDA0077EA52 /* Classes */,
 				836518722AC580660077EA52 /* DashboardViewController.swift */,
+				8376FA382ADD6F2100D1F188 /* SecondProfileVCTableViewCell.swift */,
 				83B5AC9A2ACBF4DD00F10593 /* DashboardViewController+TableView.swift */,
 				83B5ACA42ACC29B700F10593 /* DashboardTableViewCell.swift */,
 				8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */,
@@ -429,6 +440,7 @@
 				83B5ACA12ACC207200F10593 /* DashboardViewModel.swift in Sources */,
 				835EEDCE2AFA14F5006C4881 /* DashboardTblCellViewModel .swift in Sources */,
 				83A0EDBC2AD01642001CB1A3 /* ProfileViewModel.swift in Sources */,
+				835EEDD52AFA2226006C4881 /* LazyImageView.swift in Sources */,
 				835EDFBA2AEB9CDA00B9A5D1 /* SearchEmpVC + TblView.swift in Sources */,
 				8360B28B2AF1311000206C72 /* EmployeeSearchModel.swift in Sources */,
 				83A0EDAB2ACFCA4A001CB1A3 /* SideMenuSetup.swift in Sources */,

@@ -35,6 +35,7 @@ extension  DashboardViewController : UITableViewDelegate,UITableViewDataSource {
         dashboardTableView.dataSource = self
         dashboardTableView.backgroundColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 0.8)
       //dashboardTableView.estimatedRowHeight = 480.0
+        dashboardTableView.estimatedRowHeight = UITableView.automaticDimension
         self.registerCells()
     }
     
@@ -77,6 +78,10 @@ extension  DashboardViewController : UITableViewDelegate,UITableViewDataSource {
             return cell
         }*/
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+          500
     }
     
     

@@ -50,6 +50,10 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
     }
     
     func registerCells(){
+      
+        let customTableViewCellNib1 = UINib(nibName: "SecondProfileVCTableViewCell", bundle: nil)
+           profileTable.register(customTableViewCellNib1, forCellReuseIdentifier: "ProfileView2ndCell")
+        
         let customTableViewCellNib = UINib(nibName: "ProfileVCTableViewCell", bundle: nil)
            profileTable.register(customTableViewCellNib, forCellReuseIdentifier: "profileTblCell")
     }
@@ -761,7 +765,9 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 return cell
         }
          else if indexPath.row == 1 {
-            cell.contView.backgroundColor = UIColor(displayP3Red: 214/255, green: 241/255, blue: 242/255, alpha: 1.0)
+            //let cell = profileTable.dequeueReusableCell(withIdentifier: "ProfileView2ndCell", for: indexPath) as! SecondProfileVCTableViewCell
+
+           // cell.contView.backgroundColor = UIColor(displayP3Red: 214/255, green: 241/255, blue: 242/255, alpha: 1.0)
             //cell.shadowTrailingConst.constant = 10
             //cell.shadowLeadingConst.constant = 10
             cell.infoTextField.isEditable = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
@@ -779,7 +785,7 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.cellTopDistConst.constant = 0
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
-                cell.editBtn.isHidden = true
+                cell.editBtn.isHidden = true 
                 return cell
             }
             else if indexPath.row == 2 {
