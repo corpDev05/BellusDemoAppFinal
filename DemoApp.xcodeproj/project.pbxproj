@@ -10,6 +10,7 @@
 		832374B12ACD98E900A73272 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832374B02ACD98E900A73272 /* PostModel.swift */; };
 		8326ADFE2AC6FF9100AA0CEC /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */; };
 		835887C92ADE569A00C07C02 /* SearchEmpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835887C82ADE569A00C07C02 /* SearchEmpViewController.swift */; };
+		835EDEAB2B0F4D5200CE706E /* EmployeeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EDEAA2B0F4D5200CE706E /* EmployeeManager.swift */; };
 		835EDFBA2AEB9CDA00B9A5D1 /* SearchEmpVC + TblView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EDFB92AEB9CDA00B9A5D1 /* SearchEmpVC + TblView.swift */; };
 		835EDFBE2AEB9E3200B9A5D1 /* SearchResTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EDFBC2AEB9E3200B9A5D1 /* SearchResTblViewCell.swift */; };
 		835EDFBF2AEB9E3200B9A5D1 /* SearchResTblViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835EDFBD2AEB9E3200B9A5D1 /* SearchResTblViewCell.xib */; };
@@ -20,6 +21,8 @@
 		8360B2882AF1235600206C72 /* DashboardTblCellApiResponseModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360B2872AF1235600206C72 /* DashboardTblCellApiResponseModal.swift */; };
 		8360B28B2AF1311000206C72 /* EmployeeSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360B28A2AF1311000206C72 /* EmployeeSearchModel.swift */; };
 		8360B28E2AF131DF00206C72 /* SearchEmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360B28D2AF131DF00206C72 /* SearchEmployeeViewModel.swift */; };
+		83644E812B0E27BC00C200B6 /* EmployeeDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83644E802B0E27BC00C200B6 /* EmployeeDataRepository.swift */; };
+		83644E842B0E2FDA00C200B6 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83644E832B0E2FDA00C200B6 /* Employee.swift */; };
 		836518732AC580660077EA52 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836518722AC580660077EA52 /* DashboardViewController.swift */; };
 		8371FC4A2AF3CAF400006E36 /* APIResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8371FC492AF3CAF400006E36 /* APIResultModel.swift */; };
 		8376FA3A2ADD6F2100D1F188 /* SecondProfileVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8376FA382ADD6F2100D1F188 /* SecondProfileVCTableViewCell.swift */; };
@@ -38,6 +41,9 @@
 		83B5ACA12ACC207200F10593 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5ACA02ACC207200F10593 /* DashboardViewModel.swift */; };
 		83B5ACA62ACC29B700F10593 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5ACA42ACC29B700F10593 /* DashboardTableViewCell.swift */; };
 		83B5ACA72ACC29B700F10593 /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83B5ACA52ACC29B700F10593 /* DashboardTableViewCell.xib */; };
+		83CECFE52B0CDD3200E8664F /* Employee+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CECFE42B0CDD3200E8664F /* Employee+CoreDataClass.swift */; };
+		83CECFE82B0CDD3800E8664F /* Employee+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CECFE72B0CDD3800E8664F /* Employee+CoreDataProperties.swift */; };
+		83CECFEB2B0CDD6F00E8664F /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CECFEA2B0CDD6F00E8664F /* PersistentStorage.swift */; };
 		83F82B352AC19999001A9116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F82B342AC19999001A9116 /* AppDelegate.swift */; };
 		83F82B372AC19999001A9116 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F82B362AC19999001A9116 /* SceneDelegate.swift */; };
 		83F82B392AC19999001A9116 /* LoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F82B382AC19999001A9116 /* LoginPageController.swift */; };
@@ -54,6 +60,7 @@
 		832374B02ACD98E900A73272 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		835887C82ADE569A00C07C02 /* SearchEmpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEmpViewController.swift; sourceTree = "<group>"; };
+		835EDEAA2B0F4D5200CE706E /* EmployeeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeManager.swift; sourceTree = "<group>"; };
 		835EDFB92AEB9CDA00B9A5D1 /* SearchEmpVC + TblView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchEmpVC + TblView.swift"; sourceTree = "<group>"; };
 		835EDFBC2AEB9E3200B9A5D1 /* SearchResTblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResTblViewCell.swift; sourceTree = "<group>"; };
 		835EDFBD2AEB9E3200B9A5D1 /* SearchResTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResTblViewCell.xib; sourceTree = "<group>"; };
@@ -64,6 +71,8 @@
 		8360B2872AF1235600206C72 /* DashboardTblCellApiResponseModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTblCellApiResponseModal.swift; sourceTree = "<group>"; };
 		8360B28A2AF1311000206C72 /* EmployeeSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSearchModel.swift; sourceTree = "<group>"; };
 		8360B28D2AF131DF00206C72 /* SearchEmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEmployeeViewModel.swift; sourceTree = "<group>"; };
+		83644E802B0E27BC00C200B6 /* EmployeeDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDataRepository.swift; sourceTree = "<group>"; };
+		83644E832B0E2FDA00C200B6 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		836518722AC580660077EA52 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		8371FC492AF3CAF400006E36 /* APIResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResultModel.swift; sourceTree = "<group>"; };
 		8376FA382ADD6F2100D1F188 /* SecondProfileVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondProfileVCTableViewCell.swift; sourceTree = "<group>"; };
@@ -100,6 +109,9 @@
 		83B5ACA02ACC207200F10593 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		83B5ACA42ACC29B700F10593 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
 		83B5ACA52ACC29B700F10593 /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
+		83CECFE42B0CDD3200E8664F /* Employee+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataClass.swift"; sourceTree = "<group>"; };
+		83CECFE72B0CDD3800E8664F /* Employee+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Employee+CoreDataProperties.swift"; path = "/Users/bellubis-ws29/BellusDemoAppFinal/DemoApp/CoreData/Employee+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		83CECFEA2B0CDD6F00E8664F /* PersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
 		83F82B312AC19998001A9116 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F82B342AC19999001A9116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83F82B362AC19999001A9116 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,12 +153,28 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		835EDEA92B0F4D3100CE706E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				835EDEAA2B0F4D5200CE706E /* EmployeeManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		835EEDD32AFA2208006C4881 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				835EEDD42AFA2226006C4881 /* LazyImageView.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		83644E7F2B0E274600C200B6 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				83644E802B0E27BC00C200B6 /* EmployeeDataRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		8365186D2AC57E1E0077EA52 /* Networking */ = {
@@ -228,6 +256,16 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		83CECFE32B0CDC7700E8664F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				83CECFE72B0CDD3800E8664F /* Employee+CoreDataProperties.swift */,
+				83CECFE42B0CDD3200E8664F /* Employee+CoreDataClass.swift */,
+				83CECFEA2B0CDD6F00E8664F /* PersistentStorage.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		83F82B282AC19998001A9116 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +287,9 @@
 		83F82B332AC19998001A9116 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				835EDEA92B0F4D3100CE706E /* Manager */,
+				83644E7F2B0E274600C200B6 /* Repository */,
+				83CECFE32B0CDC7700E8664F /* CoreData */,
 				835EEDD32AFA2208006C4881 /* Constants */,
 				838D4D512AD57E5400B29DCF /* Protocols */,
 				8390F0A72AC40CBC007F3E26 /* Delegates */,
@@ -295,6 +336,7 @@
 				8360B2872AF1235600206C72 /* DashboardTblCellApiResponseModal.swift */,
 				8360B28A2AF1311000206C72 /* EmployeeSearchModel.swift */,
 				8371FC492AF3CAF400006E36 /* APIResultModel.swift */,
+				83644E832B0E2FDA00C200B6 /* Employee.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -431,9 +473,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				837827E42AD404560084F044 /* ProfileCellModel.swift in Sources */,
+				83644E842B0E2FDA00C200B6 /* Employee.swift in Sources */,
+				835EDEAB2B0F4D5200CE706E /* EmployeeManager.swift in Sources */,
 				83F82B392AC19999001A9116 /* LoginPageController.swift in Sources */,
 				8326ADFE2AC6FF9100AA0CEC /* SideMenuTableViewController.swift in Sources */,
 				8360B2882AF1235600206C72 /* DashboardTblCellApiResponseModal.swift in Sources */,
+				83CECFE82B0CDD3800E8664F /* Employee+CoreDataProperties.swift in Sources */,
 				83F82B352AC19999001A9116 /* AppDelegate.swift in Sources */,
 				8360B2822AF11D8B00206C72 /* NetworkConstant.swift in Sources */,
 				83AAA9A42ACEDA4E00DA58B7 /* ProfileViewVC.swift in Sources */,
@@ -445,6 +490,7 @@
 				8360B28B2AF1311000206C72 /* EmployeeSearchModel.swift in Sources */,
 				83A0EDAB2ACFCA4A001CB1A3 /* SideMenuSetup.swift in Sources */,
 				8376FA3A2ADD6F2100D1F188 /* SecondProfileVCTableViewCell.swift in Sources */,
+				83CECFEB2B0CDD6F00E8664F /* PersistentStorage.swift in Sources */,
 				838D4D532AD57E8700B29DCF /* Protocols.swift in Sources */,
 				8360B28E2AF131DF00206C72 /* SearchEmployeeViewModel.swift in Sources */,
 				83B5ACA62ACC29B700F10593 /* DashboardTableViewCell.swift in Sources */,
@@ -457,6 +503,8 @@
 				835887C92ADE569A00C07C02 /* SearchEmpViewController.swift in Sources */,
 				8360B2852AF121B000206C72 /* ApiCaller.swift in Sources */,
 				83F82B372AC19999001A9116 /* SceneDelegate.swift in Sources */,
+				83CECFE52B0CDD3200E8664F /* Employee+CoreDataClass.swift in Sources */,
+				83644E812B0E27BC00C200B6 /* EmployeeDataRepository.swift in Sources */,
 				83B5AC9B2ACBF4DD00F10593 /* DashboardViewController+TableView.swift in Sources */,
 				83A0EDAF2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift in Sources */,
 				832374B12ACD98E900A73272 /* PostModel.swift in Sources */,

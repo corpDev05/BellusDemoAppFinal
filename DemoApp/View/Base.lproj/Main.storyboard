@@ -434,6 +434,9 @@
                                                 <state key="normal" title="Search">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="searchBtnclk:" destination="Ocf-yw-Erm" eventType="touchUpInside" id="zA5-YC-jJq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.035294117649999998" green="0.37647058820000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -482,6 +485,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nameTxtField" destination="H6z-Pc-hU3" id="AjV-oT-xpn"/>
                         <outlet property="searchResultTbl" destination="2as-Q2-izV" id="Ats-9n-U0z"/>
                         <outlet property="searchView" destination="8cG-e8-ZxI" id="uIg-Ov-C3X"/>
                         <outlet property="topView" destination="css-ny-9e1" id="Oem-kD-6lo"/>

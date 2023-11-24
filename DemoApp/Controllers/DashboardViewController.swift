@@ -22,8 +22,30 @@ class DashboardViewController: UIViewController{
         setupSideControllerMenu()
         setupNavBar()
         bindViewModel()
+        //createEmployee()
+        fetchEmployee()
         
-        
+    }
+    
+    func createEmployee() {
+        let employee = Employee(context: PersistentStorage.shared.context)
+        employee.name = "John Doe"
+        employee.designation = "UI/UX Designer"
+        employee.email = "johnDoe@bellurbis.com"
+        employee.contactNo = 7983253849
+        PersistentStorage.shared.saveContext()
+    }
+    
+    func fetchEmployee()
+    {
+        do {
+            guard let result = try PersistentStorage.shared.context.fetch(Employee.fetchRequest()) as? [Employee] else {return}
+            
+            result.forEach({debugPrint("\($0.name) \($0.designation) \($0.email) \($0.contactNo)")})
+        }
+         catch let error{
+            debugPrint(error)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
