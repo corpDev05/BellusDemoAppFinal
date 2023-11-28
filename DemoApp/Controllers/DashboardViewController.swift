@@ -13,6 +13,7 @@ class DashboardViewController: UIViewController{
     var menu : SideMenuNavigationController?
    // @IBOutlet var activityIndicator: UIActivityIndicatorView!
     var cellDataSource : [DashboardTblCellViewModel] = []
+    let manager : EmployeeManager = EmployeeManager()
     
     @IBOutlet var dashboardTableView: UITableView!
     var dashboardViewModel : DashboardViewModel = DashboardViewModel()
@@ -23,8 +24,12 @@ class DashboardViewController: UIViewController{
         setupNavBar()
         bindViewModel()
         //createEmployee()
-        fetchEmployee()
-        
+        //fetchEmployee()
+        deleteRecord()
+    }
+ 
+    func deleteRecord(){
+        manager.deleteAll()
     }
     
     func createEmployee() {
@@ -36,7 +41,7 @@ class DashboardViewController: UIViewController{
         PersistentStorage.shared.saveContext()
     }
     
-    func fetchEmployee()
+    /*func fetchEmployee()
     {
         do {
             guard let result = try PersistentStorage.shared.context.fetch(Employee.fetchRequest()) as? [Employee] else {return}
@@ -46,7 +51,7 @@ class DashboardViewController: UIViewController{
          catch let error{
             debugPrint(error)
         }
-    }
+    }*/
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

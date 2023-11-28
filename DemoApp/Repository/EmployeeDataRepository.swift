@@ -17,9 +17,10 @@ protocol EmployeeRepository {
 
     func create(employees: Employees)
     func getAll() -> [Employees]?
-    func get(byName name: String) -> Employees?
+    func get(byName name: String) -> [Employees]?
     func update(employees: Employees) -> Bool
     func delete(record: Employees) -> Bool
+    func deleteAll()
 }
 
 struct EmployeeDataRepository : EmployeeRepository
@@ -41,15 +42,26 @@ struct EmployeeDataRepository : EmployeeRepository
         return employees
     }
     
-    func get(byName name: String) -> Employees? {
+    func get(byName name: String) -> [Employees]? {
+        var emplRes : [Employees] = []
         let fetchRequest = NSFetchRequest<Employee>(entityName: "Employee")
-        let predicate = NSPredicate(format: "%K == %@",argumentArray: ["name",name]/*name as CVarArg*/)
-        
-        fetchRequest.predicate = predicate
+       // let predicate = NSPredicate(format: "%K == %@",argumentArray: ["name",name]/*name as CVarArg*/)
+        //fetchRequest = Employee.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "name CONTAINS %@", "\(name)")
         do {
-            let result = try PersistentStorage.shared.context.fetch(fetchRequest).first
+            let result = try PersistentStorage.shared.context.fetch(fetchRequest)
             guard result != nil else{return nil}
-            return result?.convertToEmployee()
+            /*for res in result {
+                emplRes.insert(res.convertToEmployee(), at: emplRes.count)
+            }*/
+            print("Inside Search Function")
+            print("\(result.count)")
+            for res in result{
+             //res.convertToEmployee()
+                print("\(res.name)")
+             emplRes.append(res.convertToEmployee())
+            }
+            return emplRes
         } catch let error {
             debugPrint(error)
         }
@@ -73,6 +85,19 @@ struct EmployeeDataRepository : EmployeeRepository
         PersistentStorage.shared.context.delete(employee!)
         return true
         
+    }
+    func deleteAll(){
+        //let context = ( UIApplication.shared.delegate as! AppDelegate ).persistentContainer.viewContext
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Employee")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        do{
+            try PersistentStorage.shared.context.execute(deleteRequest)
+                   try PersistentStorage.shared.context.save()
+               }
+               catch
+               {
+                   print ("There was an error")
+               }
     }
     private func getEmployee(byName name : String) -> Employee?{
         let fetchRequest = NSFetchRequest<Employee>(entityName: "Employee")

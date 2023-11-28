@@ -20,7 +20,7 @@ class SearchEmpViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var searchResultTbl: UITableView!
     
     private let manager = EmployeeManager()
-    var tblViewHeaderText : String = "Found 0 result"
+    var tblViewHeaderText : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +66,9 @@ class SearchEmpViewController: UIViewController,UITextFieldDelegate {
             return
         }
         print("Found results")
+        print(result.count)
         print(result)
+        reloadTable(result: result)
     }
     
     

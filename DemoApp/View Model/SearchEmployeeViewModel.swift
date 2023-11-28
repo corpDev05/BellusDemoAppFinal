@@ -9,8 +9,15 @@
 import Foundation
 
 class SearchEmployeeViewModel {
-    var employeeSearchModel : [EmployeeSearchModel] = [EmployeeSearchModel(name: "John Doe", designation: "Associate UI/UX", email: "johnDoe@gmail.com", contactNo: 8374658282),EmployeeSearchModel(name: "John", designation: "Backend Developer", email: "john@gmail.com", contactNo: 893456867934),EmployeeSearchModel(name: "Max Doe", designation: "Frontend Developer", email: "max@gmail.com", contactNo: 9893674568),EmployeeSearchModel(name: "Peter Doe", designation: "iOS Developer", email: "peter@gmail.com", contactNo: 7812345678)]
-    
+    var employeeSearchModel : [Employees] = []
+    /*public init(employeeRes : [Employees]?)
+    {
+        guard employeeRes != nil else {
+            employeeSearchModel = []
+            return
+        }
+        self.employee = employeeRes
+    }*/
     
     func getData(){
         APICaller.getTrendingMovies { (result) in

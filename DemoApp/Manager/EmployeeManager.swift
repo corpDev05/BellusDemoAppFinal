@@ -18,7 +18,7 @@ struct EmployeeManager {
     func fetchEmployee() -> [Employees]?{
         return _employeeDataRepository.getAll()
     }
-    func fetchEmployee(byName name : String) -> Employees?
+    func fetchEmployee(byName name : String) -> [Employees]?
     {
         return _employeeDataRepository.get(byName: name)
     }
@@ -28,5 +28,8 @@ struct EmployeeManager {
     }
     func deleteEmployee(employee : Employees) -> Bool {
         return _employeeDataRepository.delete(record: employee)
+    }
+    func deleteAll(){
+        _employeeDataRepository.deleteAll()
     }
 }
