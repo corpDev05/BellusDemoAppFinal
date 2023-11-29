@@ -19,6 +19,20 @@ class SecondProfileVCTableViewCell: UITableViewCell {
         UINib(nibName: "ProfileView2ndCell" , bundle: nil)
     }
 
+    @IBOutlet var projectNameLbl: UILabel!
+    
+    @IBOutlet var organizationNameLbl: UILabel!
+    
+    @IBOutlet var rolesAndResponsLbl: UILabel!
+    
+    @IBOutlet var cellHeight: NSLayoutConstraint!
+    
+    @IBOutlet var cell2View: UIView!
+    
+    @IBOutlet var borderCell: UIView!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

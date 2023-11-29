@@ -30,6 +30,7 @@
 		837827E42AD404560084F044 /* ProfileCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837827E32AD404560084F044 /* ProfileCellModel.swift */; };
 		838A840A2AEFD1D100F8B41E /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838A84092AEFD1D100F8B41E /* Observable.swift */; };
 		838D4D532AD57E8700B29DCF /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D4D522AD57E8700B29DCF /* Protocols.swift */; };
+		8395C7052B1750E800390031 /* SecondProfileCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8395C7042B1750E800390031 /* SecondProfileCellModel.swift */; };
 		83A0EDAB2ACFCA4A001CB1A3 /* SideMenuSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0EDAA2ACFCA4A001CB1A3 /* SideMenuSetup.swift */; };
 		83A0EDAF2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A0EDAD2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift */; };
 		83A0EDB02ACFE731001CB1A3 /* ProfileVCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A0EDAE2ACFE731001CB1A3 /* ProfileVCTableViewCell.xib */; };
@@ -98,6 +99,7 @@
 		8390F0B92AC42A4E007F3E26 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		8390F0BA2AC42A4F007F3E26 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		8390F0BB2AC42A4F007F3E26 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		8395C7042B1750E800390031 /* SecondProfileCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondProfileCellModel.swift; sourceTree = "<group>"; };
 		83A0EDAA2ACFCA4A001CB1A3 /* SideMenuSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuSetup.swift; sourceTree = "<group>"; };
 		83A0EDAD2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCTableViewCell.swift; sourceTree = "<group>"; };
 		83A0EDAE2ACFE731001CB1A3 /* ProfileVCTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVCTableViewCell.xib; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				8360B28A2AF1311000206C72 /* EmployeeSearchModel.swift */,
 				8371FC492AF3CAF400006E36 /* APIResultModel.swift */,
 				83644E832B0E2FDA00C200B6 /* Employee.swift */,
+				8395C7042B1750E800390031 /* SecondProfileCellModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				8326ADFE2AC6FF9100AA0CEC /* SideMenuTableViewController.swift in Sources */,
 				8360B2882AF1235600206C72 /* DashboardTblCellApiResponseModal.swift in Sources */,
 				83CECFE82B0CDD3800E8664F /* Employee+CoreDataProperties.swift in Sources */,
+				8395C7052B1750E800390031 /* SecondProfileCellModel.swift in Sources */,
 				83F82B352AC19999001A9116 /* AppDelegate.swift in Sources */,
 				8360B2822AF11D8B00206C72 /* NetworkConstant.swift in Sources */,
 				83AAA9A42ACEDA4E00DA58B7 /* ProfileViewVC.swift in Sources */,

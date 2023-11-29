@@ -107,7 +107,7 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
        // print(obj)
         if obj == true
         {
-            var count =  profileViewModel.profileVCModel[0].data[section].array.count
+            var count =  profileViewModel.profileCell2Model.count + 1
            // print(count)
             return count
         }
@@ -169,7 +169,6 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
         let cell = profileTable.dequeueReusableCell(withIdentifier: "profileTblCell", for: indexPath) as! ProfileVCTableViewCell
         cell.delegate = self
         cell.editDelegate = self
-     
         if indexPath.section == 0
         {
           //  cell.editDelegate = self
@@ -729,17 +728,21 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
         }
         else if indexPath.section == 3 {
             //cell.editDelegate = self
+            let cell1 =  profileTable.dequeueReusableCell(withIdentifier: "ProfileView2ndCell") as! SecondProfileVCTableViewCell
             if indexPath.row == 0 {
                 cell.section = indexPath.section
                 cell.titleText.text = profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
                 cell.dropButton.isHidden = false
                // self.profileTable.rowHeight = 70.0
                 //self.profileTable.rowHeight = UITableView.automaticDimension
-                cell.cellHeight.constant = 70.0
+               // cell.cellHeight.constant = 70.0
                 //cell.infoView.isHidden = true
                 cell.descriptionBottmConst.isActive = false
                 if profileViewModel.profileVCModel[0].data[indexPath.section].isExpandable == true
                 {
+                    
+                    
+                  
                     cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
                     cell.shadowView.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
                     cell.shadowBttmConst.constant = 0
@@ -748,6 +751,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                     cell.cellTopDistConst.constant = 0
                     cell.contView.layer.cornerRadius = 0
                     cell.editBtn.isHidden = true
+                    cell.cellHeight.constant = 70.0
+                    return cell
                     
                 }
                 else{
@@ -761,10 +766,43 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                     cell.contView.layer.cornerRadius = 8.0
                    self.profileTable.rowHeight = UITableView.automaticDimension
                     cell.editBtn.isHidden = true
+                    return cell
                 }
-                return cell
+                //return cell
         }
-         else if indexPath.row == 1 {
+            else if indexPath.row == 1{
+                cell1.borderCell.layer.borderWidth = 2.0
+                cell1.borderCell.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
+                cell1.cellHeight.constant = 216.0
+                cell1.organizationNameLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].orgName
+                cell1.projectNameLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].pojectName
+                cell1.rolesAndResponsLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].rolesAndResponsibilities[0]
+                return cell1
+                
+            }
+            else if indexPath.row == 2{
+                cell1.borderCell.layer.borderWidth = 2.0
+                cell1.borderCell.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
+                cell1.cellHeight.constant = 216.0
+                cell1.organizationNameLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].orgName
+                cell1.projectNameLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].pojectName
+                cell1.rolesAndResponsLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].rolesAndResponsibilities[0]
+                return cell1
+                
+            }
+            else if indexPath.row == 3{
+                cell1.borderCell.layer.borderWidth = 2.0
+                cell1.borderCell.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
+                //cell.cellHeight.constant = 216
+                cell1.cellHeight.constant = 216.0
+                cell1.organizationNameLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].orgName
+                cell1.projectNameLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].pojectName
+                cell1.rolesAndResponsLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].rolesAndResponsibilities[0]
+                return cell1
+                
+            }
+            
+        /* else if indexPath.row == 1 {
             //let cell = profileTable.dequeueReusableCell(withIdentifier: "ProfileView2ndCell", for: indexPath) as! SecondProfileVCTableViewCell
 
            // cell.contView.backgroundColor = UIColor(displayP3Red: 214/255, green: 241/255, blue: 242/255, alpha: 1.0)
@@ -865,7 +903,33 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 return cell
             }
             else if indexPath.row == 6 {
-                cell.infoTextField.isEditable = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
+                cell.cellHeight.constant = 120.0
+               //cell.contView.isHidden = false
+                cell.infoTextField.isHidden = true
+                cell.dropButton.isHidden = true
+                cell.descriptionBottmConst.isActive = true
+                cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
+                cell.shadowView.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
+                
+               //cell.editBtn.isUserInteractionEnabled = true
+                cell.editBtn.isHidden = false
+                cell.section = indexPath.section
+                cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                cell.editBtn.titleLabel?.text = "Edit Information"
+                cell.editBtn.titleLabel?.textColor = .white
+                //cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                cell.shadowBttmConst.constant = 2
+                cell.shadowTopConst.constant = 0
+                cell.cellBottomDistConst.constant = 0
+                cell.cellTopDistConst.constant = 0
+                cell.contView.layer.cornerRadius = 0
+                cell.titleText.text = ""
+                
+              //  cell.shadowView.isHidden = true
+               // cell.shadowView.isOpaque = true
+          
+                return cell
+                /*cell.infoTextField.isEditable = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
                 cell.cellHeight.constant = 100.0
                 cell.infoTextField.isHidden = false
                 cell.titleText.text = profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
@@ -881,9 +945,9 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
-                return cell
+                return cell*/
             }
-            else if indexPath.row == 6 {
+            else if indexPath.row == 6{
                 
                 cell.cellHeight.constant = 120.0
                //cell.contView.isHidden = false
@@ -911,7 +975,7 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                // cell.shadowView.isOpaque = true
           
                 return cell
-            }
+            }*/
         }
         else if indexPath.section == 4 {
             cell.editDelegate = self

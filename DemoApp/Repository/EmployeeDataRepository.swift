@@ -37,7 +37,6 @@ struct EmployeeDataRepository : EmployeeRepository
     func getAll() -> [Employees]? {
         let result = PersistentStorage.shared.fetchManagedObject(managedObject: Employee.self)
         var employees : [Employees] = []
-        
         result?.forEach({(employee) in employees.append(employee.convertToEmployee())} )
         return employees
     }
@@ -47,7 +46,7 @@ struct EmployeeDataRepository : EmployeeRepository
         let fetchRequest = NSFetchRequest<Employee>(entityName: "Employee")
        // let predicate = NSPredicate(format: "%K == %@",argumentArray: ["name",name]/*name as CVarArg*/)
         //fetchRequest = Employee.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "name CONTAINS %@", "\(name)")
+        fetchRequest.predicate = NSPredicate(format: "name CONTAINS [C]%@", "\(name)")
         do {
             let result = try PersistentStorage.shared.context.fetch(fetchRequest)
             guard result != nil else{return nil}
