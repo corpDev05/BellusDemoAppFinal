@@ -42,6 +42,10 @@
                                                             <constraint firstAttribute="width" constant="120" id="0gb-MS-Owt"/>
                                                             <constraint firstAttribute="height" constant="50" id="8xm-Zh-Bar"/>
                                                         </constraints>
+                                                        <state key="normal" title="Cancel"/>
+                                                        <connections>
+                                                            <action selector="CancelBtnTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ou1-Uk-2ze"/>
+                                                        </connections>
                                                     </button>
                                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWg-C0-IsE" userLabel="Save">
                                                         <rect key="frame" x="192" y="20" width="120" height="50"/>
@@ -50,6 +54,12 @@
                                                             <constraint firstAttribute="height" constant="50" id="LlE-PI-nyg"/>
                                                             <constraint firstAttribute="width" constant="120" id="SlP-3G-OKs"/>
                                                         </constraints>
+                                                        <state key="normal" title="Save">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="SaveBtnTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VAa-l5-q0k"/>
+                                                        </connections>
                                                     </button>
                                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ngx-Nh-C5H">
                                                         <rect key="frame" x="20" y="20" width="300" height="50"/>

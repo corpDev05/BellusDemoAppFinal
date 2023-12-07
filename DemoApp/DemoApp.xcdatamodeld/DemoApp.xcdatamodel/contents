@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H2026" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDAcademicInfo" representedClassName="CDAcademicInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="course" optional="YES" attributeType="String"/>
+        <attribute name="specialization" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="CDCurrentProject" representedClassName="CDCurrentProject" syncable="YES" codeGenerationType="class">
+        <attribute name="projectName" optional="YES" attributeType="String"/>
+        <attribute name="reportingManager" optional="YES" attributeType="String"/>
+        <attribute name="rolesResp" optional="YES" attributeType="Transformable" customClassName="[NSString]"/>
+    </entity>
+    <entity name="CDInterestNHobbies" representedClassName="CDInterestNHobbies" syncable="YES" codeGenerationType="class">
+        <attribute name="interestName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="CDPersonalInformation" representedClassName="CDPersonalInformation" syncable="YES" codeGenerationType="class">
+        <attribute name="bio" optional="YES" attributeType="String"/>
+        <attribute name="contactNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dateOfBirth" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="department" optional="YES" attributeType="String"/>
+        <attribute name="designation" optional="YES" attributeType="String"/>
+        <attribute name="emailID" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="middleName" optional="YES" attributeType="String"/>
+        <attribute name="yearsOfExperience" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="CDPreviousExperience" representedClassName="CDPreviousExperience" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="organisation" optional="YES" attributeType="String"/>
+        <attribute name="roleRespons" optional="YES" attributeType="Transformable" customClassName="[NSString]"/>
+    </entity>
+    <entity name="CDSkillSet" representedClassName="CDSkillSet" syncable="YES" codeGenerationType="class">
+        <attribute name="skill" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="CDTrainingNCertificate" representedClassName="CDTrainingNCertificate" syncable="YES" codeGenerationType="class">
+        <attribute name="nameOfTraining" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Employee" representedClassName="Employee" syncable="YES">
         <attribute name="contactNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="designation" optional="YES" attributeType="String"/>
@@ -8,5 +43,12 @@
     </entity>
     <elements>
         <element name="Employee" positionX="-45" positionY="0" width="128" height="103"/>
+        <element name="CDPersonalInformation" positionX="-45" positionY="27" width="128" height="193"/>
+        <element name="CDSkillSet" positionX="-36" positionY="99" width="128" height="58"/>
+        <element name="CDCurrentProject" positionX="-18" positionY="108" width="128" height="88"/>
+        <element name="CDPreviousExperience" positionX="0" positionY="117" width="128" height="88"/>
+        <element name="CDAcademicInfo" positionX="18" positionY="126" width="128" height="73"/>
+        <element name="CDTrainingNCertificate" positionX="36" positionY="135" width="128" height="58"/>
+        <element name="CDInterestNHobbies" positionX="54" positionY="144" width="128" height="58"/>
     </elements>
 </model>

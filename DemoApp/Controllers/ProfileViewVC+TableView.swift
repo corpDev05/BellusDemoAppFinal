@@ -15,6 +15,7 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
         profileViewModel.profileVCModel[0].data[section].isEditable = editable
         var indexSet : IndexSet = [section]
         self.profileTable.reloadSections(indexSet, with: .automatic)
+       //self.profileTable.reloadData()
     }
     func profileTVCell(_ section : Int, _ boolDrop: Bool){
        // print(boolDrop)
@@ -107,7 +108,7 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
        // print(obj)
         if obj == true
         {
-            var count =  profileViewModel.profileCell2Model.count + 1
+            var count =  profileViewModel.profileCell2Model.count + 2
            // print(count)
             return count
         }
@@ -193,6 +194,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.cellTopDistConst.constant = 0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 
             }
             else{
@@ -206,6 +209,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.contView.layer.cornerRadius = 8.0
                self.profileTable.rowHeight = UITableView.automaticDimension
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 
             }
             return cell
@@ -230,6 +235,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             cell.shadowView.layer.cornerRadius = 0.0
             cell.contView.layer.cornerRadius = 0
             cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
             cell.infoTextField.isHidden = false
                 return cell
             }
@@ -249,6 +256,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 cell.infoTextField.isHidden = false
                 return cell
             }
@@ -268,6 +277,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 cell.infoTextField.isHidden = false
                 return cell
             }
@@ -288,6 +299,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 5 {
@@ -307,6 +320,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 6 {
@@ -326,6 +341,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 7 {
@@ -345,6 +362,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 8 {
@@ -364,6 +383,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 9 {
@@ -383,6 +404,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 10 {
@@ -404,6 +427,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 11 {
@@ -417,17 +442,54 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
                 
                //cell.editBtn.isUserInteractionEnabled = true
-                cell.editBtn.isHidden = false
-                cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
-                cell.editBtn.titleLabel?.text = "Edit Information"
-                cell.editBtn.titleLabel?.textColor = .white
-                //cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
-                cell.shadowBttmConst.constant = 2
-                cell.shadowTopConst.constant = 0
-                cell.cellBottomDistConst.constant = 0
-                cell.cellTopDistConst.constant = 0
-                cell.contView.layer.cornerRadius = 0
-                cell.titleText.text = ""
+                cell.editBtn.isHidden = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
+                if cell.editBtn.isHidden == false {
+                    cell.cancelBtn.isHidden = true
+                    cell.saveBtn.isHidden = true
+                    cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.editBtn.titleLabel?.text = "Edit Information"
+                    cell.editBtn.titleLabel?.textColor = .white
+                    //cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.shadowBttmConst.constant = 2
+                    cell.shadowTopConst.constant = 0
+                    cell.cellBottomDistConst.constant = 0
+                    cell.cellTopDistConst.constant = 0
+                    cell.contView.layer.cornerRadius = 0
+                    cell.titleText.text = ""
+                }
+                else {
+                    cell.saveBtn.isHidden = false
+                    cell.saveBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.saveBtn.titleLabel?.text = "Save"
+                    cell.saveBtn.titleLabel?.textColor = .white
+                    //cell.saveBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    
+                    cell.cancelBtn.isHidden = false
+                    cell.cancelBtn.backgroundColor = .white
+                    cell.cancelBtn.layer.borderWidth = 2.0
+                    cell.cancelBtn.layer.borderColor = CGColor(red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.cancelBtn.titleLabel?.text = "Cancel"
+                    cell.cancelBtn.titleLabel?.textColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                  //  cell.cancelBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.shadowBttmConst.constant = 2
+                    cell.shadowTopConst.constant = 0
+                    cell.cellBottomDistConst.constant = 0
+                    cell.cellTopDistConst.constant = 0
+                    cell.contView.layer.cornerRadius = 0
+                    cell.titleText.text = ""
+                   
+                    
+                }
+                //cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                //cell.editBtn.titleLabel?.text = "Edit Information"
+                //cell.editBtn.titleLabel?.textColor = .white
+                ////cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                //cell.shadowBttmConst.constant = 2
+                //cell.shadowTopConst.constant = 0
+                //cell.cellBottomDistConst.constant = 0
+                //cell.cellTopDistConst.constant = 0
+                //cell.contView.layer.cornerRadius = 0
+                //cell.titleText.text = ""
                 
               //  cell.shadowView.isHidden = true
                // cell.shadowView.isOpaque = true
@@ -439,9 +501,9 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
        
         else if indexPath.section == 1 {
          //   cell.editDelegate = self
+            cell.section = indexPath.section
             if indexPath.row == 0 {
                 
-                cell.section = indexPath.section
                 cell.titleText.text = profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
                 cell.dropButton.isHidden = false
             
@@ -460,6 +522,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                     cell.cellTopDistConst.constant = 0
                     cell.contView.layer.cornerRadius = 0
                     cell.editBtn.isHidden = true
+                    cell.saveBtn.isHidden = true
+                    cell.cancelBtn.isHidden = true
                     
                 }
                 else{
@@ -473,6 +537,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                     cell.contView.layer.cornerRadius = 8.0
                    self.profileTable.rowHeight = UITableView.automaticDimension
                     cell.editBtn.isHidden = true
+                    cell.saveBtn.isHidden = true
+                    cell.cancelBtn.isHidden = true
                 }
                 return cell
         }
@@ -493,6 +559,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             cell.shadowView.layer.cornerRadius = 0.0
             cell.contView.layer.cornerRadius = 0
             cell.editBtn.isHidden = true
+            cell.saveBtn.isHidden = true
+            cell.cancelBtn.isHidden = true
             return cell
         }
         else if indexPath.row == 2 {
@@ -512,6 +580,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             cell.shadowView.layer.cornerRadius = 0.0
             cell.contView.layer.cornerRadius = 0
             cell.editBtn.isHidden = true
+            cell.saveBtn.isHidden = true
+            cell.cancelBtn.isHidden = true
             return cell
         }
         else if indexPath.row == 3 {
@@ -531,6 +601,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             cell.shadowView.layer.cornerRadius = 0.0
             cell.contView.layer.cornerRadius = 0
             cell.editBtn.isHidden = true
+            cell.saveBtn.isHidden = true
+            cell.cancelBtn.isHidden = true
             return cell
         }
         else if indexPath.row == 4 {
@@ -550,6 +622,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             cell.shadowView.layer.cornerRadius = 0.0
             cell.contView.layer.cornerRadius = 0
             cell.editBtn.isHidden = true
+            cell.saveBtn.isHidden = true
+            cell.cancelBtn.isHidden = true
             return cell
         }
         else if indexPath.row == 5 {
@@ -569,10 +643,11 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             cell.shadowView.layer.cornerRadius = 0.0
             cell.contView.layer.cornerRadius = 0
             cell.editBtn.isHidden = true
+            cell.saveBtn.isHidden = true
+            cell.cancelBtn.isHidden = true
             return cell
         }
         else if indexPath.row == 6 {
-           // cell.infoTextField.isEditable = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
             cell.cellHeight.constant = 120.0
            //cell.contView.isHidden = false
             cell.section = indexPath.section
@@ -583,17 +658,52 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             cell.shadowView.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
             
            //cell.editBtn.isUserInteractionEnabled = true
-            cell.editBtn.isHidden = false
-            cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
-            cell.editBtn.titleLabel?.text = "Edit Information"
-            cell.editBtn.titleLabel?.textColor = .white
-            //cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
-            cell.shadowBttmConst.constant = 2
-            cell.shadowTopConst.constant = 0
-            cell.cellBottomDistConst.constant = 0
-            cell.cellTopDistConst.constant = 0
-            cell.contView.layer.cornerRadius = 0
-            cell.titleText.text = ""
+            cell.editBtn.isHidden = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
+            if cell.editBtn.isHidden == false {
+                cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                cell.editBtn.titleLabel?.text = "Edit Information"
+                cell.editBtn.titleLabel?.textColor = .white
+                //cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                cell.shadowBttmConst.constant = 2
+                cell.shadowTopConst.constant = 0
+                cell.cellBottomDistConst.constant = 0
+                cell.cellTopDistConst.constant = 0
+                cell.contView.layer.cornerRadius = 0
+                cell.titleText.text = ""
+            }
+            else {
+                cell.saveBtn.isHidden = false
+                cell.saveBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                cell.saveBtn.titleLabel?.text = "Save"
+                cell.saveBtn.titleLabel?.textColor = .white
+                //cell.saveBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                
+                cell.cancelBtn.isHidden = false
+                cell.cancelBtn.backgroundColor = .white
+                cell.cancelBtn.layer.borderWidth = 2.0
+                cell.cancelBtn.layer.borderColor = CGColor(red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                cell.cancelBtn.titleLabel?.text = "Cancel"
+                cell.cancelBtn.titleLabel?.textColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+              //  cell.cancelBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                cell.shadowBttmConst.constant = 2
+                cell.shadowTopConst.constant = 0
+                cell.cellBottomDistConst.constant = 0
+                cell.cellTopDistConst.constant = 0
+                cell.contView.layer.cornerRadius = 0
+                cell.titleText.text = ""
+               
+                
+            }
+            //cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+            //cell.editBtn.titleLabel?.text = "Edit Information"
+            //cell.editBtn.titleLabel?.textColor = .white
+            ////cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+            //cell.shadowBttmConst.constant = 2
+            //cell.shadowTopConst.constant = 0
+            //cell.cellBottomDistConst.constant = 0
+            //cell.cellTopDistConst.constant = 0
+            //cell.contView.layer.cornerRadius = 0
+            //cell.titleText.text = ""
             
           //  cell.shadowView.isHidden = true
            // cell.shadowView.isOpaque = true
@@ -603,8 +713,9 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             }
       else  if indexPath.section == 2 {
         cell.editDelegate = self
+        cell.section = indexPath.section
         if indexPath.row == 0 {
-            cell.section = indexPath.section
+           // cell.section = indexPath.section
             cell.titleText.text = profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
             cell.dropButton.isHidden = false
         
@@ -623,6 +734,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.cellTopDistConst.constant = 0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 
             }
             else{
@@ -636,6 +749,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.contView.layer.cornerRadius = 8.0
                self.profileTable.rowHeight = UITableView.automaticDimension
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
             }
             return cell
     }
@@ -656,6 +771,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
         cell.shadowView.layer.cornerRadius = 0.0
         cell.contView.layer.cornerRadius = 0
         cell.editBtn.isHidden = true
+        cell.saveBtn.isHidden = true
+        cell.cancelBtn.isHidden = true
         return cell
     }
     else if indexPath.row == 2 {
@@ -675,6 +792,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
         cell.shadowView.layer.cornerRadius = 0.0
         cell.contView.layer.cornerRadius = 0
         cell.editBtn.isHidden = true
+        cell.saveBtn.isHidden = true
+        cell.cancelBtn.isHidden = true
         return cell
     }
     else if indexPath.row == 3 {
@@ -695,42 +814,79 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
         cell.shadowView.layer.cornerRadius = 0.0
         cell.contView.layer.cornerRadius = 0
         cell.editBtn.isHidden = true
+        cell.saveBtn.isHidden = true
+        cell.cancelBtn.isHidden = true
         return cell
     }
-    else if indexPath.row == 4 {
-        cell.cellHeight.constant = 120.0
-       //cell.contView.isHidden = false
-        cell.section = indexPath.section
-        cell.infoTextField.isHidden = true
-        cell.dropButton.isHidden = true
-        cell.descriptionBottmConst.isActive = true
-        cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
-        cell.shadowView.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
-        
-       //cell.editBtn.isUserInteractionEnabled = true
-        cell.editBtn.isHidden = false
-        cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
-        cell.editBtn.titleLabel?.text = "Edit Information"
-        cell.editBtn.titleLabel?.textColor = .white
-        //cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
-        cell.shadowBttmConst.constant = 2
-        cell.shadowTopConst.constant = 0
-        cell.cellBottomDistConst.constant = 0
-        cell.cellTopDistConst.constant = 0
-        cell.contView.layer.cornerRadius = 0
-        cell.titleText.text = ""
-        
-      //  cell.shadowView.isHidden = true
-       // cell.shadowView.isOpaque = true
-  
-        return cell
-    }
+    else if indexPath.row == 4 {    cell.cellHeight.constant = 120.0
+        //cell.contView.isHidden = false
+         cell.section = indexPath.section
+         cell.infoTextField.isHidden = true
+         cell.dropButton.isHidden = true
+         cell.descriptionBottmConst.isActive = true
+         cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
+         cell.shadowView.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
+         
+        //cell.editBtn.isUserInteractionEnabled = true
+         cell.editBtn.isHidden = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
+         if cell.editBtn.isHidden == false {
+             cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+             cell.editBtn.titleLabel?.text = "Edit Information"
+             cell.editBtn.titleLabel?.textColor = .white
+             //cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+             cell.shadowBttmConst.constant = 2
+             cell.shadowTopConst.constant = 0
+             cell.cellBottomDistConst.constant = 0
+             cell.cellTopDistConst.constant = 0
+             cell.contView.layer.cornerRadius = 0
+             cell.titleText.text = ""
+         }
+         else {
+             cell.saveBtn.isHidden = false
+             cell.saveBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+             cell.saveBtn.titleLabel?.text = "Save"
+             cell.saveBtn.titleLabel?.textColor = .white
+             //cell.saveBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+             
+             cell.cancelBtn.isHidden = false
+             cell.cancelBtn.backgroundColor = .white
+             cell.cancelBtn.layer.borderWidth = 2.0
+             cell.cancelBtn.layer.borderColor = CGColor(red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+             cell.cancelBtn.titleLabel?.text = "Cancel"
+             cell.cancelBtn.titleLabel?.textColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+           //  cell.cancelBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+             cell.shadowBttmConst.constant = 2
+             cell.shadowTopConst.constant = 0
+             cell.cellBottomDistConst.constant = 0
+             cell.cellTopDistConst.constant = 0
+             cell.contView.layer.cornerRadius = 0
+             cell.titleText.text = ""
+            
+             
+         }
+         //cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+         //cell.editBtn.titleLabel?.text = "Edit Information"
+         //cell.editBtn.titleLabel?.textColor = .white
+         ////cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+         //cell.shadowBttmConst.constant = 2
+         //cell.shadowTopConst.constant = 0
+         //cell.cellBottomDistConst.constant = 0
+         //cell.cellTopDistConst.constant = 0
+         //cell.contView.layer.cornerRadius = 0
+         //cell.titleText.text = ""
+         
+       //  cell.shadowView.isHidden = true
+        // cell.shadowView.isOpaque = true
+   
+         return cell
+     }
         }
         else if indexPath.section == 3 {
             //cell.editDelegate = self
+            cell.section = indexPath.section
             let cell1 =  profileTable.dequeueReusableCell(withIdentifier: "ProfileView2ndCell") as! SecondProfileVCTableViewCell
             if indexPath.row == 0 {
-                cell.section = indexPath.section
+               // cell.section = indexPath.section
                 cell.titleText.text = profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
                 cell.dropButton.isHidden = false
                // self.profileTable.rowHeight = 70.0
@@ -751,6 +907,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                     cell.cellTopDistConst.constant = 0
                     cell.contView.layer.cornerRadius = 0
                     cell.editBtn.isHidden = true
+                    cell.saveBtn.isHidden = true
+                    cell.cancelBtn.isHidden = true
                     cell.cellHeight.constant = 70.0
                     return cell
                     
@@ -766,6 +924,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                     cell.contView.layer.cornerRadius = 8.0
                    self.profileTable.rowHeight = UITableView.automaticDimension
                     cell.editBtn.isHidden = true
+                    cell.saveBtn.isHidden = true
+                    cell.cancelBtn.isHidden = true
                     return cell
                 }
                 //return cell
@@ -773,7 +933,7 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             else if indexPath.row == 1{
                 cell1.borderCell.layer.borderWidth = 2.0
                 cell1.borderCell.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
-                cell1.cellHeight.constant = 216.0
+                //cell1.cellHeight.constant = 216.0
                 cell1.organizationNameLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].orgName
                 cell1.projectNameLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].pojectName
                 cell1.rolesAndResponsLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].rolesAndResponsibilities[0]
@@ -783,7 +943,7 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             else if indexPath.row == 2{
                 cell1.borderCell.layer.borderWidth = 2.0
                 cell1.borderCell.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
-                cell1.cellHeight.constant = 216.0
+               // cell1.cellHeight.constant = 216.0
                 cell1.organizationNameLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].orgName
                 cell1.projectNameLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].pojectName
                 cell1.rolesAndResponsLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].rolesAndResponsibilities[0]
@@ -794,12 +954,77 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell1.borderCell.layer.borderWidth = 2.0
                 cell1.borderCell.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
                 //cell.cellHeight.constant = 216
-                cell1.cellHeight.constant = 216.0
+               // cell1.cellHeight.constant = 216.0
                 cell1.organizationNameLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].orgName
                 cell1.projectNameLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].pojectName
                 cell1.rolesAndResponsLbl.text = profileViewModel.profileCell2Model[indexPath.row-1].rolesAndResponsibilities[0]
                 return cell1
                 
+            }
+            else if indexPath.row == 4 {
+                cell.cellHeight.constant = 120.0
+               //cell.contView.isHidden = false
+                cell.section = indexPath.section
+                cell.infoTextField.isHidden = true
+                cell.dropButton.isHidden = true
+                cell.descriptionBottmConst.isActive = true
+                cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
+                cell.shadowView.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
+                
+               //cell.editBtn.isUserInteractionEnabled = true
+                cell.editBtn.isHidden = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
+                if cell.editBtn.isHidden == false {
+                    cell.cancelBtn.isHidden = true
+                    cell.saveBtn.isHidden = true
+                    cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.editBtn.titleLabel?.text = "Edit Information"
+                    cell.editBtn.titleLabel?.textColor = .white
+                    //cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.shadowBttmConst.constant = 2
+                    cell.shadowTopConst.constant = 0
+                    cell.cellBottomDistConst.constant = 0
+                    cell.cellTopDistConst.constant = 0
+                    cell.contView.layer.cornerRadius = 0
+                    cell.titleText.text = ""
+                }
+                else {
+                    cell.saveBtn.isHidden = false
+                    cell.saveBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.saveBtn.titleLabel?.text = "Save"
+                    cell.saveBtn.titleLabel?.textColor = .white
+                    //cell.saveBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    
+                    cell.cancelBtn.isHidden = false
+                    cell.cancelBtn.backgroundColor = .white
+                    cell.cancelBtn.layer.borderWidth = 2.0
+                    cell.cancelBtn.layer.borderColor = CGColor(red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.cancelBtn.titleLabel?.text = "Cancel"
+                    cell.cancelBtn.titleLabel?.textColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                  //  cell.cancelBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.shadowBttmConst.constant = 2
+                    cell.shadowTopConst.constant = 0
+                    cell.cellBottomDistConst.constant = 0
+                    cell.cellTopDistConst.constant = 0
+                    cell.contView.layer.cornerRadius = 0
+                    cell.titleText.text = ""
+                   
+                    
+                }
+                //cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                //cell.editBtn.titleLabel?.text = "Edit Information"
+                //cell.editBtn.titleLabel?.textColor = .white
+                ////cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                //cell.shadowBttmConst.constant = 2
+                //cell.shadowTopConst.constant = 0
+                //cell.cellBottomDistConst.constant = 0
+                //cell.cellTopDistConst.constant = 0
+                //cell.contView.layer.cornerRadius = 0
+                //cell.titleText.text = ""
+                
+              //  cell.shadowView.isHidden = true
+               // cell.shadowView.isOpaque = true
+          
+                return cell
             }
             
         /* else if indexPath.row == 1 {
@@ -979,8 +1204,9 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
         }
         else if indexPath.section == 4 {
             cell.editDelegate = self
+            cell.section = indexPath.section
             if indexPath.row == 0 {
-                cell.section = indexPath.section
+               // cell.section = indexPath.section
                 cell.titleText.text = profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
                 cell.dropButton.isHidden = false
             
@@ -999,6 +1225,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                     cell.cellTopDistConst.constant = 0
                     cell.contView.layer.cornerRadius = 0
                     cell.editBtn.isHidden = true
+                    cell.saveBtn.isHidden = true
+                    cell.cancelBtn.isHidden = true
                     
                 }
                 else{
@@ -1012,6 +1240,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                     cell.contView.layer.cornerRadius = 8.0
                    self.profileTable.rowHeight = UITableView.automaticDimension
                     cell.editBtn.isHidden = true
+                    cell.saveBtn.isHidden = true
+                    cell.cancelBtn.isHidden = true
                 }
                 return cell
         }
@@ -1032,6 +1262,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+               cell.saveBtn.isHidden = true
+               cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 2 {
@@ -1051,6 +1283,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 3 {
@@ -1070,6 +1304,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 4  {
@@ -1089,6 +1325,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 5 {
@@ -1108,6 +1346,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 6 {
@@ -1117,22 +1357,59 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.section = indexPath.section
                 cell.infoTextField.isHidden = true
                 cell.dropButton.isHidden = true
-                cell.descriptionBottmConst.isActive = false
+                cell.descriptionBottmConst.isActive = true
                 cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
                 cell.shadowView.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
                 
                //cell.editBtn.isUserInteractionEnabled = true
-                cell.editBtn.isHidden = false
-                cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
-                cell.editBtn.titleLabel?.text = "Edit Information"
-                cell.editBtn.titleLabel?.textColor = .white
-                //cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
-                cell.shadowBttmConst.constant = 2
-                cell.shadowTopConst.constant = 0
-                cell.cellBottomDistConst.constant = 0
-                cell.cellTopDistConst.constant = 0
-                cell.contView.layer.cornerRadius = 0
-                cell.titleText.text = ""
+                cell.editBtn.isHidden = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
+                if cell.editBtn.isHidden == false {
+                    cell.cancelBtn.isHidden = true
+                    cell.saveBtn.isHidden = true
+                    cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.editBtn.titleLabel?.text = "Edit Information"
+                    cell.editBtn.titleLabel?.textColor = .white
+                    //cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.shadowBttmConst.constant = 2
+                    cell.shadowTopConst.constant = 0
+                    cell.cellBottomDistConst.constant = 0
+                    cell.cellTopDistConst.constant = 0
+                    cell.contView.layer.cornerRadius = 0
+                    cell.titleText.text = ""
+                }
+                else {
+                    cell.saveBtn.isHidden = false
+                    cell.saveBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.saveBtn.titleLabel?.text = "Save"
+                    cell.saveBtn.titleLabel?.textColor = .white
+                    //cell.saveBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    
+                    cell.cancelBtn.isHidden = false
+                    cell.cancelBtn.backgroundColor = .white
+                    cell.cancelBtn.layer.borderWidth = 2.0
+                    cell.cancelBtn.layer.borderColor = CGColor(red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.cancelBtn.titleLabel?.text = "Cancel"
+                    cell.cancelBtn.titleLabel?.textColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                  //  cell.cancelBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.shadowBttmConst.constant = 2
+                    cell.shadowTopConst.constant = 0
+                    cell.cellBottomDistConst.constant = 0
+                    cell.cellTopDistConst.constant = 0
+                    cell.contView.layer.cornerRadius = 0
+                    cell.titleText.text = ""
+                   
+                    
+                }
+                //cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                //cell.editBtn.titleLabel?.text = "Edit Information"
+                //cell.editBtn.titleLabel?.textColor = .white
+                ////cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                //cell.shadowBttmConst.constant = 2
+                //cell.shadowTopConst.constant = 0
+                //cell.cellBottomDistConst.constant = 0
+                //cell.cellTopDistConst.constant = 0
+                //cell.contView.layer.cornerRadius = 0
+                //cell.titleText.text = ""
                 
               //  cell.shadowView.isHidden = true
                // cell.shadowView.isOpaque = true
@@ -1142,8 +1419,9 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
         }
         else if indexPath.section == 5 {
             //cell.editDelegate = self
+            cell.section = indexPath.section
             if indexPath.row == 0 {
-                cell.section = indexPath.section
+                //cell.section = indexPath.section
                 cell.titleText.text = profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
                 cell.dropButton.isHidden = false
             
@@ -1162,7 +1440,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                     cell.cellTopDistConst.constant = 0
                     cell.contView.layer.cornerRadius = 0
                     cell.editBtn.isHidden = true
-                    
+                    cell.saveBtn.isHidden = true
+                    cell.cancelBtn.isHidden = true
                 }
                 else{
                     //214, 241, 242,
@@ -1175,6 +1454,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                     cell.contView.layer.cornerRadius = 8.0
                    self.profileTable.rowHeight = UITableView.automaticDimension
                     cell.editBtn.isHidden = true
+                    cell.saveBtn.isHidden = true
+                    cell.cancelBtn.isHidden = true
                 }
                 return cell
         }
@@ -1197,6 +1478,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+            cell.saveBtn.isHidden = true
+            cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 2 {
@@ -1216,6 +1499,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 3 {
@@ -1235,6 +1520,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 4 {
@@ -1254,31 +1541,69 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.shadowView.layer.cornerRadius = 0.0
                 cell.contView.layer.cornerRadius = 0
                 cell.editBtn.isHidden = true
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
                 return cell
             }
             else if indexPath.row == 5 {
-                //cell.infoTextField.isEditable =  (cell.editable == false) ? false : true
                 cell.cellHeight.constant = 120.0
                //cell.contView.isHidden = false
                 cell.section = indexPath.section
                 cell.infoTextField.isHidden = true
                 cell.dropButton.isHidden = true
-                cell.descriptionBottmConst.isActive = false
+                cell.descriptionBottmConst.isActive = true
                 cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
                 cell.shadowView.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
                 
                //cell.editBtn.isUserInteractionEnabled = true
-                cell.editBtn.isHidden = false
-                cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
-                cell.editBtn.titleLabel?.text = "Edit Information"
-                cell.editBtn.titleLabel?.textColor = .white
-                //cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
-                cell.shadowBttmConst.constant = 2
-                cell.shadowTopConst.constant = 0
-                cell.cellBottomDistConst.constant = 0
-                cell.cellTopDistConst.constant = 0
-                cell.contView.layer.cornerRadius = 0
-                cell.titleText.text = ""
+                cell.editBtn.isHidden = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
+                if cell.editBtn.isHidden == false {
+                    cell.saveBtn.isHidden = true
+                    cell.cancelBtn.isHidden = true
+                    cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.editBtn.titleLabel?.text = "Edit Information"
+                    cell.editBtn.titleLabel?.textColor = .white
+                    //cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.shadowBttmConst.constant = 2
+                    cell.shadowTopConst.constant = 0
+                    cell.cellBottomDistConst.constant = 0
+                    cell.cellTopDistConst.constant = 0
+                    cell.contView.layer.cornerRadius = 0
+                    cell.titleText.text = ""
+                }
+                else {
+                    cell.saveBtn.isHidden = false
+                    cell.saveBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.saveBtn.titleLabel?.text = "Save"
+                    cell.saveBtn.titleLabel?.textColor = .white
+                    //cell.saveBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    
+                    cell.cancelBtn.isHidden = false
+                    cell.cancelBtn.backgroundColor = .white
+                    cell.cancelBtn.layer.borderWidth = 2.0
+                    cell.cancelBtn.layer.borderColor = CGColor(red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.cancelBtn.titleLabel?.text = "Cancel"
+                    cell.cancelBtn.titleLabel?.textColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                  //  cell.cancelBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                    cell.shadowBttmConst.constant = 2
+                    cell.shadowTopConst.constant = 0
+                    cell.cellBottomDistConst.constant = 0
+                    cell.cellTopDistConst.constant = 0
+                    cell.contView.layer.cornerRadius = 0
+                    cell.titleText.text = ""
+                   
+                    
+                }
+                //cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                //cell.editBtn.titleLabel?.text = "Edit Information"
+                //cell.editBtn.titleLabel?.textColor = .white
+                ////cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                //cell.shadowBttmConst.constant = 2
+                //cell.shadowTopConst.constant = 0
+                //cell.cellBottomDistConst.constant = 0
+                //cell.cellTopDistConst.constant = 0
+                //cell.contView.layer.cornerRadius = 0
+                //cell.titleText.text = ""
                 
               //  cell.shadowView.isHidden = true
                // cell.shadowView.isOpaque = true
@@ -1289,8 +1614,9 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
         }
         else if indexPath.section == 6 {
            // cell.editDelegate = self
+            cell.section = indexPath.section
             if indexPath.row == 0 {
-                cell.section = indexPath.section
+                //cell.section = indexPath.section
                 cell.titleText.text = profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
                 cell.dropButton.isHidden = false
             
@@ -1309,6 +1635,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                     cell.cellTopDistConst.constant = 0
                     cell.contView.layer.cornerRadius = 0
                     cell.editBtn.isHidden = true
+                    cell.saveBtn.isHidden = true
+                    cell.cancelBtn.isHidden = true
                     
                 }
                 else{
@@ -1322,6 +1650,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                     cell.contView.layer.cornerRadius = 8.0
                    self.profileTable.rowHeight = UITableView.automaticDimension
                     cell.editBtn.isHidden = true
+                    cell.saveBtn.isHidden = true
+                    cell.cancelBtn.isHidden = true
                 }
                 return cell
         }
@@ -1342,6 +1672,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             cell.shadowView.layer.cornerRadius = 0.0
             cell.contView.layer.cornerRadius = 0
             cell.editBtn.isHidden = true
+            cell.saveBtn.isHidden = true
+            cell.cancelBtn.isHidden = true
             return cell
         }
         else if indexPath.row == 2 {
@@ -1361,6 +1693,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             cell.shadowView.layer.cornerRadius = 0.0
             cell.contView.layer.cornerRadius = 0
             cell.editBtn.isHidden = true
+            cell.saveBtn.isHidden = true
+            cell.cancelBtn.isHidden = true
             return cell
         }
         else if indexPath.row == 3 {
@@ -1380,6 +1714,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             cell.shadowView.layer.cornerRadius = 0.0
             cell.contView.layer.cornerRadius = 0
             cell.editBtn.isHidden = true
+            cell.saveBtn.isHidden = true
+            cell.cancelBtn.isHidden = true
             return cell
         }
         else if indexPath.row == 4  {
@@ -1399,6 +1735,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             cell.shadowView.layer.cornerRadius = 0.0
             cell.contView.layer.cornerRadius = 0
             cell.editBtn.isHidden = true
+            cell.saveBtn.isHidden = true
+            cell.cancelBtn.isHidden = true
             return cell
         }
         else if indexPath.row == 5 {
@@ -1418,6 +1756,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             cell.shadowView.layer.cornerRadius = 0.0
             cell.contView.layer.cornerRadius = 0
             cell.editBtn.isHidden = true
+            cell.saveBtn.isHidden = true
+            cell.cancelBtn.isHidden = true
             return cell
         }
         else if indexPath.row == 6 {
@@ -1438,6 +1778,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             cell.shadowView.layer.cornerRadius = 0.0
             cell.contView.layer.cornerRadius = 0
             cell.editBtn.isHidden = true
+            cell.saveBtn.isHidden = true
+            cell.cancelBtn.isHidden = true
             return cell
         }
         else if indexPath.row == 7 {
@@ -1452,18 +1794,58 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
             cell.shadowView.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
             
            //cell.editBtn.isUserInteractionEnabled = true
-            cell.editBtn.isHidden = false
-            cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
-            cell.editBtn.titleLabel?.text = "Edit Information"
-            cell.editBtn.titleLabel?.textColor = .white
-            //cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
-            cell.shadowBttmConst.constant = 2
-            cell.shadowTopConst.constant = 0
-            cell.cellBottomDistConst.constant = 0
-            cell.cellTopDistConst.constant = 0
-            cell.contView.layer.cornerRadius = 0
-            cell.titleText.text = ""
+            cell.editBtn.isHidden = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
+            if cell.editBtn.isHidden == false {
+                cell.saveBtn.isHidden = true
+                cell.cancelBtn.isHidden = true
+                cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                cell.editBtn.titleLabel?.text = "Edit Information"
+                cell.editBtn.titleLabel?.textColor = .white
+                //cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                cell.shadowBttmConst.constant = 2
+                cell.shadowTopConst.constant = 0
+                cell.cellBottomDistConst.constant = 0
+                cell.cellTopDistConst.constant = 0
+                cell.contView.layer.cornerRadius = 0
+                cell.titleText.text = ""
+            }
+            else {
+                cell.saveBtn.isHidden = false
+                cell.saveBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                cell.saveBtn.titleLabel?.text = "Save"
+                cell.saveBtn.titleLabel?.textColor = .white
+                //cell.saveBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                
+                cell.cancelBtn.isHidden = false
+                cell.cancelBtn.backgroundColor = .white
+                cell.cancelBtn.layer.borderWidth = 2.0
+                cell.cancelBtn.layer.borderColor = CGColor(red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                cell.cancelBtn.titleLabel?.text = "Cancel"
+                cell.cancelBtn.titleLabel?.textColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+              //  cell.cancelBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+                cell.shadowBttmConst.constant = 2
+                cell.shadowTopConst.constant = 0
+                cell.cellBottomDistConst.constant = 0
+                cell.cellTopDistConst.constant = 0
+                cell.contView.layer.cornerRadius = 0
+                cell.titleText.text = ""
+               
+                
+            }
+            //cell.editBtn.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+            //cell.editBtn.titleLabel?.text = "Edit Information"
+            //cell.editBtn.titleLabel?.textColor = .white
+            ////cell.editBtnLabel.backgroundColor = UIColor(displayP3Red: 9/255, green: 96/255, blue: 123/255, alpha: 1.0)
+            //cell.shadowBttmConst.constant = 2
+            //cell.shadowTopConst.constant = 0
+            //cell.cellBottomDistConst.constant = 0
+            //cell.cellTopDistConst.constant = 0
+            //cell.contView.layer.cornerRadius = 0
+            //cell.titleText.text = ""
             
+          //  cell.shadowView.isHidden = true
+           // cell.shadowView.isOpaque = true
+      
             return cell
         }
         }

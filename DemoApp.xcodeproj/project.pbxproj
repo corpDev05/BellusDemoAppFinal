@@ -10,6 +10,27 @@
 		832374B12ACD98E900A73272 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832374B02ACD98E900A73272 /* PostModel.swift */; };
 		8326ADFE2AC6FF9100AA0CEC /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */; };
 		835887C92ADE569A00C07C02 /* SearchEmpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835887C82ADE569A00C07C02 /* SearchEmpViewController.swift */; };
+		835BC8742B1F3946005C2B39 /* CDPersonalInformation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC8662B1F3942005C2B39 /* CDPersonalInformation+CoreDataProperties.swift */; };
+		835BC8752B1F3946005C2B39 /* CDAcademicInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC8712B1F3945005C2B39 /* CDAcademicInfo+CoreDataClass.swift */; };
+		835BC8762B1F3946005C2B39 /* CDTrainingNCertificate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC8732B1F3945005C2B39 /* CDTrainingNCertificate+CoreDataProperties.swift */; };
+		835BC8772B1F3946005C2B39 /* CDAcademicInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC86A2B1F3943005C2B39 /* CDAcademicInfo+CoreDataProperties.swift */; };
+		835BC8782B1F3946005C2B39 /* CDPreviousExperience+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC8702B1F3945005C2B39 /* CDPreviousExperience+CoreDataClass.swift */; };
+		835BC8792B1F3946005C2B39 /* CDInterestNHobbies+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC8682B1F3943005C2B39 /* CDInterestNHobbies+CoreDataProperties.swift */; };
+		835BC87A2B1F3946005C2B39 /* CDCurrentProject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC86B2B1F3943005C2B39 /* CDCurrentProject+CoreDataClass.swift */; };
+		835BC87B2B1F3946005C2B39 /* CDPersonalInformation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC86E2B1F3944005C2B39 /* CDPersonalInformation+CoreDataClass.swift */; };
+		835BC87C2B1F3946005C2B39 /* CDInterestNHobbies+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC86F2B1F3944005C2B39 /* CDInterestNHobbies+CoreDataClass.swift */; };
+		835BC87D2B1F3946005C2B39 /* CDTrainingNCertificate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC8722B1F3945005C2B39 /* CDTrainingNCertificate+CoreDataClass.swift */; };
+		835BC87E2B1F3946005C2B39 /* CDPreviousExperience+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC86D2B1F3944005C2B39 /* CDPreviousExperience+CoreDataProperties.swift */; };
+		835BC87F2B1F3946005C2B39 /* CDSkillSet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC8672B1F3943005C2B39 /* CDSkillSet+CoreDataProperties.swift */; };
+		835BC8802B1F3946005C2B39 /* CDSkillSet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC8692B1F3943005C2B39 /* CDSkillSet+CoreDataClass.swift */; };
+		835BC8812B1F3946005C2B39 /* CDCurrentProject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC86C2B1F3944005C2B39 /* CDCurrentProject+CoreDataProperties.swift */; };
+		835BC8842B1F3AB9005C2B39 /* PersonalInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC8832B1F3AB9005C2B39 /* PersonalInformation.swift */; };
+		835BC8872B1F3B89005C2B39 /* SkillSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC8862B1F3B89005C2B39 /* SkillSet.swift */; };
+		835BC88A2B1F3BC4005C2B39 /* CurrentProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC8892B1F3BC4005C2B39 /* CurrentProject.swift */; };
+		835BC88D2B1F3BD8005C2B39 /* PreviousExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC88C2B1F3BD8005C2B39 /* PreviousExperience.swift */; };
+		835BC8902B1F3CF0005C2B39 /* AcademicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC88F2B1F3CF0005C2B39 /* AcademicInfo.swift */; };
+		835BC8932B1F3D08005C2B39 /* Training_Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC8922B1F3D08005C2B39 /* Training_Certificate.swift */; };
+		835BC8962B1F3D20005C2B39 /* Interest&Hobbies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC8952B1F3D20005C2B39 /* Interest&Hobbies.swift */; };
 		835EDEAB2B0F4D5200CE706E /* EmployeeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EDEAA2B0F4D5200CE706E /* EmployeeManager.swift */; };
 		835EDFBA2AEB9CDA00B9A5D1 /* SearchEmpVC + TblView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EDFB92AEB9CDA00B9A5D1 /* SearchEmpVC + TblView.swift */; };
 		835EDFBE2AEB9E3200B9A5D1 /* SearchResTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EDFBC2AEB9E3200B9A5D1 /* SearchResTblViewCell.swift */; };
@@ -21,6 +42,15 @@
 		8360B2882AF1235600206C72 /* DashboardTblCellApiResponseModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360B2872AF1235600206C72 /* DashboardTblCellApiResponseModal.swift */; };
 		8360B28B2AF1311000206C72 /* EmployeeSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360B28A2AF1311000206C72 /* EmployeeSearchModel.swift */; };
 		8360B28E2AF131DF00206C72 /* SearchEmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360B28D2AF131DF00206C72 /* SearchEmployeeViewModel.swift */; };
+		83611C222B2041C6001C4492 /* DemoApp.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 83F82B3D2AC19999001A9116 /* DemoApp.xcdatamodeld */; };
+		83611C292B205D19001C4492 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83611C282B205D19001C4492 /* BaseRepository.swift */; };
+		83611C2C2B205EF5001C4492 /* PersonalInfoDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83611C2B2B205EF5001C4492 /* PersonalInfoDataRepository.swift */; };
+		83611C2F2B207931001C4492 /* AcademicInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83611C2E2B207931001C4492 /* AcademicInfoRepository.swift */; };
+		83611C322B207A6A001C4492 /* PreviousExperienceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83611C312B207A6A001C4492 /* PreviousExperienceRepository.swift */; };
+		83611C352B207CA9001C4492 /* CurrentProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83611C342B207CA9001C4492 /* CurrentProjectRepository.swift */; };
+		83611C382B207E7D001C4492 /* Interest_HobbiesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83611C372B207E7D001C4492 /* Interest_HobbiesRepository.swift */; };
+		83611C3B2B208050001C4492 /* SkillSetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83611C3A2B208050001C4492 /* SkillSetRepository.swift */; };
+		83611C3E2B2081B0001C4492 /* Training_CertificateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83611C3D2B2081B0001C4492 /* Training_CertificateRepository.swift */; };
 		83644E812B0E27BC00C200B6 /* EmployeeDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83644E802B0E27BC00C200B6 /* EmployeeDataRepository.swift */; };
 		83644E842B0E2FDA00C200B6 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83644E832B0E2FDA00C200B6 /* Employee.swift */; };
 		836518732AC580660077EA52 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836518722AC580660077EA52 /* DashboardViewController.swift */; };
@@ -49,7 +79,6 @@
 		83F82B372AC19999001A9116 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F82B362AC19999001A9116 /* SceneDelegate.swift */; };
 		83F82B392AC19999001A9116 /* LoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F82B382AC19999001A9116 /* LoginPageController.swift */; };
 		83F82B3C2AC19999001A9116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F82B3A2AC19999001A9116 /* Main.storyboard */; };
-		83F82B3F2AC19999001A9116 /* DemoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83F82B3D2AC19999001A9116 /* DemoApp.xcdatamodeld */; };
 		83F82B412AC1999D001A9116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F82B402AC1999D001A9116 /* Assets.xcassets */; };
 		83F82B442AC1999D001A9116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F82B422AC1999D001A9116 /* LaunchScreen.storyboard */; };
 		E455943598A99CCBE5D1A515 /* Pods_DemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B7B157E30A710977E0D5CA /* Pods_DemoApp.framework */; };
@@ -61,6 +90,27 @@
 		832374B02ACD98E900A73272 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		8326ADFD2AC6FF9100AA0CEC /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		835887C82ADE569A00C07C02 /* SearchEmpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEmpViewController.swift; sourceTree = "<group>"; };
+		835BC8662B1F3942005C2B39 /* CDPersonalInformation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDPersonalInformation+CoreDataProperties.swift"; path = "/Users/bellubis-ws29/BellusDemoAppFinal/DemoApp/CoreData/CDPersonalInformation+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		835BC8672B1F3943005C2B39 /* CDSkillSet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDSkillSet+CoreDataProperties.swift"; path = "/Users/bellubis-ws29/BellusDemoAppFinal/DemoApp/CoreData/CDSkillSet+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		835BC8682B1F3943005C2B39 /* CDInterestNHobbies+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDInterestNHobbies+CoreDataProperties.swift"; path = "/Users/bellubis-ws29/BellusDemoAppFinal/DemoApp/CoreData/CDInterestNHobbies+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		835BC8692B1F3943005C2B39 /* CDSkillSet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDSkillSet+CoreDataClass.swift"; path = "/Users/bellubis-ws29/BellusDemoAppFinal/DemoApp/CoreData/CDSkillSet+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		835BC86A2B1F3943005C2B39 /* CDAcademicInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDAcademicInfo+CoreDataProperties.swift"; path = "/Users/bellubis-ws29/BellusDemoAppFinal/DemoApp/CoreData/CDAcademicInfo+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		835BC86B2B1F3943005C2B39 /* CDCurrentProject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDCurrentProject+CoreDataClass.swift"; path = "/Users/bellubis-ws29/BellusDemoAppFinal/DemoApp/CoreData/CDCurrentProject+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		835BC86C2B1F3944005C2B39 /* CDCurrentProject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDCurrentProject+CoreDataProperties.swift"; path = "/Users/bellubis-ws29/BellusDemoAppFinal/DemoApp/CoreData/CDCurrentProject+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		835BC86D2B1F3944005C2B39 /* CDPreviousExperience+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDPreviousExperience+CoreDataProperties.swift"; path = "/Users/bellubis-ws29/BellusDemoAppFinal/DemoApp/CoreData/CDPreviousExperience+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		835BC86E2B1F3944005C2B39 /* CDPersonalInformation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDPersonalInformation+CoreDataClass.swift"; path = "/Users/bellubis-ws29/BellusDemoAppFinal/DemoApp/CoreData/CDPersonalInformation+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		835BC86F2B1F3944005C2B39 /* CDInterestNHobbies+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDInterestNHobbies+CoreDataClass.swift"; path = "/Users/bellubis-ws29/BellusDemoAppFinal/DemoApp/CoreData/CDInterestNHobbies+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		835BC8702B1F3945005C2B39 /* CDPreviousExperience+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDPreviousExperience+CoreDataClass.swift"; path = "/Users/bellubis-ws29/BellusDemoAppFinal/DemoApp/CoreData/CDPreviousExperience+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		835BC8712B1F3945005C2B39 /* CDAcademicInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDAcademicInfo+CoreDataClass.swift"; path = "/Users/bellubis-ws29/BellusDemoAppFinal/DemoApp/CoreData/CDAcademicInfo+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		835BC8722B1F3945005C2B39 /* CDTrainingNCertificate+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDTrainingNCertificate+CoreDataClass.swift"; path = "/Users/bellubis-ws29/BellusDemoAppFinal/DemoApp/CoreData/CDTrainingNCertificate+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		835BC8732B1F3945005C2B39 /* CDTrainingNCertificate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDTrainingNCertificate+CoreDataProperties.swift"; path = "/Users/bellubis-ws29/BellusDemoAppFinal/DemoApp/CoreData/CDTrainingNCertificate+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		835BC8832B1F3AB9005C2B39 /* PersonalInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformation.swift; sourceTree = "<group>"; };
+		835BC8862B1F3B89005C2B39 /* SkillSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillSet.swift; sourceTree = "<group>"; };
+		835BC8892B1F3BC4005C2B39 /* CurrentProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentProject.swift; sourceTree = "<group>"; };
+		835BC88C2B1F3BD8005C2B39 /* PreviousExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousExperience.swift; sourceTree = "<group>"; };
+		835BC88F2B1F3CF0005C2B39 /* AcademicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicInfo.swift; sourceTree = "<group>"; };
+		835BC8922B1F3D08005C2B39 /* Training_Certificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training_Certificate.swift; sourceTree = "<group>"; };
+		835BC8952B1F3D20005C2B39 /* Interest&Hobbies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Interest&Hobbies.swift"; sourceTree = "<group>"; };
 		835EDEAA2B0F4D5200CE706E /* EmployeeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeManager.swift; sourceTree = "<group>"; };
 		835EDFB92AEB9CDA00B9A5D1 /* SearchEmpVC + TblView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchEmpVC + TblView.swift"; sourceTree = "<group>"; };
 		835EDFBC2AEB9E3200B9A5D1 /* SearchResTblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResTblViewCell.swift; sourceTree = "<group>"; };
@@ -72,6 +122,14 @@
 		8360B2872AF1235600206C72 /* DashboardTblCellApiResponseModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTblCellApiResponseModal.swift; sourceTree = "<group>"; };
 		8360B28A2AF1311000206C72 /* EmployeeSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSearchModel.swift; sourceTree = "<group>"; };
 		8360B28D2AF131DF00206C72 /* SearchEmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEmployeeViewModel.swift; sourceTree = "<group>"; };
+		83611C282B205D19001C4492 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		83611C2B2B205EF5001C4492 /* PersonalInfoDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoDataRepository.swift; sourceTree = "<group>"; };
+		83611C2E2B207931001C4492 /* AcademicInfoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicInfoRepository.swift; sourceTree = "<group>"; };
+		83611C312B207A6A001C4492 /* PreviousExperienceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousExperienceRepository.swift; sourceTree = "<group>"; };
+		83611C342B207CA9001C4492 /* CurrentProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentProjectRepository.swift; sourceTree = "<group>"; };
+		83611C372B207E7D001C4492 /* Interest_HobbiesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest_HobbiesRepository.swift; sourceTree = "<group>"; };
+		83611C3A2B208050001C4492 /* SkillSetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillSetRepository.swift; sourceTree = "<group>"; };
+		83611C3D2B2081B0001C4492 /* Training_CertificateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training_CertificateRepository.swift; sourceTree = "<group>"; };
 		83644E802B0E27BC00C200B6 /* EmployeeDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDataRepository.swift; sourceTree = "<group>"; };
 		83644E832B0E2FDA00C200B6 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		836518722AC580660077EA52 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +233,14 @@
 			isa = PBXGroup;
 			children = (
 				83644E802B0E27BC00C200B6 /* EmployeeDataRepository.swift */,
+				83611C282B205D19001C4492 /* BaseRepository.swift */,
+				83611C2B2B205EF5001C4492 /* PersonalInfoDataRepository.swift */,
+				83611C2E2B207931001C4492 /* AcademicInfoRepository.swift */,
+				83611C312B207A6A001C4492 /* PreviousExperienceRepository.swift */,
+				83611C342B207CA9001C4492 /* CurrentProjectRepository.swift */,
+				83611C372B207E7D001C4492 /* Interest_HobbiesRepository.swift */,
+				83611C3A2B208050001C4492 /* SkillSetRepository.swift */,
+				83611C3D2B2081B0001C4492 /* Training_CertificateRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -261,6 +327,20 @@
 		83CECFE32B0CDC7700E8664F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				835BC8712B1F3945005C2B39 /* CDAcademicInfo+CoreDataClass.swift */,
+				835BC86A2B1F3943005C2B39 /* CDAcademicInfo+CoreDataProperties.swift */,
+				835BC8702B1F3945005C2B39 /* CDPreviousExperience+CoreDataClass.swift */,
+				835BC86D2B1F3944005C2B39 /* CDPreviousExperience+CoreDataProperties.swift */,
+				835BC86B2B1F3943005C2B39 /* CDCurrentProject+CoreDataClass.swift */,
+				835BC86C2B1F3944005C2B39 /* CDCurrentProject+CoreDataProperties.swift */,
+				835BC86F2B1F3944005C2B39 /* CDInterestNHobbies+CoreDataClass.swift */,
+				835BC8682B1F3943005C2B39 /* CDInterestNHobbies+CoreDataProperties.swift */,
+				835BC8692B1F3943005C2B39 /* CDSkillSet+CoreDataClass.swift */,
+				835BC8672B1F3943005C2B39 /* CDSkillSet+CoreDataProperties.swift */,
+				835BC86E2B1F3944005C2B39 /* CDPersonalInformation+CoreDataClass.swift */,
+				835BC8662B1F3942005C2B39 /* CDPersonalInformation+CoreDataProperties.swift */,
+				835BC8722B1F3945005C2B39 /* CDTrainingNCertificate+CoreDataClass.swift */,
+				835BC8732B1F3945005C2B39 /* CDTrainingNCertificate+CoreDataProperties.swift */,
 				83CECFE72B0CDD3800E8664F /* Employee+CoreDataProperties.swift */,
 				83CECFE42B0CDD3200E8664F /* Employee+CoreDataClass.swift */,
 				83CECFEA2B0CDD6F00E8664F /* PersistentStorage.swift */,
@@ -340,6 +420,13 @@
 				8371FC492AF3CAF400006E36 /* APIResultModel.swift */,
 				83644E832B0E2FDA00C200B6 /* Employee.swift */,
 				8395C7042B1750E800390031 /* SecondProfileCellModel.swift */,
+				835BC8832B1F3AB9005C2B39 /* PersonalInformation.swift */,
+				835BC8862B1F3B89005C2B39 /* SkillSet.swift */,
+				835BC8892B1F3BC4005C2B39 /* CurrentProject.swift */,
+				835BC88C2B1F3BD8005C2B39 /* PreviousExperience.swift */,
+				835BC88F2B1F3CF0005C2B39 /* AcademicInfo.swift */,
+				835BC8922B1F3D08005C2B39 /* Training_Certificate.swift */,
+				835BC8952B1F3D20005C2B39 /* Interest&Hobbies.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -416,6 +503,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83611C222B2041C6001C4492 /* DemoApp.xcdatamodeld in Resources */,
 				83F82B442AC1999D001A9116 /* LaunchScreen.storyboard in Resources */,
 				83F82B412AC1999D001A9116 /* Assets.xcassets in Resources */,
 				8376FA3B2ADD6F2100D1F188 /* SecondProfileVCTableViewCell.xib in Resources */,
@@ -475,44 +563,72 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				835BC8792B1F3946005C2B39 /* CDInterestNHobbies+CoreDataProperties.swift in Sources */,
 				837827E42AD404560084F044 /* ProfileCellModel.swift in Sources */,
 				83644E842B0E2FDA00C200B6 /* Employee.swift in Sources */,
 				835EDEAB2B0F4D5200CE706E /* EmployeeManager.swift in Sources */,
+				835BC8872B1F3B89005C2B39 /* SkillSet.swift in Sources */,
+				835BC8812B1F3946005C2B39 /* CDCurrentProject+CoreDataProperties.swift in Sources */,
+				83611C2F2B207931001C4492 /* AcademicInfoRepository.swift in Sources */,
 				83F82B392AC19999001A9116 /* LoginPageController.swift in Sources */,
+				83611C382B207E7D001C4492 /* Interest_HobbiesRepository.swift in Sources */,
 				8326ADFE2AC6FF9100AA0CEC /* SideMenuTableViewController.swift in Sources */,
+				835BC8932B1F3D08005C2B39 /* Training_Certificate.swift in Sources */,
 				8360B2882AF1235600206C72 /* DashboardTblCellApiResponseModal.swift in Sources */,
+				835BC8902B1F3CF0005C2B39 /* AcademicInfo.swift in Sources */,
+				83611C3B2B208050001C4492 /* SkillSetRepository.swift in Sources */,
 				83CECFE82B0CDD3800E8664F /* Employee+CoreDataProperties.swift in Sources */,
 				8395C7052B1750E800390031 /* SecondProfileCellModel.swift in Sources */,
+				835BC8762B1F3946005C2B39 /* CDTrainingNCertificate+CoreDataProperties.swift in Sources */,
 				83F82B352AC19999001A9116 /* AppDelegate.swift in Sources */,
+				83611C322B207A6A001C4492 /* PreviousExperienceRepository.swift in Sources */,
+				835BC8742B1F3946005C2B39 /* CDPersonalInformation+CoreDataProperties.swift in Sources */,
+				835BC8772B1F3946005C2B39 /* CDAcademicInfo+CoreDataProperties.swift in Sources */,
 				8360B2822AF11D8B00206C72 /* NetworkConstant.swift in Sources */,
+				835BC88D2B1F3BD8005C2B39 /* PreviousExperience.swift in Sources */,
 				83AAA9A42ACEDA4E00DA58B7 /* ProfileViewVC.swift in Sources */,
 				83B5ACA12ACC207200F10593 /* DashboardViewModel.swift in Sources */,
+				835BC88A2B1F3BC4005C2B39 /* CurrentProject.swift in Sources */,
+				835BC8962B1F3D20005C2B39 /* Interest&Hobbies.swift in Sources */,
 				835EEDCE2AFA14F5006C4881 /* DashboardTblCellViewModel .swift in Sources */,
 				83A0EDBC2AD01642001CB1A3 /* ProfileViewModel.swift in Sources */,
+				835BC8752B1F3946005C2B39 /* CDAcademicInfo+CoreDataClass.swift in Sources */,
+				835BC87E2B1F3946005C2B39 /* CDPreviousExperience+CoreDataProperties.swift in Sources */,
 				835EEDD52AFA2226006C4881 /* LazyImageView.swift in Sources */,
+				835BC8782B1F3946005C2B39 /* CDPreviousExperience+CoreDataClass.swift in Sources */,
+				835BC87C2B1F3946005C2B39 /* CDInterestNHobbies+CoreDataClass.swift in Sources */,
 				835EDFBA2AEB9CDA00B9A5D1 /* SearchEmpVC + TblView.swift in Sources */,
 				8360B28B2AF1311000206C72 /* EmployeeSearchModel.swift in Sources */,
+				83611C292B205D19001C4492 /* BaseRepository.swift in Sources */,
 				83A0EDAB2ACFCA4A001CB1A3 /* SideMenuSetup.swift in Sources */,
 				8376FA3A2ADD6F2100D1F188 /* SecondProfileVCTableViewCell.swift in Sources */,
 				83CECFEB2B0CDD6F00E8664F /* PersistentStorage.swift in Sources */,
 				838D4D532AD57E8700B29DCF /* Protocols.swift in Sources */,
 				8360B28E2AF131DF00206C72 /* SearchEmployeeViewModel.swift in Sources */,
+				835BC87D2B1F3946005C2B39 /* CDTrainingNCertificate+CoreDataClass.swift in Sources */,
 				83B5ACA62ACC29B700F10593 /* DashboardTableViewCell.swift in Sources */,
 				8371FC4A2AF3CAF400006E36 /* APIResultModel.swift in Sources */,
 				835EDFBE2AEB9E3200B9A5D1 /* SearchResTblViewCell.swift in Sources */,
 				836518732AC580660077EA52 /* DashboardViewController.swift in Sources */,
-				83F82B3F2AC19999001A9116 /* DemoApp.xcdatamodeld in Sources */,
+				835BC8842B1F3AB9005C2B39 /* PersonalInformation.swift in Sources */,
+				835BC8802B1F3946005C2B39 /* CDSkillSet+CoreDataClass.swift in Sources */,
+				835BC87B2B1F3946005C2B39 /* CDPersonalInformation+CoreDataClass.swift in Sources */,
 				83B5AC982ACBE08D00F10593 /* UserLoginModel.swift in Sources */,
+				83611C3E2B2081B0001C4492 /* Training_CertificateRepository.swift in Sources */,
 				83A0EDB82AD01188001CB1A3 /* ProfileViewVC+TableView.swift in Sources */,
 				835887C92ADE569A00C07C02 /* SearchEmpViewController.swift in Sources */,
 				8360B2852AF121B000206C72 /* ApiCaller.swift in Sources */,
 				83F82B372AC19999001A9116 /* SceneDelegate.swift in Sources */,
 				83CECFE52B0CDD3200E8664F /* Employee+CoreDataClass.swift in Sources */,
 				83644E812B0E27BC00C200B6 /* EmployeeDataRepository.swift in Sources */,
+				83611C352B207CA9001C4492 /* CurrentProjectRepository.swift in Sources */,
 				83B5AC9B2ACBF4DD00F10593 /* DashboardViewController+TableView.swift in Sources */,
 				83A0EDAF2ACFE731001CB1A3 /* ProfileVCTableViewCell.swift in Sources */,
 				832374B12ACD98E900A73272 /* PostModel.swift in Sources */,
+				835BC87F2B1F3946005C2B39 /* CDSkillSet+CoreDataProperties.swift in Sources */,
 				838A840A2AEFD1D100F8B41E /* Observable.swift in Sources */,
+				83611C2C2B205EF5001C4492 /* PersonalInfoDataRepository.swift in Sources */,
+				835BC87A2B1F3946005C2B39 /* CDCurrentProject+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

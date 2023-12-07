@@ -59,7 +59,7 @@ class ProfileVCTableViewCell: UITableViewCell {
         // Initialization code
         //shadowView.isHidden = true
        setUp()
-        
+
     }
    
     func setUp(){
@@ -75,9 +75,10 @@ class ProfileVCTableViewCell: UITableViewCell {
 
     @IBAction func editBtnTap(_ sender: Any) {
         editable.toggle()
-      //  var edit = editable
-       // print(editable)
-        self.editDelegate?.isEditable(section ,editable)
+        //editable = editable == true ? false : true
+       var edit = editable
+        print("editable is \(edit)")
+        self.editDelegate?.isEditable(section ,true)
         
         
     }
@@ -85,13 +86,31 @@ class ProfileVCTableViewCell: UITableViewCell {
     
     @IBAction func dropDownClk(_ sender : AnyObject){
         drop.toggle()
-       // print(drop)
+        print("drop is \(drop)")
        // weak var delegate : ProfileTVCellDelegate?
         delegate?.profileTVCell(section,drop)
         
     }
 
-
+    @IBAction func SaveBtnTap(_ sender: Any) {
+       // editable.toggle()
+       // editable = editable == true ? false : true
+        var flag = editable
+        print("save is \(flag)")
+        print("editable is \(editable)")
+        self.editDelegate?.isEditable(section,false)
+    }
+    
+    @IBAction func CancelBtnTap(_ sender: Any) {
+        editable.toggle()
+       // editable = editable == true ? false : true
+        var flag = editable
+        print("cancel is \(flag)")
+        print("editable is \(editable)")
+        self.editDelegate?.isEditable(section, false)
+    }
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

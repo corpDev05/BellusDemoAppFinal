@@ -44,19 +44,13 @@ struct EmployeeDataRepository : EmployeeRepository
     func get(byName name: String) -> [Employees]? {
         var emplRes : [Employees] = []
         let fetchRequest = NSFetchRequest<Employee>(entityName: "Employee")
-       // let predicate = NSPredicate(format: "%K == %@",argumentArray: ["name",name]/*name as CVarArg*/)
-        //fetchRequest = Employee.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "name CONTAINS [C]%@", "\(name)")
         do {
             let result = try PersistentStorage.shared.context.fetch(fetchRequest)
             guard result != nil else{return nil}
-            /*for res in result {
-                emplRes.insert(res.convertToEmployee(), at: emplRes.count)
-            }*/
             print("Inside Search Function")
             print("\(result.count)")
             for res in result{
-             //res.convertToEmployee()
                 print("\(res.name)")
              emplRes.append(res.convertToEmployee())
             }

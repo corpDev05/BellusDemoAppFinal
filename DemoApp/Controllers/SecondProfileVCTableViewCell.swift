@@ -36,6 +36,7 @@ class SecondProfileVCTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        cell2View.layer.cornerRadius = 16.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
