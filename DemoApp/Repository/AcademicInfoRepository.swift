@@ -48,12 +48,37 @@ struct AcademicInfoDataRepository : AcademicInfoRepository {
     }
     
     func update(record: AcademicInfo) -> Bool {
-        <#code#>
+        guard record != nil else {return false}
+        let result = getRecords(byName: record.course!)
+        guard  result != nil else {
+            return false
+        }
+        result!.course = record.course
+        PersistentStorage.shared.saveContext()
+        return true
     }
     
     func delete(byName name: String) -> Bool {
-        <#code#>
+        let academicInfo = getRecords(byName: name)
+        guard academicInfo != nil else {return false}
+        PersistentStorage.shared.context.delete(academicInfo!)
+        return true
     }
     
     typealias T = AcademicInfo
+    
+    private func getRecords(byName name : String) -> CDAcademicInfo? {
+        // var interest_Hobbies : Interest_Hobbies?
+         let fetchRequest = NSFetchRequest<CDAcademicInfo>(entityName: "CDAcademicInfo")
+         fetchRequest.predicate = NSPredicate(format: "name == %@", "\(name)")
+         do {
+             let result = try  PersistentStorage.shared.context.fetch(fetchRequest).first
+             guard result != nil else{return nil}
+             return  result
+         } catch let error {
+             debugPrint(error)
+         }
+        return nil
+     }
+    
 }

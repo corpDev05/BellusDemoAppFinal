@@ -37,6 +37,7 @@
 		835EDFBF2AEB9E3200B9A5D1 /* SearchResTblViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835EDFBD2AEB9E3200B9A5D1 /* SearchResTblViewCell.xib */; };
 		835EEDCE2AFA14F5006C4881 /* DashboardTblCellViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EEDCD2AFA14F5006C4881 /* DashboardTblCellViewModel .swift */; };
 		835EEDD52AFA2226006C4881 /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835EEDD42AFA2226006C4881 /* LazyImageView.swift */; };
+		835F35FD2B21DE5800F1B001 /* BaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835F35FC2B21DE5800F1B001 /* BaseManager.swift */; };
 		8360B2822AF11D8B00206C72 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360B2812AF11D8B00206C72 /* NetworkConstant.swift */; };
 		8360B2852AF121B000206C72 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360B2842AF121B000206C72 /* ApiCaller.swift */; };
 		8360B2882AF1235600206C72 /* DashboardTblCellApiResponseModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360B2872AF1235600206C72 /* DashboardTblCellApiResponseModal.swift */; };
@@ -117,6 +118,7 @@
 		835EDFBD2AEB9E3200B9A5D1 /* SearchResTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResTblViewCell.xib; sourceTree = "<group>"; };
 		835EEDCD2AFA14F5006C4881 /* DashboardTblCellViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardTblCellViewModel .swift"; sourceTree = "<group>"; };
 		835EEDD42AFA2226006C4881 /* LazyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyImageView.swift; sourceTree = "<group>"; };
+		835F35FC2B21DE5800F1B001 /* BaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseManager.swift; sourceTree = "<group>"; };
 		8360B2812AF11D8B00206C72 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		8360B2842AF121B000206C72 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		8360B2872AF1235600206C72 /* DashboardTblCellApiResponseModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTblCellApiResponseModal.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				835EDEAA2B0F4D5200CE706E /* EmployeeManager.swift */,
+				835F35FC2B21DE5800F1B001 /* BaseManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 				835887C92ADE569A00C07C02 /* SearchEmpViewController.swift in Sources */,
 				8360B2852AF121B000206C72 /* ApiCaller.swift in Sources */,
 				83F82B372AC19999001A9116 /* SceneDelegate.swift in Sources */,
+				835F35FD2B21DE5800F1B001 /* BaseManager.swift in Sources */,
 				83CECFE52B0CDD3200E8664F /* Employee+CoreDataClass.swift in Sources */,
 				83644E812B0E27BC00C200B6 /* EmployeeDataRepository.swift in Sources */,
 				83611C352B207CA9001C4492 /* CurrentProjectRepository.swift in Sources */,

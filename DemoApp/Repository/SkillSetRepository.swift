@@ -27,17 +27,55 @@ struct SkillSetDataRepository : SkillSetRepository {
         return skillSet
     }
     
-    func get(byName name: String) -> SkillSet? {
-        <#code#>
+    func get(byName name: String) -> [SkillSet]? {
+        var skillSet : [SkillSet] = []
+        let fetchRequest = NSFetchRequest<CDSkillSet>(entityName: "CDSkillSet")
+        fetchRequest.predicate = NSPredicate(format: "name CONTAINS %@", "\(name)")
+        do {
+            let result = try PersistentStorage.shared.context.fetch(fetchRequest)
+            guard result != nil else{return nil}
+            result.forEach { (cdSkillSet) in
+                skillSet.append(cdSkillSet.convertToSkillSet())
+            }
+            return skillSet
+        } catch let error {
+            debugPrint(error)
+        }
+        return nil
     }
     
     func update(record: SkillSet) -> Bool {
-        <#code#>
+        guard record != nil else {return false}
+        let result = getRecords(byName: record.skill!)
+        guard  result != nil else {
+            return false
+        }
+        result!.skill = record.skill
+        PersistentStorage.shared.saveContext()
+        return true
     }
     
     func delete(byName name: String) -> Bool {
-        <#code#>
+        let skillSet = getRecords(byName: name)
+        guard skillSet != nil else {return false}
+        PersistentStorage.shared.context.delete(skillSet!)
+        return true
     }
     
     typealias T = SkillSet
+    
+    private func getRecords(byName name : String) -> CDSkillSet? {
+        // var interest_Hobbies : Interest_Hobbies?
+         let fetchRequest = NSFetchRequest<CDSkillSet>(entityName: "CDSkillSet")
+         fetchRequest.predicate = NSPredicate(format: "name == %@", "\(name)")
+         do {
+             let result = try PersistentStorage.shared.context.fetch(fetchRequest).first
+             guard result != nil else{return nil}
+             return  result
+         } catch let error {
+             debugPrint(error)
+         }
+        return nil
+     }
+    
 }

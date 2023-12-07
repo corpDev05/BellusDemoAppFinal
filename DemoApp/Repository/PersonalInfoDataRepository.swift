@@ -36,7 +36,7 @@ struct PersonalInfoDataRepository : PersonalInfoRepository {
     }
     
     func get(byName name: String) -> [PersonalInformation]? {
-        var personalInformation : [PersonalInformation]
+        var personalInformation : [PersonalInformation] = []
         let fetchRequest = NSFetchRequest<CDPersonalInformation>(entityName: "CDPersonalInformation")
         fetchRequest.predicate = NSPredicate(format: "name CONTAINS %@", "\(name)")
         do {
@@ -45,6 +45,7 @@ struct PersonalInfoDataRepository : PersonalInfoRepository {
             result.forEach { (cdPersonalInformation) in
                 personalInformation.append(cdPersonalInformation.convertToPersonalInformation())
             }
+            return personalInformation
         } catch let error {
             debugPrint(error)
         }
@@ -52,13 +53,36 @@ struct PersonalInfoDataRepository : PersonalInfoRepository {
     }
     
     func update(record: PersonalInformation) -> Bool {
-        <#code#>
+        guard record != nil else {return false}
+        let result = getRecords(byName: record.firstName!)
+        guard  result != nil else {
+            return false
+        }
+        result!.firstName = record.firstName
+        PersistentStorage.shared.saveContext()
+        return true
     }
     
     func delete(byName name: String) -> Bool {
-        <#code#>
+        let personalInformation = getRecords(byName: name)
+        guard personalInformation != nil else {return false}
+        PersistentStorage.shared.context.delete(personalInformation!)
+        return true
     }
     
     typealias T = PersonalInformation
     
+    private func getRecords(byName name : String) -> CDPersonalInformation? {
+        // var interest_Hobbies : Interest_Hobbies?
+         let fetchRequest = NSFetchRequest<CDPersonalInformation>(entityName: "CDPersonalInformation")
+         fetchRequest.predicate = NSPredicate(format: "name == %@", "\(name)")
+         do {
+             let result = try  PersistentStorage.shared.context.fetch(fetchRequest).first
+             guard result != nil else{return nil}
+             return  result
+         } catch let error {
+             debugPrint(error)
+         }
+        return nil
+     }
 }

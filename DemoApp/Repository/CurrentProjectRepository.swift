@@ -50,12 +50,37 @@ struct CurrentProjectDataRepository : CurrentProjectRepository {
     }
     
     func update(record: CurrentProject) -> Bool {
-        <#code#>
+        guard record != nil else {return false}
+        let result = getRecords(byName: record.projectName!)
+        guard  result != nil else {
+            return false
+        }
+        result!.projectName = record.projectName
+        PersistentStorage.shared.saveContext()
+        return true
     }
     
     func delete(byName name: String) -> Bool {
-        <#code#>
+        let currentProject = getRecords(byName: name)
+        guard currentProject != nil else {return false}
+        PersistentStorage.shared.context.delete(currentProject!)
+        return true
     }
     
     typealias T = CurrentProject
+    
+    private func getRecords(byName name : String) -> CDCurrentProject? {
+        // var interest_Hobbies : Interest_Hobbies?
+         let fetchRequest = NSFetchRequest<CDCurrentProject>(entityName: "CDCurrentProject")
+         fetchRequest.predicate = NSPredicate(format: "name == %@", "\(name)")
+         do {
+             let result = try PersistentStorage.shared.context.fetch(fetchRequest).first
+             guard result != nil else{return nil}
+             return  result
+         } catch let error {
+             debugPrint(error)
+         }
+        return nil
+     }
+    
 }

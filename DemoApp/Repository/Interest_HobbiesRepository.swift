@@ -27,17 +27,54 @@ struct Interest_HobbiesDataRepository : Interest_HobbiesRepository {
         return interestNhobbies
     }
     
-    func get(byName name: String) -> Interest_Hobbies? {
-        <#code#>
+    func get(byName name: String) -> [Interest_Hobbies]? {
+        var interest_Hobbies : [Interest_Hobbies] = []
+        let fetchRequest = NSFetchRequest<CDInterestNHobbies>(entityName: "CDInterestNHobbies")
+        fetchRequest.predicate = NSPredicate(format: "name CONTAINS %@", "\(name)")
+        do {
+            let result = try PersistentStorage.shared.context.fetch(fetchRequest)
+            guard result != nil else {return nil}
+            result.forEach { (cdInterestNHobbies) in
+                interest_Hobbies.append(cdInterestNHobbies.convertToInterestNHobbies())
+            }
+            return interest_Hobbies
+        } catch  let error{
+            debugPrint(error)
+        }
+        return nil
     }
     
     func update(record: Interest_Hobbies) -> Bool {
-        <#code#>
+        guard record != nil else {return false}
+        let result = getRecords(byName: record.interestName!)
+        guard  result != nil else {
+            return false
+        }
+        result!.interestName = record.interestName
+        PersistentStorage.shared.saveContext()
+        return true
     }
     
     func delete(byName name: String) -> Bool {
-        <#code#>
+        let interestNhobbies = getRecords(byName: name)
+        guard interestNhobbies != nil else {return false}
+        PersistentStorage.shared.context.delete(interestNhobbies!)
+        return true
     }
     
     typealias T = Interest_Hobbies
+    
+   private func getRecords(byName name : String) -> CDInterestNHobbies? {
+       // var interest_Hobbies : Interest_Hobbies?
+        let fetchRequest = NSFetchRequest<CDInterestNHobbies>(entityName: "CDInterestNHobbies")
+        fetchRequest.predicate = NSPredicate(format: "name == %@", "\(name)")
+        do {
+            let result = try  PersistentStorage.shared.context.fetch(fetchRequest).first
+            guard result != nil else{return nil}
+            return  result
+        } catch let error {
+            debugPrint(error)
+        }
+     return nil
+    }
 }

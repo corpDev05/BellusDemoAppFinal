@@ -28,17 +28,56 @@ struct Training_CertificateDataRepository : Training_CertificateRepository {
         
     }
     
-    func get(byName name: String) -> Training_Certificate? {
-        <#code#>
+    func get(byName name: String) -> [Training_Certificate]? {
+        var training_Certificate : [Training_Certificate] = []
+        let fetchRequest = NSFetchRequest<CDTrainingNCertificate>(entityName: "CDTrainingNCertificate")
+        fetchRequest.predicate = NSPredicate(format: "name CONTAINS  %@", "\(name)")
+        do {
+            let result =  try PersistentStorage.shared.context.fetch(fetchRequest)
+            guard result != nil else{return nil}
+            result.forEach { (cdTrainingNCertificate) in
+                training_Certificate.append(cdTrainingNCertificate.convertToCertificate())
+            }
+            return training_Certificate
+            
+        } catch let error {
+            debugPrint(error)
+        }
+        return nil
     }
     
     func update(record: Training_Certificate) -> Bool {
-        <#code#>
+        guard record != nil else {return false}
+        let result = getRecords(byName: record.nameOfTraining!)
+        guard  result != nil else {
+            return false
+        }
+        result!.nameOfTraining = record.nameOfTraining
+        PersistentStorage.shared.saveContext()
+        return true
     }
     
     func delete(byName name: String) -> Bool {
-        <#code#>
+        let trainingNcertificates = getRecords(byName: name)
+        guard trainingNcertificates != nil else {return false}
+        PersistentStorage.shared.context.delete(trainingNcertificates!)
+        return true
     }
     
     typealias T = Training_Certificate
+    
+    private func getRecords(byName name : String) -> CDTrainingNCertificate?{
+        // var interest_Hobbies : Interest_Hobbies?
+         let fetchRequest = NSFetchRequest<CDTrainingNCertificate>(entityName: "CDTrainingNCertificate")
+         fetchRequest.predicate = NSPredicate(format: "name == %@", "\(name)")
+         do {
+             let result = try PersistentStorage.shared.context.fetch(fetchRequest).first
+             guard result != nil else{return nil}
+             return  result
+         } catch let error {
+             debugPrint(error)
+         }
+        return nil
+     }
+  
 }

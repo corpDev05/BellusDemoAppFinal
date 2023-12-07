@@ -50,12 +50,36 @@ struct PreviousExperienceDataRepository : PreviousExperienceRepository{
     }
     
     func update(record: PreviousExperience) -> Bool {
-        <#code#>
+        guard record != nil else {return false}
+        let result = getRecords(byName: record.name!)
+        guard  result != nil else {
+            return false
+        }
+        result!.name = record.name
+        PersistentStorage.shared.saveContext()
+        return true
     }
     
     func delete(byName name: String) -> Bool {
-        <#code#>
+        let previousExperience = getRecords(byName: name)
+        guard previousExperience != nil else {return false}
+        PersistentStorage.shared.context.delete(previousExperience!)
+        return true
     }
     
     typealias T = PreviousExperience
+    
+    private func getRecords(byName name : String) -> CDPreviousExperience? {
+        // var interest_Hobbies : Interest_Hobbies?
+         let fetchRequest = NSFetchRequest<CDPreviousExperience>(entityName: "CDPreviousExperience")
+         fetchRequest.predicate = NSPredicate(format: "name == %@", "\(name)")
+         do {
+             let result = try  PersistentStorage.shared.context.fetch(fetchRequest).first
+             guard result != nil else{return nil}
+             return  result
+         } catch let error {
+             debugPrint(error)
+         }
+        return nil
+     }
 }
