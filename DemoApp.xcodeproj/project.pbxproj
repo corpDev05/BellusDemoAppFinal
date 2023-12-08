@@ -52,6 +52,13 @@
 		83611C382B207E7D001C4492 /* Interest_HobbiesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83611C372B207E7D001C4492 /* Interest_HobbiesRepository.swift */; };
 		83611C3B2B208050001C4492 /* SkillSetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83611C3A2B208050001C4492 /* SkillSetRepository.swift */; };
 		83611C3E2B2081B0001C4492 /* Training_CertificateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83611C3D2B2081B0001C4492 /* Training_CertificateRepository.swift */; };
+		8362F97F2B22EE6D009F66EB /* PersonalInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8362F97E2B22EE6D009F66EB /* PersonalInfoManager.swift */; };
+		8362F9822B22F3B5009F66EB /* AcademicInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8362F9812B22F3B5009F66EB /* AcademicInfoManager.swift */; };
+		8362F9852B22F715009F66EB /* PreviousExperienceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8362F9842B22F715009F66EB /* PreviousExperienceManager.swift */; };
+		8362F9882B22F9B1009F66EB /* CurrentProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8362F9872B22F9B1009F66EB /* CurrentProjectManager.swift */; };
+		8362F98B2B22FC02009F66EB /* Interest_HobbiesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8362F98A2B22FC02009F66EB /* Interest_HobbiesManager.swift */; };
+		8362F98E2B22FDF4009F66EB /* SkillSetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8362F98D2B22FDF4009F66EB /* SkillSetManager.swift */; };
+		8362F9912B2300A2009F66EB /* Training_CertificateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8362F9902B2300A2009F66EB /* Training_CertificateManager.swift */; };
 		83644E812B0E27BC00C200B6 /* EmployeeDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83644E802B0E27BC00C200B6 /* EmployeeDataRepository.swift */; };
 		83644E842B0E2FDA00C200B6 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83644E832B0E2FDA00C200B6 /* Employee.swift */; };
 		836518732AC580660077EA52 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836518722AC580660077EA52 /* DashboardViewController.swift */; };
@@ -132,6 +139,13 @@
 		83611C372B207E7D001C4492 /* Interest_HobbiesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest_HobbiesRepository.swift; sourceTree = "<group>"; };
 		83611C3A2B208050001C4492 /* SkillSetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillSetRepository.swift; sourceTree = "<group>"; };
 		83611C3D2B2081B0001C4492 /* Training_CertificateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training_CertificateRepository.swift; sourceTree = "<group>"; };
+		8362F97E2B22EE6D009F66EB /* PersonalInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoManager.swift; sourceTree = "<group>"; };
+		8362F9812B22F3B5009F66EB /* AcademicInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicInfoManager.swift; sourceTree = "<group>"; };
+		8362F9842B22F715009F66EB /* PreviousExperienceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousExperienceManager.swift; sourceTree = "<group>"; };
+		8362F9872B22F9B1009F66EB /* CurrentProjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentProjectManager.swift; sourceTree = "<group>"; };
+		8362F98A2B22FC02009F66EB /* Interest_HobbiesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest_HobbiesManager.swift; sourceTree = "<group>"; };
+		8362F98D2B22FDF4009F66EB /* SkillSetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillSetManager.swift; sourceTree = "<group>"; };
+		8362F9902B2300A2009F66EB /* Training_CertificateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training_CertificateManager.swift; sourceTree = "<group>"; };
 		83644E802B0E27BC00C200B6 /* EmployeeDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDataRepository.swift; sourceTree = "<group>"; };
 		83644E832B0E2FDA00C200B6 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		836518722AC580660077EA52 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +234,13 @@
 			children = (
 				835EDEAA2B0F4D5200CE706E /* EmployeeManager.swift */,
 				835F35FC2B21DE5800F1B001 /* BaseManager.swift */,
+				8362F97E2B22EE6D009F66EB /* PersonalInfoManager.swift */,
+				8362F9812B22F3B5009F66EB /* AcademicInfoManager.swift */,
+				8362F9842B22F715009F66EB /* PreviousExperienceManager.swift */,
+				8362F9872B22F9B1009F66EB /* CurrentProjectManager.swift */,
+				8362F98A2B22FC02009F66EB /* Interest_HobbiesManager.swift */,
+				8362F98D2B22FDF4009F66EB /* SkillSetManager.swift */,
+				8362F9902B2300A2009F66EB /* Training_CertificateManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -590,6 +611,7 @@
 				8360B2822AF11D8B00206C72 /* NetworkConstant.swift in Sources */,
 				835BC88D2B1F3BD8005C2B39 /* PreviousExperience.swift in Sources */,
 				83AAA9A42ACEDA4E00DA58B7 /* ProfileViewVC.swift in Sources */,
+				8362F9822B22F3B5009F66EB /* AcademicInfoManager.swift in Sources */,
 				83B5ACA12ACC207200F10593 /* DashboardViewModel.swift in Sources */,
 				835BC88A2B1F3BC4005C2B39 /* CurrentProject.swift in Sources */,
 				835BC8962B1F3D20005C2B39 /* Interest&Hobbies.swift in Sources */,
@@ -608,21 +630,27 @@
 				83CECFEB2B0CDD6F00E8664F /* PersistentStorage.swift in Sources */,
 				838D4D532AD57E8700B29DCF /* Protocols.swift in Sources */,
 				8360B28E2AF131DF00206C72 /* SearchEmployeeViewModel.swift in Sources */,
+				8362F98E2B22FDF4009F66EB /* SkillSetManager.swift in Sources */,
 				835BC87D2B1F3946005C2B39 /* CDTrainingNCertificate+CoreDataClass.swift in Sources */,
+				8362F97F2B22EE6D009F66EB /* PersonalInfoManager.swift in Sources */,
 				83B5ACA62ACC29B700F10593 /* DashboardTableViewCell.swift in Sources */,
 				8371FC4A2AF3CAF400006E36 /* APIResultModel.swift in Sources */,
 				835EDFBE2AEB9E3200B9A5D1 /* SearchResTblViewCell.swift in Sources */,
+				8362F9882B22F9B1009F66EB /* CurrentProjectManager.swift in Sources */,
 				836518732AC580660077EA52 /* DashboardViewController.swift in Sources */,
 				835BC8842B1F3AB9005C2B39 /* PersonalInformation.swift in Sources */,
 				835BC8802B1F3946005C2B39 /* CDSkillSet+CoreDataClass.swift in Sources */,
+				8362F98B2B22FC02009F66EB /* Interest_HobbiesManager.swift in Sources */,
 				835BC87B2B1F3946005C2B39 /* CDPersonalInformation+CoreDataClass.swift in Sources */,
 				83B5AC982ACBE08D00F10593 /* UserLoginModel.swift in Sources */,
 				83611C3E2B2081B0001C4492 /* Training_CertificateRepository.swift in Sources */,
 				83A0EDB82AD01188001CB1A3 /* ProfileViewVC+TableView.swift in Sources */,
 				835887C92ADE569A00C07C02 /* SearchEmpViewController.swift in Sources */,
+				8362F9852B22F715009F66EB /* PreviousExperienceManager.swift in Sources */,
 				8360B2852AF121B000206C72 /* ApiCaller.swift in Sources */,
 				83F82B372AC19999001A9116 /* SceneDelegate.swift in Sources */,
 				835F35FD2B21DE5800F1B001 /* BaseManager.swift in Sources */,
+				8362F9912B2300A2009F66EB /* Training_CertificateManager.swift in Sources */,
 				83CECFE52B0CDD3200E8664F /* Employee+CoreDataClass.swift in Sources */,
 				83644E812B0E27BC00C200B6 /* EmployeeDataRepository.swift in Sources */,
 				83611C352B207CA9001C4492 /* CurrentProjectRepository.swift in Sources */,

@@ -43,10 +43,12 @@ class ProfileVCTableViewCell: UITableViewCell {
     
     @IBOutlet var  infoTextField: UITextView!
     
-
+    @IBOutlet var dropBtn: UIButton!
+    
     @IBOutlet var shadowTrailingConst: NSLayoutConstraint!
     
     @IBOutlet var shadowLeadingConst: NSLayoutConstraint!
+    
     
     var editable = false
     var drop  = false
@@ -89,7 +91,6 @@ class ProfileVCTableViewCell: UITableViewCell {
         print("drop is \(drop)")
        // weak var delegate : ProfileTVCellDelegate?
         delegate?.profileTVCell(section,drop)
-        
     }
 
     @IBAction func SaveBtnTap(_ sender: Any) {

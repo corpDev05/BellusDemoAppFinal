@@ -178,6 +178,7 @@
                 <outlet property="cellbtnHeight" destination="rbD-iD-6jd" id="UHo-EW-pTB"/>
                 <outlet property="contView" destination="R4x-az-ORp" id="Fhz-Rd-FzC"/>
                 <outlet property="descriptionBottmConst" destination="a09-i7-7BW" id="u30-8m-YND"/>
+                <outlet property="dropBtn" destination="w9p-NW-AZi" id="7cL-Qr-kci"/>
                 <outlet property="dropButton" destination="w9p-NW-AZi" id="GZW-zo-plf"/>
                 <outlet property="editBtn" destination="Ngx-Nh-C5H" id="U0q-mI-sD2"/>
                 <outlet property="infoTextField" destination="EUf-fj-UqM" id="YbX-DI-Lmt"/>

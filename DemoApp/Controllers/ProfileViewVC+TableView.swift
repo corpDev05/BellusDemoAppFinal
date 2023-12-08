@@ -196,6 +196,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.editBtn.isHidden = true
                 cell.saveBtn.isHidden = true
                 cell.cancelBtn.isHidden = true
+                //cell.dropBtn.setImage(UIImage(named: "moveUP"), for: .selected)
+                //cell.dropBtn.setBackgroundImage(UIImage(named: "moveUP"), for: .normal)
                 
             }
             else{
@@ -211,6 +213,7 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource{
                 cell.editBtn.isHidden = true
                 cell.saveBtn.isHidden = true
                 cell.cancelBtn.isHidden = true
+                cell.dropBtn.setImage(UIImage(named: "dropDown"), for: .normal)
                 
             }
             return cell
