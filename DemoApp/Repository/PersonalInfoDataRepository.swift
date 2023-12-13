@@ -59,6 +59,15 @@ struct PersonalInfoDataRepository : PersonalInfoRepository {
             return false
         }
         result!.firstName = record.firstName
+        result!.middleName = record.middleName
+        result!.lastName = record.lastName
+        result!.dateOfBirth  = record.dateOfBirth
+        result!.bio = record.bio
+        result!.contactNumber = record.contactNumber
+        result!.department = record.department
+        result!.designation = record.designation
+        result!.emailID = record.emailID
+        result!.yearsOfExperience = record.yearsOfExperience
         PersistentStorage.shared.saveContext()
         return true
     }
@@ -72,7 +81,7 @@ struct PersonalInfoDataRepository : PersonalInfoRepository {
     
     typealias T = PersonalInformation
     
-    private func getRecords(byName name : String) -> CDPersonalInformation? {
+    public func getRecords(byName name : String) -> CDPersonalInformation? {
         // var interest_Hobbies : Interest_Hobbies?
          let fetchRequest = NSFetchRequest<CDPersonalInformation>(entityName: "CDPersonalInformation")
          fetchRequest.predicate = NSPredicate(format: "name == %@", "\(name)")
@@ -85,4 +94,16 @@ struct PersonalInfoDataRepository : PersonalInfoRepository {
          }
         return nil
      }
+    public func getALLRecords() -> [CDPersonalInformation]? {
+        let fetchRequest  = NSFetchRequest<CDPersonalInformation>(entityName: "CDPersonalInformation")
+        
+        do {
+            let result = try PersistentStorage.shared.context.fetch(fetchRequest)
+            guard result != nil else { return [] }
+            return result
+        } catch let error {
+            debugPrint(error)
+        }
+        return nil
+    }
 }

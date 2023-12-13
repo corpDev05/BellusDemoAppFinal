@@ -98,7 +98,7 @@
                                                             <action selector="dropDownClk:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Dj9-uF-E4P"/>
                                                         </connections>
                                                     </button>
-                                                    <textView clipsSubviews="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUf-fj-UqM">
+                                                    <textView clipsSubviews="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EUf-fj-UqM">
                                                         <rect key="frame" x="24" y="42" width="284" height="28"/>
                                                         <color key="backgroundColor" red="0.83921568629999999" green="0.94509803920000002" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="textColor" systemColor="labelColor"/>

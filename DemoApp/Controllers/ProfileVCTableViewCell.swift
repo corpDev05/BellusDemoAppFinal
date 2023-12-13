@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ProfileVCTableViewCell: UITableViewCell {
+class ProfileVCTableViewCell: UITableViewCell , UITextViewDelegate{
     @IBOutlet var cellTopDistConst: NSLayoutConstraint!
     
   
@@ -56,8 +56,12 @@ class ProfileVCTableViewCell: UITableViewCell {
     var delegate : ProfileTVCellDelegate?
     var editDelegate : ProfileVCCellEditDelegate?
     var section : Int = 0
+    var row : Int = 0
+    var data : String?
+    var saveDelegate : ProfileCellSaveBtnClkDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
+        infoTextField.delegate = self
         // Initialization code
         //shadowView.isHidden = true
        setUp()
@@ -75,6 +79,7 @@ class ProfileVCTableViewCell: UITableViewCell {
         //innerViewBotmCost.isActive = false
     }
 
+    
     @IBAction func editBtnTap(_ sender: Any) {
         editable.toggle()
         //editable = editable == true ? false : true
@@ -92,6 +97,17 @@ class ProfileVCTableViewCell: UITableViewCell {
        // weak var delegate : ProfileTVCellDelegate?
         delegate?.profileTVCell(section,drop)
     }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        print("Began editing")
+    }
+    
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if let value = textView.text  {
+             print(value)
+        }
+    }
 
     @IBAction func SaveBtnTap(_ sender: Any) {
        // editable.toggle()
@@ -100,6 +116,16 @@ class ProfileVCTableViewCell: UITableViewCell {
         print("save is \(flag)")
         print("editable is \(editable)")
         self.editDelegate?.isEditable(section,false)
+        print("Row is \(row),and Coloumn is \(section)")
+        let data = infoTextField.text
+        debugPrint(" data is \(data)")
+        saveDelegate?.saveBtnClked(section, row, data)
+        
+        //Call textfield Did end editing
+        //Create a protocol for saving the entered data in the correct section/row of the table core data.
+        //Make the function to save the input in the core data
+        //After all is done add a UIALert to confirm changing data/saving data
+        
     }
     
     @IBAction func CancelBtnTap(_ sender: Any) {

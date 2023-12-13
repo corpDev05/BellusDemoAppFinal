@@ -31,6 +31,10 @@ struct PersonalInfoManager : BaseManagerProtocol{
     func deleteRecord(byName name : String) -> Bool {
         _personalInfoDataRepository.delete(byName: name)
     }
+    func getAllRecord() -> [CDPersonalInformation]
+    {
+        _personalInfoDataRepository.getALLRecords()!
+    }
         
   typealias T = PersonalInformation
 }

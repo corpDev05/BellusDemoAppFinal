@@ -17,4 +17,5 @@ protocol BaseRepository {
     func get(byName name : String) -> [T]?
     func update(record: T) ->Bool
     func delete(byName name : String) -> Bool
+
 }

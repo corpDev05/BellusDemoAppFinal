@@ -14,7 +14,20 @@ class ProfileViewVC : UIViewController , ProfileTVCellDelegate ,ProfileVCCellEdi
     
     
   //  var cellVC = ProfileVCTableViewCell()
-    
+    public let personalInfoManager = PersonalInfoManager()
+    public let skillSetManager = SkillSetManager()
+    public let currentProjectManager = CurrentProjectManager()
+    public let previousExperienceManager = PreviousExperienceManager()
+    public let interest_HobbiesManager = Interest_HobbiesManager()
+    public let academicInfoManager  = AcademicInfoManager()
+    public let training_certificateManager = Training_CertificateManager()
+    var personalInfo : PersonalInformation?
+    var skill : [SkillSet] = []
+    var currProj : CurrentProject?
+    var prevExp : [PreviousExperience] = []
+    var interest_Hobbies : [Interest_Hobbies] = []
+    var academicInfo : [AcademicInfo] = []
+    var training : [Training_Certificate] = []
     var menu : SideMenuNavigationController?
     var edit : Bool  = false
    // var  profileViewModel : ProfileCellModel
@@ -25,6 +38,7 @@ class ProfileViewVC : UIViewController , ProfileTVCellDelegate ,ProfileVCCellEdi
         setupNavBar()
         setupSideControllerMenu()
         setupTableView()
+        createDatabase()
        // cellVC.delegate = self
         // Do any additional setup after loading the view.
     }
@@ -33,6 +47,37 @@ class ProfileViewVC : UIViewController , ProfileTVCellDelegate ,ProfileVCCellEdi
         profileTable.rowHeight = UITableView.automaticDimension
       //  profileTable.autoresizesSubviews = true
         }*/
+    
+    func createDatabase(){
+         personalInfo  = PersonalInformation(firstName: "John", middleName: "", lastName: "Doe", bio: "I create visual concepts,develops overall layout & communication ideas that inspire,inform and captivate consumers", dateOfBirth: DateFormatter().date(from:"DD/MM/YYYY"), designation: "Designer", department: "Information Technology", yearsOfExperience: 15, contactNumber: 2563365825, emailID: "JohnDoe@Example.com")
+         skill = [SkillSet(skill: "DSA"),SkillSet(skill: "OOP"),SkillSet(skill: "iOS Development"),SkillSet(skill: "Swift"),SkillSet(skill: "Core Data"),SkillSet(skill: "API integration")]
+        
+         currProj = CurrentProject(projectName: "ORCA", reportingManager: "Jane Doe", rolesResp: ["UI Designing","Prototyping","Wireframing","UX Research"])
+        
+        prevExp  = [PreviousExperience(organisation: "ABC Technologies", name: "ORCA", roleRespons: ["Designing user interfaces and clickable prototypes"]),PreviousExperience(organisation: "ABC Technologies", name: "Telemedicine", roleRespons: ["Designing user interfaces and clickable prototypes"]),PreviousExperience(organisation: "ABC Technologies", name: "Poker - Anuvaka", roleRespons: ["Designing user interfaces and clickable prototypes"])]
+        
+        interest_Hobbies = [Interest_Hobbies(interestName: "Excercising"),Interest_Hobbies(interestName: "Watching Movies/Shows"),Interest_Hobbies(interestName: "Tennis"),Interest_Hobbies(interestName: "Exploring new places"),Interest_Hobbies(interestName: "Learning new things"),Interest_Hobbies(interestName: "Hiking"),Interest_Hobbies(interestName: "Exploring new places")]
+        
+         academicInfo = [AcademicInfo(course: "Post Graduation", specialization: "XYZ"),AcademicInfo(course: "B.Tech", specialization: "Electronics")]
+        
+        training = [Training_Certificate(nameOfTraining: "DSA"),Training_Certificate(nameOfTraining: "Object-Oriented Programming"),Training_Certificate(nameOfTraining: "Protocol-Oriented Programming"),Training_Certificate(nameOfTraining: "iOS Development"),Training_Certificate(nameOfTraining: "Swift")]
+        for trainings in training {
+            training_certificateManager.create(record: trainings)
+        }
+        
+        for hobbies in interest_Hobbies {
+            interest_HobbiesManager.create(record: hobbies)
+        }
+        
+        for exp in prevExp {
+            previousExperienceManager.create(record: exp)
+        }
+        currentProjectManager.create(record: currProj!)
+        for skills in skill {
+            skillSetManager.create(record: skills)
+        }
+        personalInfoManager.create(record: personalInfo!)
+    }
 
     
     func setupNavBar(){

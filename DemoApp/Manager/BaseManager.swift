@@ -16,7 +16,6 @@ protocol BaseManagerProtocol {
     func fetchALL() -> [T]?
     func fetchRecord(byName name : String) -> [T]?
     func updateRecord(record : T) ->Bool
-    func deleteRecord(byName name : String) ->Bool
-    
+    func deleteRecord(byName name : String) ->Bool    
 }
 

@@ -15,3 +15,7 @@ protocol ProfileTVCellDelegate: AnyObject {
 protocol ProfileVCCellEditDelegate: AnyObject {
     func isEditable(_ section : Int ,_ editable : Bool)
 }
+
+protocol ProfileCellSaveBtnClkDelegate : AnyObject {
+    func saveBtnClked(_ section : Int ,_ row : Int ,_ data : Any)
+}
