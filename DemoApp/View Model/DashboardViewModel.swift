@@ -32,10 +32,7 @@ class DashboardViewModel {
         }
         isLoading.value = true
         APICaller.getTrendingMovies { [weak self] (result) in
-            //DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            //    self?.isLoading.value  = false
-            //}
-            //self?.isLoading.value  = false
+            
             switch result {
             case .failure(let error):
                 print(error)

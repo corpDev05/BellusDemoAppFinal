@@ -26,6 +26,7 @@ struct APIResultModel: Codable {
         case totalPages = "total_pages"
         case totalResults = "total_results"
     }
+    
 }
 
 // MARK: - Result

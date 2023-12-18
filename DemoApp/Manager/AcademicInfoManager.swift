@@ -30,6 +30,11 @@ struct AcademicInfoManager : BaseManagerProtocol {
     func deleteRecord(byName name: String) -> Bool {
         _academicInfoDataRepository.delete(byName: name)
     }
+    func getAllRecord() -> [CDAcademicInfo]
+    {
+        _academicInfoDataRepository.getALLRecords()!
+    }
+        
     
     typealias T = AcademicInfo
 }

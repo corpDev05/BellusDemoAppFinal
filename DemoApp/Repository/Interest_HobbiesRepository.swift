@@ -77,4 +77,17 @@ struct Interest_HobbiesDataRepository : Interest_HobbiesRepository {
         }
      return nil
     }
+    public func getALLRecords() -> [CDInterestNHobbies]? {
+        let fetchRequest  = NSFetchRequest<CDInterestNHobbies>(entityName: "CDInterestNHobbies")
+        
+        do {
+            let result = try PersistentStorage.shared.context.fetch(fetchRequest)
+            guard result != nil else { return [] }
+            return result
+        } catch let error {
+            debugPrint(error)
+        }
+        return nil
+    }
+    
 }

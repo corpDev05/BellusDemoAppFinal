@@ -82,4 +82,17 @@ struct PreviousExperienceDataRepository : PreviousExperienceRepository{
          }
         return nil
      }
+    public func getALLRecords() -> [CDPreviousExperience]? {
+        let fetchRequest  = NSFetchRequest<CDPreviousExperience>(entityName: "CDPreviousExperience")
+        
+        do {
+            let result = try PersistentStorage.shared.context.fetch(fetchRequest)
+            guard result != nil else { return [] }
+            return result
+        } catch let error {
+            debugPrint(error)
+        }
+        return nil
+    }
+    
 }

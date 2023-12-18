@@ -31,7 +31,10 @@ struct CurrentProjectManager : BaseManagerProtocol{
     func deleteRecord(byName name: String) -> Bool {
         _currentProjectDataRepository.delete(byName: name)
     }
-    
+    func getAllRecord() -> [CDCurrentProject]
+    {
+        _currentProjectDataRepository.getALLRecords()!
+    }
     typealias T = CurrentProject
     
 }

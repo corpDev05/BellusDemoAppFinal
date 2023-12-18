@@ -30,6 +30,10 @@ struct SkillSetManager : BaseManagerProtocol {
     func deleteRecord(byName name: String) -> Bool {
         _skillSetDataRepository.delete(byName: name)
     }
+    func getAllRecord() -> [CDSkillSet]
+    {
+        _skillSetDataRepository.getALLRecords()!
+    }
     
     typealias T = SkillSet
     

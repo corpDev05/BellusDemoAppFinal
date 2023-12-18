@@ -272,8 +272,8 @@
 		8365186D2AC57E1E0077EA52 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				838A84092AEFD1D100F8B41E /* Observable.swift */,
 				8360B2812AF11D8B00206C72 /* NetworkConstant.swift */,
+				838A84092AEFD1D100F8B41E /* Observable.swift */,
 				8360B2842AF121B000206C72 /* ApiCaller.swift */,
 			);
 			path = Networking;

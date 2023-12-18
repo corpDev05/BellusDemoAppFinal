@@ -30,6 +30,11 @@ struct PreviousExperienceManager : BaseManagerProtocol {
     func deleteRecord(byName name: String) -> Bool {
         _previousExperienceDataRepository.delete(byName: name)
     }
+ 
+    func getAllRecord() -> [CDPreviousExperience]
+    {
+        _previousExperienceDataRepository.getALLRecords()!
+    }
     
     typealias T = PreviousExperience
 }

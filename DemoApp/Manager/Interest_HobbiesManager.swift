@@ -30,6 +30,10 @@ struct Interest_HobbiesManager : BaseManagerProtocol{
     func deleteRecord(byName name: String) -> Bool {
         _interest_HobbiesDataRepository.delete(byName: name)
     }
+    func getAllRecord() -> [CDInterestNHobbies]
+    {
+        _interest_HobbiesDataRepository.getALLRecords()!
+    }
     
     typealias T = Interest_Hobbies
 }

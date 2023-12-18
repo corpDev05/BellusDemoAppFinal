@@ -64,7 +64,7 @@ struct SkillSetDataRepository : SkillSetRepository {
     
     typealias T = SkillSet
     
-    private func getRecords(byName name : String) -> CDSkillSet? {
+    public func getRecords(byName name : String) -> CDSkillSet? {
         // var interest_Hobbies : Interest_Hobbies?
          let fetchRequest = NSFetchRequest<CDSkillSet>(entityName: "CDSkillSet")
          fetchRequest.predicate = NSPredicate(format: "name == %@", "\(name)")
@@ -78,4 +78,16 @@ struct SkillSetDataRepository : SkillSetRepository {
         return nil
      }
     
+    public func getALLRecords() -> [CDSkillSet]? {
+        let fetchRequest  = NSFetchRequest<CDSkillSet>(entityName: "CDSkillSet")
+        
+        do {
+            let result = try PersistentStorage.shared.context.fetch(fetchRequest)
+            guard result != nil else { return [] }
+            return result
+        } catch let error {
+            debugPrint(error)
+        }
+        return nil
+    }
 }

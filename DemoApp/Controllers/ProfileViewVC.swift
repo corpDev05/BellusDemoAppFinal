@@ -30,6 +30,7 @@ class ProfileViewVC : UIViewController , ProfileTVCellDelegate ,ProfileVCCellEdi
     var training : [Training_Certificate] = []
     var menu : SideMenuNavigationController?
     var edit : Bool  = false
+    var section : Int = 0
    // var  profileViewModel : ProfileCellModel
     @IBOutlet var profileTable: UITableView!
     
@@ -61,6 +62,9 @@ class ProfileViewVC : UIViewController , ProfileTVCellDelegate ,ProfileVCCellEdi
          academicInfo = [AcademicInfo(course: "Post Graduation", specialization: "XYZ"),AcademicInfo(course: "B.Tech", specialization: "Electronics")]
         
         training = [Training_Certificate(nameOfTraining: "DSA"),Training_Certificate(nameOfTraining: "Object-Oriented Programming"),Training_Certificate(nameOfTraining: "Protocol-Oriented Programming"),Training_Certificate(nameOfTraining: "iOS Development"),Training_Certificate(nameOfTraining: "Swift")]
+        for acad in academicInfo {
+            academicInfoManager.create(record: acad)
+        }
         for trainings in training {
             training_certificateManager.create(record: trainings)
         }

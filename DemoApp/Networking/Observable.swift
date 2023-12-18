@@ -7,10 +7,9 @@
 //
 
 import Foundation
-
 class Observable<T> {
     var value : T? {
-        didSet {
+        didSet{
             DispatchQueue.main.async {
                 self.listener?(self.value)
             }

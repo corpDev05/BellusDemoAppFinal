@@ -80,5 +80,18 @@ struct AcademicInfoDataRepository : AcademicInfoRepository {
          }
         return nil
      }
+    public func getALLRecords() -> [CDAcademicInfo]? {
+        let fetchRequest  = NSFetchRequest<CDAcademicInfo>(entityName: "CDAcademicInfo")
+        
+        do {
+            let result = try PersistentStorage.shared.context.fetch(fetchRequest)
+            guard result != nil else { return [] }
+            return result
+        } catch let error {
+            debugPrint(error)
+        }
+        return nil
+    }
+    
     
 }

@@ -30,6 +30,10 @@ struct Training_CertificateManager : BaseManagerProtocol{
     func deleteRecord(byName name: String) -> Bool {
         _training_CertificateDataRepository.delete(byName: name)
     }
+    func getAllRecord() -> [CDTrainingNCertificate]
+    {
+        _training_CertificateDataRepository.getALLRecords()!
+    }
     
     typealias T = Training_Certificate
 }

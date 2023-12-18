@@ -79,5 +79,17 @@ struct Training_CertificateDataRepository : Training_CertificateRepository {
          }
         return nil
      }
+    public func getALLRecords() -> [CDTrainingNCertificate]? {
+        let fetchRequest  = NSFetchRequest<CDTrainingNCertificate>(entityName: "CDTrainingNCertificate")
+        
+        do {
+            let result = try PersistentStorage.shared.context.fetch(fetchRequest)
+            guard result != nil else { return [] }
+            return result
+        } catch let error {
+            debugPrint(error)
+        }
+        return nil
+    }
   
 }

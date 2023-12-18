@@ -58,6 +58,7 @@ class ProfileVCTableViewCell: UITableViewCell , UITextViewDelegate{
     var section : Int = 0
     var row : Int = 0
     var data : String?
+    var index : NSIndexPath?
     var saveDelegate : ProfileCellSaveBtnClkDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -67,6 +68,16 @@ class ProfileVCTableViewCell: UITableViewCell , UITextViewDelegate{
        setUp()
 
     }
+    
+    //func textViewDidBeginEditing(_ textView: UITextView) {
+     //   debugPrint("Began Editing")
+    //}
+    //func textViewDidEndEditing(_ textView: UITextView) {
+    //    debugPrint("Ended Editing")
+    //}
+    /*func textViewDidEndEditing(_ textView: UITextView) {
+            index = NSIndexPath(row: textView.tag, section: section)
+           }*/
    
     func setUp(){
      
@@ -98,17 +109,7 @@ class ProfileVCTableViewCell: UITableViewCell , UITextViewDelegate{
         delegate?.profileTVCell(section,drop)
     }
     
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        print("Began editing")
-    }
-    
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if let value = textView.text  {
-             print(value)
-        }
-    }
-
+  
     @IBAction func SaveBtnTap(_ sender: Any) {
        // editable.toggle()
        // editable = editable == true ? false : true
