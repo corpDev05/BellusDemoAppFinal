@@ -235,6 +235,102 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
                 debugPrint("Error in Saving changes to Core Data")
             }
         }
+        case 3 :
+            do {
+                var record = previousExperienceManager.getAllRecord()
+                switch row {
+               
+            case 1 :
+                do {
+                    guard record != nil else {
+                        return
+                    }
+                    record[0].name = data as? String
+                    prevExp[0].name   = data as? String
+                    PersistentStorage.shared.saveContext()
+                }
+            case 2 :
+                do {
+                    guard record != nil else {
+                        return
+                    }
+                    record[0].organisation = data as? String
+                    prevExp[0].organisation  = data as? String
+                    PersistentStorage.shared.saveContext()
+                }
+                
+            case 3 :
+                do {
+                    guard record != nil else {
+                        return
+                    }
+                    record[0].roleRespons?[0]  = data as? NSString ?? "Edit and Enter the value again"
+                    prevExp[0].roleRespons?[0]   = data as? NSString ?? "Edit and Enter the value again"
+                    PersistentStorage.shared.saveContext()
+                }
+            case 4 :
+                do {
+                    guard record != nil else {
+                        return
+                    }
+                    record[1].name = data as? String
+                    prevExp[1].name   = data as? String
+                    PersistentStorage.shared.saveContext()
+                }
+                
+            case 5 :
+                do {
+                    guard record != nil else {
+                        return
+                    }
+                    record[1].organisation = data as? String
+                    prevExp[1].organisation    = data as? String
+                    PersistentStorage.shared.saveContext()
+                }
+            case 6 :
+                do {
+                    guard record != nil else {
+                        return
+                    }
+                    record[1].roleRespons![0] = data as? String as! NSString
+                    prevExp[1].roleRespons![0] = data as? String as! NSString
+                    PersistentStorage.shared.saveContext()
+                }
+            case 7 :
+                do {
+                    guard record != nil else {
+                        return
+                    }
+                    record[2].name = data as? String
+                    prevExp[2].name    = data as? String
+                    PersistentStorage.shared.saveContext()
+                }
+            case 8 :
+                do {
+                    guard record != nil else {
+                        return
+                    }
+                    record[2].organisation = data as? String
+                    prevExp[2].organisation = data as? String
+                    PersistentStorage.shared.saveContext()
+                }
+            case 9 :
+                do {
+                    guard record != nil else {
+                        return
+                    }
+                    record[2].roleRespons?[0] = data as? NSString ?? "Edit and Enter Again"
+                    prevExp[2].roleRespons?[0] = data as? NSString ?? "Edit and Enter Again"
+                    //personalInfo?.contactNumber = (data as? Int64) ?? 7239239024
+                    PersistentStorage.shared.saveContext()
+                }
+             
+            default:
+                debugPrint("Error")
+            }
+                 let indexSet = IndexSet(integer: section)
+                profileTable.reloadSections(indexSet, with: .none)
+            }
         case 4 : do {
             var record = training_certificateManager.getAllRecord()
             switch row {
@@ -1423,12 +1519,12 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
             if !(profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false) {
             
              if indexPath.row == 1 {
-                section = indexPath.section
+                self.section = indexPath.section
                 cell.infoTextField.tag = indexPath.row
                 cell.data  = cell.infoTextField.text
                 cell.row = indexPath.row
                 
-                 section = indexPath.section
+                self.section = indexPath.section
                  //
                 cell1.borderCell.layer.borderWidth = 2.0
                 cell1.borderCell.layer.borderColor = CGColor(red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
@@ -1441,7 +1537,7 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
                 
             }
             else if indexPath.row == 2{
-                section = indexPath.section
+                self.section = indexPath.section
                 cell.infoTextField.tag = indexPath.row
                 cell.data  = cell.infoTextField.text
                 cell.row = indexPath.row
@@ -1455,7 +1551,7 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
                 
             }
             else if indexPath.row == 3{
-                section = indexPath.section
+                self.section = indexPath.section
                 cell.infoTextField.tag = indexPath.row
                 cell.data  = cell.infoTextField.text
                 cell.row = indexPath.row
@@ -1475,7 +1571,7 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
                 
             }
             else if indexPath.row == 4 {
-                section = indexPath.section
+                self.section = indexPath.section
                // cell.infoTextField.tag = indexPath.row
                 cell.data  = cell.infoTextField.text
                 cell.row = indexPath.row
@@ -1547,6 +1643,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
             else {
                 
             if indexPath.row == 1 {
+                self.section = indexPath.section
+                cell.infoTextField.tag = indexPath.row
             //let cell = profileTable.dequeueReusableCell(withIdentifier: "ProfileView2ndCell", for: indexPath) as! SecondProfileVCTableViewCell
 
            // cell.contView.backgroundColor = UIColor(displayP3Red: 214/255, green: 241/255, blue: 242/255, alpha: 1.0)
@@ -1557,8 +1655,8 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
             cell.infoTextField.isEditable = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
                 cell.cellHeight.constant = 100.0
                 cell.infoTextField.isHidden = false
-                cell.titleText.text =  prevExp[0].name  // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
-                cell.infoTextField.text = "" // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
+                cell.titleText.text =  "Name" //prevExp[0].name  // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
+                cell.infoTextField.text = prevExp[0].name ?? "" // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
                 cell.dropButton.isHidden = true
                 cell.descriptionBottmConst.isActive = true
                 cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
@@ -1573,13 +1671,15 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
                 return cell
             }
             else if indexPath.row == 2 {
+                self.section = indexPath.section
+                cell.infoTextField.tag = indexPath.row
                 cell.cancelBtn.isHidden = true
                 cell.saveBtn.isHidden = true
                 cell.infoTextField.isEditable = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
                 cell.cellHeight.constant = 100.0
                 cell.infoTextField.isHidden = false
-                cell.titleText.text =   prevExp[0].organisation // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
-                cell.infoTextField.text = "" // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
+                cell.titleText.text =   "Organisation" //prevExp[0].organisation // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
+                cell.infoTextField.text = prevExp[0].organisation ?? "" // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
                 cell.dropButton.isHidden = true
                 cell.descriptionBottmConst.isActive = true
                 cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
@@ -1594,13 +1694,15 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
                 return cell
             }
             else if indexPath.row == 3 {
+                self.section = indexPath.section
+                cell.infoTextField.tag = indexPath.row
                 cell.cancelBtn.isHidden = true
                 cell.saveBtn.isHidden = true
                 cell.infoTextField.isEditable = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
                 cell.cellHeight.constant = 100.0
                 cell.infoTextField.isHidden = false
-                cell.titleText.text =  prevExp[0].roleRespons?[0] as String? // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
-                cell.infoTextField.text = "" // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
+                cell.titleText.text =  "Roles and Responsibilities" // prevExp[0].roleRespons?[0] as String? // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
+                cell.infoTextField.text = prevExp[0].roleRespons?[0]  as String? ??  "" // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
                 cell.dropButton.isHidden = true
                 cell.descriptionBottmConst.isActive = true
                 cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
@@ -1615,13 +1717,15 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
                 return cell
             }
             else if indexPath.row == 4  {
+                self.section = indexPath.section
+                cell.infoTextField.tag = indexPath.row
                 cell.cancelBtn.isHidden = true
                 cell.saveBtn.isHidden = true
                 cell.infoTextField.isEditable = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
                 cell.cellHeight.constant = 100.0
                 cell.infoTextField.isHidden = false
-                cell.titleText.text =  prevExp[1].name  // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
-                cell.infoTextField.text =  "" // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
+                cell.titleText.text = "Name"   //prevExp[1].name  // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
+                cell.infoTextField.text = prevExp[1].name ?? "" // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
                 cell.dropButton.isHidden = true
                 cell.descriptionBottmConst.isActive = true
                 cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
@@ -1636,13 +1740,15 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
                 return cell
             }
             else if indexPath.row == 5 {
+                self.section = indexPath.section
+                cell.infoTextField.tag = indexPath.row
                 cell.cancelBtn.isHidden = true
                 cell.saveBtn.isHidden = true
                 cell.infoTextField.isEditable = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
                 cell.cellHeight.constant = 100.0
                 cell.infoTextField.isHidden = false
-                cell.titleText.text =   prevExp[1].organisation // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
-                cell.infoTextField.text =  ""// profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
+                cell.titleText.text =   "Organization"  //prevExp[1].organisation // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
+                cell.infoTextField.text = prevExp[1].organisation ?? ""// profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
                 cell.dropButton.isHidden = true
                 cell.descriptionBottmConst.isActive = true
                 cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
@@ -1657,13 +1763,15 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
                 return cell
             }
             else if indexPath.row == 6 {
+                self.section = indexPath.section
+                cell.infoTextField.tag = indexPath.row
                 cell.cancelBtn.isHidden = true
                 cell.saveBtn.isHidden = true
                 cell.infoTextField.isEditable = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
                 cell.cellHeight.constant = 100.0
                 cell.infoTextField.isHidden = false
-                cell.titleText.text =   prevExp[1].roleRespons![0] as? String // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
-                cell.infoTextField.text =  ""// profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
+                cell.titleText.text = "Roles and Responsibilities"  // prevExp[1].roleRespons![0] as? String // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
+                cell.infoTextField.text = prevExp[1].roleRespons![0] as? String ?? ""// profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
                 cell.dropButton.isHidden = true
                 cell.descriptionBottmConst.isActive = true
                 cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
@@ -1678,13 +1786,15 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
                 return cell
             }
             else if indexPath.row == 7 {
+                self.section = indexPath.section
+                cell.infoTextField.tag = indexPath.row
                 cell.cancelBtn.isHidden = true
                 cell.saveBtn.isHidden = true
                 cell.infoTextField.isEditable = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
                 cell.cellHeight.constant = 100.0
                 cell.infoTextField.isHidden = false
-                cell.titleText.text =   prevExp[2].name // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
-                cell.infoTextField.text =  ""// profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
+                cell.titleText.text =  "Name"    //prevExp[2].name // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
+                cell.infoTextField.text = prevExp[2].name ?? ""// profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
                 cell.dropButton.isHidden = true
                 cell.descriptionBottmConst.isActive = true
                 cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
@@ -1699,13 +1809,15 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
                 return cell
             }
             else if indexPath.row == 8 {
+                self.section = indexPath.section
+                cell.infoTextField.tag = indexPath.row
                 cell.cancelBtn.isHidden = true
                 cell.saveBtn.isHidden = true
                 cell.infoTextField.isEditable = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
                 cell.cellHeight.constant = 100.0
                 cell.infoTextField.isHidden = false
-                cell.titleText.text =   prevExp[2].organisation // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
-                cell.infoTextField.text =  ""// profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
+                cell.titleText.text =   "Organization" //prevExp[2].organisation // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
+                cell.infoTextField.text = prevExp[2].organisation ?? ""// profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
                 cell.dropButton.isHidden = true
                 cell.descriptionBottmConst.isActive = true
                 cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
@@ -1720,14 +1832,16 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
                 return cell
             }
             else if indexPath.row == 9 {
+                self.section = indexPath.section
+                cell.infoTextField.tag = indexPath.row
                 cell.cancelBtn.isHidden = true
                 cell.saveBtn.isHidden = true
 
                 cell.infoTextField.isEditable = profileViewModel.profileVCModel[0].data[indexPath.section].isEditable ?? false
                 cell.cellHeight.constant = 100.0
                 cell.infoTextField.isHidden = false
-                cell.titleText.text =   prevExp[2].roleRespons![0] as String // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
-                cell.infoTextField.text =  ""// profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
+                cell.titleText.text =  "Roles and Resposibilities" // prevExp[2].roleRespons![0] as String // profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].title
+                cell.infoTextField.text = prevExp[2].roleRespons![0] as String ?? ""// profileViewModel.profileVCModel[0].data[indexPath.section].array[indexPath.row].description
                 cell.dropButton.isHidden = true
                 cell.descriptionBottmConst.isActive = true
                 cell.shadowView.backgroundColor = UIColor(displayP3Red: 17/255, green: 180/255, blue: 189/255, alpha: 1.0)
@@ -1743,7 +1857,7 @@ extension ProfileViewVC : UITableViewDelegate,UITableViewDataSource,ProfileCellS
             }
             else if indexPath.row == 10{
                 //cell.cancelBtn.isHidden = false
-                 section = indexPath.section
+                self.section = indexPath.section
                // cell.infoTextField.tag = indexPath.row
                 cell.data  = cell.infoTextField.text
                 cell.row = indexPath.row
@@ -2532,3 +2646,8 @@ public extension UITableView {
 }
 
 
+//let queue = DispatchQueue(label: "Withrawal Queue", qos: .default, attributes: .concurrent, autoreleaseFrequency: .inherit, target: .none)
+
+//queue.async {
+//    <#code#>
+//}

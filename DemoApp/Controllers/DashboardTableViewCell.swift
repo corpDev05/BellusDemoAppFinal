@@ -10,7 +10,6 @@ import UIKit
 
 class DashboardTableViewCell: UITableViewCell {
     @IBOutlet var tblView: UIView!
-  //  @IBOutlet var postView: UIView!
     @IBOutlet var tblPostView: UIView!
     @IBOutlet var userImage: UIImageView!
     @IBOutlet var userName: UILabel!

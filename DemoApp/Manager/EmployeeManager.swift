@@ -29,7 +29,7 @@ struct EmployeeManager {
     func deleteEmployee(employee : Employees) -> Bool {
         return _employeeDataRepository.delete(record: employee)
     }
-    func deleteAll(){
+    func   deleteAll(){
         _employeeDataRepository.deleteAll()
     }
 }
