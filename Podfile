@@ -8,5 +8,6 @@ target 'DemoApp' do
   # Pods for DemoApp
 
 pod 'SideMenu'
+pod 'SDWebImage/MapKit'
 
 end

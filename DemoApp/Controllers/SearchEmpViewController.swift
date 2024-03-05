@@ -13,11 +13,13 @@ class SearchEmpViewController: UIViewController,UITextFieldDelegate {
     var edit : Bool  = false
    // var  profileViewModel : ProfileCellModel
     var searchEmployeeViewModel : SearchEmployeeViewModel = SearchEmployeeViewModel()
+    var cellData : [Datum] = []
     @IBOutlet var searchView: UIView!
     @IBOutlet var topView: UIView!
     
     @IBOutlet var nameTxtField: UITextField!
     @IBOutlet var searchResultTbl: UITableView!
+    @IBOutlet weak var skillTxtField: UITextField!
     
     private let manager = EmployeeManager()
     var tblViewHeaderText : String?
@@ -33,6 +35,7 @@ class SearchEmpViewController: UIViewController,UITextFieldDelegate {
         topView.layer.borderWidth = 2.0
         self.hideKeyboardWhenTappedAround()
         createDatabase()
+        bindViewModel()
        // cellVC.delegate = self
         // Do any additional setup after loading the view.
     }
@@ -68,7 +71,8 @@ class SearchEmpViewController: UIViewController,UITextFieldDelegate {
         print("Found results")
         print(result.count)
         print(result)
-        reloadTable(result: result)
+        searchEmployeeViewModel.getSearchData(nameTxtField.text ?? "iPhone", skillTxtField.text ?? "black")
+        //reloadTable(result: result)
     }
     
     
@@ -76,6 +80,20 @@ class SearchEmpViewController: UIViewController,UITextFieldDelegate {
      //   print("\(searchEmployeeViewModel.getData())")
     }
 
+    
+    func bindViewModel(){
+        searchEmployeeViewModel.isLoading.bind { [weak self](isLoading) in
+            guard let self = self , let isloading = isLoading else {
+                return
+            }
+        }
+      
+        searchEmployeeViewModel.celldata.bind { [weak self] (data) in
+            guard let self = self , let data = data else{return}
+            self.cellData = data
+            searchResultTbl.reloadData()
+        }
+    }
     
     func setupNavBar(){
         

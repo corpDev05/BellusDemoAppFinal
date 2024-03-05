@@ -7,11 +7,13 @@
 //
 import SideMenu
 import UIKit
-
+import SDWebImage
 class DashboardViewController: UIViewController{
  
     var menu : SideMenuNavigationController?
    // @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    var newcellDataSource : [Movie] = []
+    var fakeResponseCellData : [FakeStoreResponseElement] = []
     var cellDataSource : [DashboardTblCellViewModel] = []
     let manager : EmployeeManager = EmployeeManager()
     
@@ -22,12 +24,123 @@ class DashboardViewController: UIViewController{
         setupTableView()
         setupSideControllerMenu()
         setupNavBar()
-        bindViewModel()
+    // bindViewModel()
         //createEmployee()
         //fetchEmployee()
         deleteRecord()
+        APICall()
+        checkForPermission()
     }
- 
+    
+    func checkForPermission(){
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.getNotificationSettings { settings in
+            switch settings.authorizationStatus {
+            case .notDetermined:
+                do{
+                    notificationCenter.requestAuthorization(options: [.alert,.sound]) { didAllow, error in
+                        if(didAllow){
+                            self.dispatchNotification()
+                        }
+                        
+                    }
+                }
+            case .denied:
+                return
+            case .authorized:
+                self.dispatchNotification()
+            default:
+                return
+            }
+        }
+    }
+    
+    func dispatchNotification(){
+        let identifier = "my-first-notification"
+        let title = "This is my first notificaiton sent!"
+        let body = "Hello I am elon musk the battery of my tesla ran out send me 20$ for uber i will send you 2000$"
+        let hour = 17
+        let minute = 02
+        let isDaily = true
+        
+        let notificationCenter = UNUserNotificationCenter.current()
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = body
+        content.sound = .default
+        
+        let calendar = Calendar.current
+        var dateComponent = DateComponents(calendar: calendar,timeZone: TimeZone.current )
+        dateComponent.hour = hour
+        dateComponent.minute = minute
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: isDaily)
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        notificationCenter.removePendingNotificationRequests(withIdentifiers: [identifier])
+        notificationCenter.add(request)
+    }
+        
+    func APICall() {
+        
+        let group  = DispatchGroup()
+        let bp1 = BlockOperation{
+        group.enter()
+        debugPrint("Entering the get Trending Movies")
+        APICaller.getTrendingMovies { [weak self] result in
+            
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let data):
+                do {
+                    self?.newcellDataSource = data.results
+                  //  debugPrint(" Api data count is \(self?.newcellDataSource.count)")
+                   // debugPrint("\(self?.newcellDataSource[0].firstAirDate)")
+                  
+                }
+            }
+            debugPrint("Exiting the get Trending Movies")
+            group.leave()
+            
+           // self?.reloadTableView()
+        }
+        group.wait()
+        }
+       
+        let bp2 = BlockOperation{
+            debugPrint("Entering the get Fake Response")
+            debugPrint("The count of data from Trending movies is \(self.newcellDataSource.count)")
+            APICaller.getFakeResponse { [weak self] result in
+                switch result{
+                case .success(let data) :
+                    do{
+                        self?.fakeResponseCellData = data
+                        debugPrint("Api data count from fake response is \(self?.fakeResponseCellData.count)")
+                        
+                        
+                    }
+                case .failure(let error):
+                    do{
+                        debugPrint("Error fetching data from API with description: \(error.localizedDescription)")
+                    }
+                    
+                }
+                debugPrint("Existing the get Fake Response")
+                self?.reloadTableView()
+                
+            }
+        }
+        
+       // group.notify(queue: .main) {
+       ////     debugPrint("Entering the maint thread")
+       ////     self.reloadTableView()
+       // }
+        bp2.addDependency(bp1)
+        let queue = OperationQueue()
+        queue.addOperations([bp1,bp2],waitUntilFinished:true)
+
+    }
     func deleteRecord(){
         manager.deleteAll()
     }

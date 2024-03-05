@@ -1,16 +1,22 @@
 PODS:
+  - SDWebImage/Core (5.18.8)
+  - SDWebImage/MapKit (5.18.8):
+    - SDWebImage/Core
   - SideMenu (6.5.0)
 
 DEPENDENCIES:
+  - SDWebImage/MapKit
   - SideMenu
 
 SPEC REPOS:
   trunk:
+    - SDWebImage
     - SideMenu
 
 SPEC CHECKSUMS:
+  SDWebImage: a81bbb3ba4ea5f810f4069c68727cb118467a04a
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
 
-PODFILE CHECKSUM: 8411936a0c3535662916a05d6c374a40472709c1
+PODFILE CHECKSUM: 8ac95e1dda0f61040af3f811f98214a8b795bed3
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.14.3

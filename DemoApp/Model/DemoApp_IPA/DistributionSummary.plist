@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DemoApp.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>620F13157570A1730367BC2425E6CA874D3CBA14</string>
+				<key>dateExpires</key>
+				<string>01/02/25</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>1</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>620F13157570A1730367BC2425E6CA874D3CBA14</string>
+						<key>dateExpires</key>
+						<string>01/02/25</string>
+						<key>type</key>
+						<string>Apple Development</string>
+					</dict>
+					<key>name</key>
+					<string>SDWebImage.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>C9244NHD3W</string>
+						<key>name</key>
+						<string>EDUREV LEARNING PRIVATE LIMITED</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>5.18.8</string>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>1</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>620F13157570A1730367BC2425E6CA874D3CBA14</string>
+						<key>dateExpires</key>
+						<string>01/02/25</string>
+						<key>type</key>
+						<string>Apple Development</string>
+					</dict>
+					<key>name</key>
+					<string>SideMenu.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>C9244NHD3W</string>
+						<key>name</key>
+						<string>EDUREV LEARNING PRIVATE LIMITED</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>6.5.0</string>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>C9244NHD3W.com.bellurbis.DemoApp</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>C9244NHD3W</string>
+				<key>get-task-allow</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>DemoApp.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>bdffe703-c92e-430e-80ca-24281c122118</string>
+				<key>dateExpires</key>
+				<string>01/02/25</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: *</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>C9244NHD3W</string>
+				<key>name</key>
+				<string>EDUREV LEARNING PRIVATE LIMITED</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,289 @@
+2024-03-04 06:14:13 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x2b4291650; archive(resolved)="<IDEArchive: 0x600081b68ea0>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodDevelopmentSigned: 0x60008b3a7140>", team(resolved)="<IDEProvisioningDisambiguatableBasicTeam: 0x60000a478e40; teamID='C9244NHD3W', teamName='EDUREV LEARNING PRIVATE LIMITED', teamType='Company', username='pdevesh669@gmail.com', isFreeProvisioningTeam='0'>">
+	Chain (15, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x2b4291650; archive = "<IDEArchive: 0x600081b68ea0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x60008b3a7140>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000a478e40; teamID='C9244NHD3W', teamName='EDUREV LEARNING PRIVATE LIMITED', teamType='Company', username='pdevesh669@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionProcessingPipelineContext: 0x124bcc250; archive = "<IDEArchive: 0x600081b68ea0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x60008b3a7140>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000a478e40; teamID='C9244NHD3W', teamName='EDUREV LEARNING PRIVATE LIMITED', teamType='Company', username='pdevesh669@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2b3af2950; archive = "<IDEArchive: 0x600081b68ea0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x60008b3a7140>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000a478e40; teamID='C9244NHD3W', teamName='EDUREV LEARNING PRIVATE LIMITED', teamType='Company', username='pdevesh669@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2b406ec60; archive = "<IDEArchive: 0x600081b68ea0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x60008b3a7140>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000a478e40; teamID='C9244NHD3W', teamName='EDUREV LEARNING PRIVATE LIMITED', teamType='Company', username='pdevesh669@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2b65524f0; archive = "<IDEArchive: 0x600081b68ea0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x60008b3a7140>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000a478e40; teamID='C9244NHD3W', teamName='EDUREV LEARNING PRIVATE LIMITED', teamType='Company', username='pdevesh669@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2b3aef3d0; archive = "<IDEArchive: 0x600081b68ea0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x60008b3a7140>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000a478e40; teamID='C9244NHD3W', teamName='EDUREV LEARNING PRIVATE LIMITED', teamType='Company', username='pdevesh669@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2b3af4ec0; archive = "<IDEArchive: 0x600081b68ea0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x60008b3a7140>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000a478e40; teamID='C9244NHD3W', teamName='EDUREV LEARNING PRIVATE LIMITED', teamType='Company', username='pdevesh669@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2b3adef40; archive = "<IDEArchive: 0x600081b68ea0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x60008b3a7140>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000a478e40; teamID='C9244NHD3W', teamName='EDUREV LEARNING PRIVATE LIMITED', teamType='Company', username='pdevesh669@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2b42903a0; archive = "<IDEArchive: 0x600081b68ea0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x60008b3a7140>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000a478e40; teamID='C9244NHD3W', teamName='EDUREV LEARNING PRIVATE LIMITED', teamType='Company', username='pdevesh669@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2b42dcfd0; archive = "<IDEArchive: 0x600081b68ea0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x60008b3a7140>", team="(null)">
+	<IDEDistributionContext: 0x2bc448620; archive = "<IDEArchive: 0x600081b68ea0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x60008b3a7140>", team="(null)">
+	<IDEDistributionContext: 0x2bc4643c0; archive = "<IDEArchive: 0x600081b68ea0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x60008b3a7140>", team="(null)">
+	<IDEDistributionContext: 0x2b651f320; archive = "<IDEArchive: 0x600081b68ea0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x60008b3a7140>", team="(null)">
+	<IDEDistributionContext: 0x122ba76f0; archive = "<IDEArchive: 0x600081b68ea0>", distributionMethod="(null)", team="(null)">
+	<IDEDistributionContext: 0x122b3e010; archive = "<IDEArchive: 0x600081b68ea0>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0x2b4291650>
+2024-03-04 06:14:13 +0000  Processing step: IDEDistributionCreateDestRootStep
+2024-03-04 06:14:13 +0000  Processing step: IDEDistributionCopyItemStep
+2024-03-04 06:14:13 +0000  Running /usr/bin/ditto '-V' '/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app' '/var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app'
+2024-03-04 06:14:13 +0000  >>> Copying /Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app 
+2024-03-04 06:14:13 +0000  copying file ./_CodeSignature/CodeResources ... 
+2024-03-04 06:14:13 +0000  9787 bytes for ./_CodeSignature/CodeResources
+2024-03-04 06:14:13 +0000  copying file ./DemoApp.momd/DemoApp.mom ... 
+2024-03-04 06:14:13 +0000  5299 bytes for ./DemoApp.momd/DemoApp.mom
+2024-03-04 06:14:13 +0000  copying file ./DemoApp.momd/VersionInfo.plist ... 
+2024-03-04 06:14:13 +0000  685 bytes for ./DemoApp.momd/VersionInfo.plist
+2024-03-04 06:14:13 +0000  copying file ./Base.lproj/Main.storyboardc/Ocf-yw-Erm-view-NrH-F1-fn0.nib ... 
+2024-03-04 06:14:13 +0000  9970 bytes for ./Base.lproj/Main.storyboardc/Ocf-yw-Erm-view-NrH-F1-fn0.nib
+2024-03-04 06:14:13 +0000  copying file ./Base.lproj/Main.storyboardc/searchEmpVC.nib ... 
+2024-03-04 06:14:13 +0000  1052 bytes for ./Base.lproj/Main.storyboardc/searchEmpVC.nib
+2024-03-04 06:14:13 +0000  copying file ./Base.lproj/Main.storyboardc/ONN-cS-sMZ-view-p18-nt-4Ev.nib ... 
+2024-03-04 06:14:13 +0000  1225 bytes for ./Base.lproj/Main.storyboardc/ONN-cS-sMZ-view-p18-nt-4Ev.nib
+2024-03-04 06:14:13 +0000  copying file ./Base.lproj/Main.storyboardc/SideMenu.nib ... 
+2024-03-04 06:14:13 +0000  1091 bytes for ./Base.lproj/Main.storyboardc/SideMenu.nib
+2024-03-04 06:14:13 +0000  copying file ./Base.lproj/Main.storyboardc/loginPageVC.nib ... 
+2024-03-04 06:14:13 +0000  1402 bytes for ./Base.lproj/Main.storyboardc/loginPageVC.nib
+2024-03-04 06:14:13 +0000  copying file ./Base.lproj/Main.storyboardc/UINavigationController-0Kr-pp-Ljq.nib ... 
+2024-03-04 06:14:13 +0000  2071 bytes for ./Base.lproj/Main.storyboardc/UINavigationController-0Kr-pp-Ljq.nib
+2024-03-04 06:14:13 +0000  copying file ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib ... 
+2024-03-04 06:14:13 +0000  7840 bytes for ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+2024-03-04 06:14:13 +0000  copying file ./Base.lproj/Main.storyboardc/kP1-j9-OKz-view-ckU-tm-Fsg.nib ... 
+2024-03-04 06:14:13 +0000  7096 bytes for ./Base.lproj/Main.storyboardc/kP1-j9-OKz-view-ckU-tm-Fsg.nib
+2024-03-04 06:14:13 +0000  copying file ./Base.lproj/Main.storyboardc/profileVC.nib ... 
+2024-03-04 06:14:13 +0000  1145 bytes for ./Base.lproj/Main.storyboardc/profileVC.nib
+2024-03-04 06:14:13 +0000  copying file ./Base.lproj/Main.storyboardc/dashboardVC.nib ... 
+2024-03-04 06:14:13 +0000  1052 bytes for ./Base.lproj/Main.storyboardc/dashboardVC.nib
+2024-03-04 06:14:13 +0000  copying file ./Base.lproj/Main.storyboardc/9Qp-4P-rIU-view-oCM-bs-Nut.nib ... 
+2024-03-04 06:14:13 +0000  2990 bytes for ./Base.lproj/Main.storyboardc/9Qp-4P-rIU-view-oCM-bs-Nut.nib
+2024-03-04 06:14:13 +0000  copying file ./Base.lproj/Main.storyboardc/Info.plist ... 
+2024-03-04 06:14:13 +0000  425 bytes for ./Base.lproj/Main.storyboardc/Info.plist
+2024-03-04 06:14:13 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2024-03-04 06:14:13 +0000  2621 bytes for ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+2024-03-04 06:14:13 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2024-03-04 06:14:13 +0000  924 bytes for ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+2024-03-04 06:14:13 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2024-03-04 06:14:13 +0000  258 bytes for ./Base.lproj/LaunchScreen.storyboardc/Info.plist
+2024-03-04 06:14:13 +0000  copying file ./DemoApp ... 
+2024-03-04 06:14:13 +0000  472256 bytes for ./DemoApp
+2024-03-04 06:14:13 +0000  copying file ./DashboardTableViewCell.nib ... 
+2024-03-04 06:14:13 +0000  10106 bytes for ./DashboardTableViewCell.nib
+2024-03-04 06:14:13 +0000  copying file ./Assets.car ... 
+2024-03-04 06:14:13 +0000  1498271 bytes for ./Assets.car
+2024-03-04 06:14:13 +0000  copying file ./SecondProfileVCTableViewCell.nib ... 
+2024-03-04 06:14:13 +0000  8120 bytes for ./SecondProfileVCTableViewCell.nib
+2024-03-04 06:14:13 +0000  copying file ./Frameworks/SDWebImage.framework/_CodeSignature/CodeResources ... 
+2024-03-04 06:14:13 +0000  1798 bytes for ./Frameworks/SDWebImage.framework/_CodeSignature/CodeResources
+2024-03-04 06:14:13 +0000  copying file ./Frameworks/SDWebImage.framework/SDWebImage ... 
+2024-03-04 06:14:13 +0000  848384 bytes for ./Frameworks/SDWebImage.framework/SDWebImage
+2024-03-04 06:14:13 +0000  copying file ./Frameworks/SDWebImage.framework/Info.plist ... 
+2024-03-04 06:14:13 +0000  789 bytes for ./Frameworks/SDWebImage.framework/Info.plist
+2024-03-04 06:14:13 +0000  copying file ./Frameworks/SideMenu.framework/_CodeSignature/CodeResources ... 
+2024-03-04 06:14:13 +0000  1798 bytes for ./Frameworks/SideMenu.framework/_CodeSignature/CodeResources
+2024-03-04 06:14:13 +0000  copying file ./Frameworks/SideMenu.framework/SideMenu ... 
+2024-03-04 06:14:13 +0000  482464 bytes for ./Frameworks/SideMenu.framework/SideMenu
+2024-03-04 06:14:13 +0000  copying file ./Frameworks/SideMenu.framework/Info.plist ... 
+2024-03-04 06:14:13 +0000  784 bytes for ./Frameworks/SideMenu.framework/Info.plist
+2024-03-04 06:14:13 +0000  copying file ./ProfileVCTableViewCell.nib ... 
+2024-03-04 06:14:13 +0000  9474 bytes for ./ProfileVCTableViewCell.nib
+2024-03-04 06:14:13 +0000  copying file ./embedded.mobileprovision ... 
+2024-03-04 06:14:13 +0000  23928 bytes for ./embedded.mobileprovision
+2024-03-04 06:14:13 +0000  copying file ./SearchResTblViewCell.nib ... 
+2024-03-04 06:14:13 +0000  6526 bytes for ./SearchResTblViewCell.nib
+2024-03-04 06:14:13 +0000  copying file ./Info.plist ... 
+2024-03-04 06:14:13 +0000  1490 bytes for ./Info.plist
+2024-03-04 06:14:13 +0000  copying file ./PkgInfo ... 
+2024-03-04 06:14:13 +0000  8 bytes for ./PkgInfo
+2024-03-04 06:14:13 +0000  /usr/bin/ditto exited with 0
+2024-03-04 06:14:13 +0000  Processing step: IDEDistributionEmbedProfileStep
+2024-03-04 06:14:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x6000214e5d40; bundleID='org.cocoapods.SDWebImage', path='<DVTFilePath:0x6000319531e0:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SDWebImage.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60012d744d70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000344e4780; name='Apple Development: Devesh Pandey (VG4747NG9H)', hash='620F13157570A1730367BC2425E6CA874D3CBA14', serialNumber='5FA3B48E07B7235671D695D444B43C7B', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2024-02-02 10:49:59 +0000''>', entitlements='(null)', teamID='C9244NHD3W', identifier='org.cocoapods.SDWebImage', executablePath='<DVTFilePath:0x6000258a9260:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SDWebImage.framework/SDWebImage'>', hardenedRuntime='0'>'>
+2024-03-04 06:14:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x600081b55320; bundleID='org.cocoapods.SideMenu', path='<DVTFilePath:0x600021854700:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SideMenu.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60012d745ea0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000344e4780; name='Apple Development: Devesh Pandey (VG4747NG9H)', hash='620F13157570A1730367BC2425E6CA874D3CBA14', serialNumber='5FA3B48E07B7235671D695D444B43C7B', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2024-02-02 10:49:59 +0000''>', entitlements='(null)', teamID='C9244NHD3W', identifier='org.cocoapods.SideMenu', executablePath='<DVTFilePath:0x6000258a8bd0:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SideMenu.framework/SideMenu'>', hardenedRuntime='0'>'>
+2024-03-04 06:14:13 +0000  Processing step: IDEDistributionInfoPlistStep
+2024-03-04 06:14:13 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2024-03-04 06:14:13 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2024-03-04 06:14:13 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2024-03-04 06:14:13 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2024-03-04 06:14:13 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2024-03-04 06:14:13 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2024-03-04 06:14:13 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2024-03-04 06:14:13 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2024-03-04 06:14:13 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2024-03-04 06:14:13 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2024-03-04 06:14:13 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2024-03-04 06:14:13 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2024-03-04 06:14:13 +0000  Processing step: IDEDistributionSymbolsStep
+2024-03-04 06:14:13 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2024-03-04 06:14:13 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2024-03-04 06:14:13 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2024-03-04 06:14:13 +0000  Processing step: IDEDistributionAppThinningStep
+2024-03-04 06:14:13 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2024-03-04 06:14:13 +0000  Processing step: IDEDistributionArchThinningStep
+2024-03-04 06:14:13 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app/Frameworks/SDWebImage.framework/SDWebImage' '-verify_arch' 'arm64e'
+2024-03-04 06:14:13 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2024-03-04 06:14:13 +0000  Skipping architecture thinning for item "SDWebImage" because arch "arm64e" wasn't found
+2024-03-04 06:14:13 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app/Frameworks/SideMenu.framework/SideMenu' '-verify_arch' 'arm64e'
+2024-03-04 06:14:13 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2024-03-04 06:14:13 +0000  Skipping architecture thinning for item "SideMenu" because arch "arm64e" wasn't found
+2024-03-04 06:14:13 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app/DemoApp' '-verify_arch' 'arm64e'
+2024-03-04 06:14:13 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2024-03-04 06:14:13 +0000  Skipping architecture thinning for item "DemoApp" because arch "arm64e" wasn't found
+2024-03-04 06:14:13 +0000  Processing step: IDEDistributionODRStep
+2024-03-04 06:14:13 +0000  Processing step: IDEDistributionStripXattrsStep
+2024-03-04 06:14:13 +0000  Skipping stripping extended attributes because the codesign step will strip them.
+2024-03-04 06:14:13 +0000  Skipping stripping extended attributes because the codesign step will strip them.
+2024-03-04 06:14:13 +0000  Skipping stripping extended attributes because the codesign step will strip them.
+2024-03-04 06:14:13 +0000  Processing step: IDEDistributionCodesignStep
+2024-03-04 06:14:13 +0000  Entitlements for <IDEDistributionItem: 0x6000214e5d40; bundleID='org.cocoapods.SDWebImage', path='<DVTFilePath:0x6000319531e0:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SDWebImage.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60012d744d70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600020474e40; name='Apple Development: Devesh Pandey (VG4747NG9H)', hash='620F13157570A1730367BC2425E6CA874D3CBA14', serialNumber='5FA3B48E07B7235671D695D444B43C7B', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2024-02-02 10:49:59 +0000''>', entitlements='(null)', teamID='C9244NHD3W', identifier='org.cocoapods.SDWebImage', executablePath='<DVTFilePath:0x6000258a9260:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SDWebImage.framework/SDWebImage'>', hardenedRuntime='0'>'>: {
+}
+2024-03-04 06:14:13 +0000  Associated App Clip Identifiers Filter: Skipping because "com.apple.developer.associated-appclip-app-identifiers" is not present
+2024-03-04 06:14:13 +0000  Entitlements for <IDEDistributionItem: 0x6000214e5d40; bundleID='org.cocoapods.SDWebImage', path='<DVTFilePath:0x6000319531e0:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SDWebImage.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60012d744d70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000344e4780; name='Apple Development: Devesh Pandey (VG4747NG9H)', hash='620F13157570A1730367BC2425E6CA874D3CBA14', serialNumber='5FA3B48E07B7235671D695D444B43C7B', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2024-02-02 10:49:59 +0000''>', entitlements='(null)', teamID='C9244NHD3W', identifier='org.cocoapods.SDWebImage', executablePath='<DVTFilePath:0x6000258a9260:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SDWebImage.framework/SDWebImage'>', hardenedRuntime='0'>'> are: {
+}
+2024-03-04 06:14:13 +0000  Writing entitlements for <IDEDistributionItem: 0x6000214e5d40; bundleID='org.cocoapods.SDWebImage', path='<DVTFilePath:0x6000319531e0:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SDWebImage.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60012d744d70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000344e6b80; name='Apple Development: Devesh Pandey (VG4747NG9H)', hash='620F13157570A1730367BC2425E6CA874D3CBA14', serialNumber='5FA3B48E07B7235671D695D444B43C7B', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2024-02-02 10:49:59 +0000''>', entitlements='(null)', teamID='C9244NHD3W', identifier='org.cocoapods.SDWebImage', executablePath='<DVTFilePath:0x6000258a9260:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SDWebImage.framework/SDWebImage'>', hardenedRuntime='0'>'> to: /var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/entitlements~~~scorGE
+2024-03-04 06:14:13 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '620F13157570A1730367BC2425E6CA874D3CBA14' '--entitlements' '/var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/entitlements~~~scorGE' '--generate-entitlement-der' '--strip-disallowed-xattrs' '--preserve-metadata=identifier,flags,runtime' '/var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app/Frameworks/SDWebImage.framework'
+2024-03-04 06:14:13 +0000  /var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app/Frameworks/SDWebImage.framework: replacing existing signature
+2024-03-04 06:14:17 +0000  /var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app/Frameworks/SDWebImage.framework: signed bundle with Mach-O thin (arm64) [org.cocoapods.SDWebImage]
+2024-03-04 06:14:17 +0000  /usr/bin/codesign exited with 0
+2024-03-04 06:14:17 +0000  Entitlements for <IDEDistributionItem: 0x600081b55320; bundleID='org.cocoapods.SideMenu', path='<DVTFilePath:0x600021854700:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SideMenu.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60012d745ea0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000044f8a80; name='Apple Development: Devesh Pandey (VG4747NG9H)', hash='620F13157570A1730367BC2425E6CA874D3CBA14', serialNumber='5FA3B48E07B7235671D695D444B43C7B', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2024-02-02 10:49:59 +0000''>', entitlements='(null)', teamID='C9244NHD3W', identifier='org.cocoapods.SideMenu', executablePath='<DVTFilePath:0x6000258a8bd0:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SideMenu.framework/SideMenu'>', hardenedRuntime='0'>'>: {
+}
+2024-03-04 06:14:17 +0000  Associated App Clip Identifiers Filter: Skipping because "com.apple.developer.associated-appclip-app-identifiers" is not present
+2024-03-04 06:14:17 +0000  Entitlements for <IDEDistributionItem: 0x600081b55320; bundleID='org.cocoapods.SideMenu', path='<DVTFilePath:0x600021854700:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SideMenu.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60012d745ea0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000344d6400; name='Apple Development: Devesh Pandey (VG4747NG9H)', hash='620F13157570A1730367BC2425E6CA874D3CBA14', serialNumber='5FA3B48E07B7235671D695D444B43C7B', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2024-02-02 10:49:59 +0000''>', entitlements='(null)', teamID='C9244NHD3W', identifier='org.cocoapods.SideMenu', executablePath='<DVTFilePath:0x6000258a8bd0:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SideMenu.framework/SideMenu'>', hardenedRuntime='0'>'> are: {
+}
+2024-03-04 06:14:17 +0000  Writing entitlements for <IDEDistributionItem: 0x600081b55320; bundleID='org.cocoapods.SideMenu', path='<DVTFilePath:0x600021854700:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SideMenu.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60012d745ea0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600010482880; name='Apple Development: Devesh Pandey (VG4747NG9H)', hash='620F13157570A1730367BC2425E6CA874D3CBA14', serialNumber='5FA3B48E07B7235671D695D444B43C7B', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2024-02-02 10:49:59 +0000''>', entitlements='(null)', teamID='C9244NHD3W', identifier='org.cocoapods.SideMenu', executablePath='<DVTFilePath:0x6000258a8bd0:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/Frameworks/SideMenu.framework/SideMenu'>', hardenedRuntime='0'>'> to: /var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/entitlements~~~7yahNV
+2024-03-04 06:14:17 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '620F13157570A1730367BC2425E6CA874D3CBA14' '--entitlements' '/var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/entitlements~~~7yahNV' '--generate-entitlement-der' '--strip-disallowed-xattrs' '--preserve-metadata=identifier,flags,runtime' '/var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app/Frameworks/SideMenu.framework'
+2024-03-04 06:14:17 +0000  /var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app/Frameworks/SideMenu.framework: replacing existing signature
+2024-03-04 06:14:20 +0000  /var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app/Frameworks/SideMenu.framework: signed bundle with Mach-O thin (arm64) [org.cocoapods.SideMenu]
+2024-03-04 06:14:20 +0000  /usr/bin/codesign exited with 0
+2024-03-04 06:14:20 +0000  Entitlements for <IDEDistributionItem: 0x600081ba0900; bundleID='com.bellurbis.DemoApp', path='<DVTFilePath:0x600031951650:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000fd15d770; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60002047f000; name='Apple Development: Devesh Pandey (VG4747NG9H)', hash='620F13157570A1730367BC2425E6CA874D3CBA14', serialNumber='5FA3B48E07B7235671D695D444B43C7B', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2024-02-02 10:49:59 +0000''>', entitlements='{
+    "application-identifier" = "C9244NHD3W.com.bellurbis.DemoApp";
+    "com.apple.developer.team-identifier" = C9244NHD3W;
+    "get-task-allow" = 1;
+}', teamID='C9244NHD3W', identifier='com.bellurbis.DemoApp', executablePath='<DVTFilePath:0x600081b9abe0:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/DemoApp'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "C9244NHD3W.com.bellurbis.DemoApp";
+    "com.apple.developer.team-identifier" = C9244NHD3W;
+    "get-task-allow" = 1;
+}
+2024-03-04 06:14:20 +0000  Associated App Clip Identifiers Filter: Skipping because "com.apple.developer.associated-appclip-app-identifiers" is not present
+2024-03-04 06:14:20 +0000  Entitlements for <IDEDistributionItem: 0x600081ba0900; bundleID='com.bellurbis.DemoApp', path='<DVTFilePath:0x600031951650:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000fd15d770; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60002047dec0; name='Apple Development: Devesh Pandey (VG4747NG9H)', hash='620F13157570A1730367BC2425E6CA874D3CBA14', serialNumber='5FA3B48E07B7235671D695D444B43C7B', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2024-02-02 10:49:59 +0000''>', entitlements='{
+    "application-identifier" = "C9244NHD3W.com.bellurbis.DemoApp";
+    "com.apple.developer.team-identifier" = C9244NHD3W;
+    "get-task-allow" = 1;
+}', teamID='C9244NHD3W', identifier='com.bellurbis.DemoApp', executablePath='<DVTFilePath:0x600081b9abe0:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/DemoApp'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "C9244NHD3W.com.bellurbis.DemoApp";
+    "com.apple.developer.team-identifier" = C9244NHD3W;
+    "get-task-allow" = 1;
+}
+2024-03-04 06:14:20 +0000  Writing entitlements for <IDEDistributionItem: 0x600081ba0900; bundleID='com.bellurbis.DemoApp', path='<DVTFilePath:0x600031951650:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000fd15d770; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60002047d8c0; name='Apple Development: Devesh Pandey (VG4747NG9H)', hash='620F13157570A1730367BC2425E6CA874D3CBA14', serialNumber='5FA3B48E07B7235671D695D444B43C7B', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2024-02-02 10:49:59 +0000''>', entitlements='{
+    "application-identifier" = "C9244NHD3W.com.bellurbis.DemoApp";
+    "com.apple.developer.team-identifier" = C9244NHD3W;
+    "get-task-allow" = 1;
+}', teamID='C9244NHD3W', identifier='com.bellurbis.DemoApp', executablePath='<DVTFilePath:0x600081b9abe0:'/Users/deveshpandey/Library/Developer/Xcode/Archives/2024-03-04/DemoApp 04-03-24, 11.43 AM.xcarchive/Products/Applications/DemoApp.app/DemoApp'>', hardenedRuntime='0'>'> to: /var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/entitlements~~~yyEFLQ
+2024-03-04 06:14:20 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '620F13157570A1730367BC2425E6CA874D3CBA14' '--entitlements' '/var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/entitlements~~~yyEFLQ' '--generate-entitlement-der' '--strip-disallowed-xattrs' '--preserve-metadata=identifier,flags,runtime' '/var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app'
+2024-03-04 06:14:20 +0000  /var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app: replacing existing signature
+2024-03-04 06:14:23 +0000  /var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app: signed app bundle with Mach-O thin (arm64) [com.bellurbis.DemoApp]
+2024-03-04 06:14:23 +0000  /usr/bin/codesign exited with 0
+2024-03-04 06:14:23 +0000  Processing step: IDEDistributionZipODRItemStep
+2024-03-04 06:14:23 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2024-03-04 06:14:23 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2024-03-04 06:14:23 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2024-03-04 06:14:23 +0000  Processing step: IDEDistributionCreateIPAStep
+2024-03-04 06:14:23 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root' '/var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Packages/DemoApp.ipa'
+2024-03-04 06:14:23 +0000  >>> Copying /var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root 
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/_CodeSignature/CodeResources ... 
+2024-03-04 06:14:23 +0000  9787 bytes for ./Payload/DemoApp.app/_CodeSignature/CodeResources
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/DemoApp.momd/DemoApp.mom ... 
+2024-03-04 06:14:23 +0000  5299 bytes for ./Payload/DemoApp.app/DemoApp.momd/DemoApp.mom
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/DemoApp.momd/VersionInfo.plist ... 
+2024-03-04 06:14:23 +0000  685 bytes for ./Payload/DemoApp.app/DemoApp.momd/VersionInfo.plist
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/Ocf-yw-Erm-view-NrH-F1-fn0.nib ... 
+2024-03-04 06:14:23 +0000  9970 bytes for ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/Ocf-yw-Erm-view-NrH-F1-fn0.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/searchEmpVC.nib ... 
+2024-03-04 06:14:23 +0000  1052 bytes for ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/searchEmpVC.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/ONN-cS-sMZ-view-p18-nt-4Ev.nib ... 
+2024-03-04 06:14:23 +0000  1225 bytes for ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/ONN-cS-sMZ-view-p18-nt-4Ev.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/SideMenu.nib ... 
+2024-03-04 06:14:23 +0000  1091 bytes for ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/SideMenu.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/loginPageVC.nib ... 
+2024-03-04 06:14:23 +0000  1402 bytes for ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/loginPageVC.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/UINavigationController-0Kr-pp-Ljq.nib ... 
+2024-03-04 06:14:23 +0000  2071 bytes for ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/UINavigationController-0Kr-pp-Ljq.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib ... 
+2024-03-04 06:14:23 +0000  7840 bytes for ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/kP1-j9-OKz-view-ckU-tm-Fsg.nib ... 
+2024-03-04 06:14:23 +0000  7096 bytes for ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/kP1-j9-OKz-view-ckU-tm-Fsg.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/profileVC.nib ... 
+2024-03-04 06:14:23 +0000  1145 bytes for ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/profileVC.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/dashboardVC.nib ... 
+2024-03-04 06:14:23 +0000  1052 bytes for ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/dashboardVC.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/9Qp-4P-rIU-view-oCM-bs-Nut.nib ... 
+2024-03-04 06:14:23 +0000  2990 bytes for ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/9Qp-4P-rIU-view-oCM-bs-Nut.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/Info.plist ... 
+2024-03-04 06:14:23 +0000  425 bytes for ./Payload/DemoApp.app/Base.lproj/Main.storyboardc/Info.plist
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2024-03-04 06:14:23 +0000  2621 bytes for ./Payload/DemoApp.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2024-03-04 06:14:23 +0000  924 bytes for ./Payload/DemoApp.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2024-03-04 06:14:23 +0000  258 bytes for ./Payload/DemoApp.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/DemoApp ... 
+2024-03-04 06:14:23 +0000  472256 bytes for ./Payload/DemoApp.app/DemoApp
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/DashboardTableViewCell.nib ... 
+2024-03-04 06:14:23 +0000  10106 bytes for ./Payload/DemoApp.app/DashboardTableViewCell.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Assets.car ... 
+2024-03-04 06:14:23 +0000  1498271 bytes for ./Payload/DemoApp.app/Assets.car
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/SecondProfileVCTableViewCell.nib ... 
+2024-03-04 06:14:23 +0000  8120 bytes for ./Payload/DemoApp.app/SecondProfileVCTableViewCell.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Frameworks/SDWebImage.framework/_CodeSignature/CodeResources ... 
+2024-03-04 06:14:23 +0000  1798 bytes for ./Payload/DemoApp.app/Frameworks/SDWebImage.framework/_CodeSignature/CodeResources
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Frameworks/SDWebImage.framework/SDWebImage ... 
+2024-03-04 06:14:23 +0000  848640 bytes for ./Payload/DemoApp.app/Frameworks/SDWebImage.framework/SDWebImage
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Frameworks/SDWebImage.framework/Info.plist ... 
+2024-03-04 06:14:23 +0000  789 bytes for ./Payload/DemoApp.app/Frameworks/SDWebImage.framework/Info.plist
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Frameworks/SideMenu.framework/_CodeSignature/CodeResources ... 
+2024-03-04 06:14:23 +0000  1798 bytes for ./Payload/DemoApp.app/Frameworks/SideMenu.framework/_CodeSignature/CodeResources
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Frameworks/SideMenu.framework/SideMenu ... 
+2024-03-04 06:14:23 +0000  482768 bytes for ./Payload/DemoApp.app/Frameworks/SideMenu.framework/SideMenu
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Frameworks/SideMenu.framework/Info.plist ... 
+2024-03-04 06:14:23 +0000  784 bytes for ./Payload/DemoApp.app/Frameworks/SideMenu.framework/Info.plist
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/ProfileVCTableViewCell.nib ... 
+2024-03-04 06:14:23 +0000  9474 bytes for ./Payload/DemoApp.app/ProfileVCTableViewCell.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/embedded.mobileprovision ... 
+2024-03-04 06:14:23 +0000  23928 bytes for ./Payload/DemoApp.app/embedded.mobileprovision
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/SearchResTblViewCell.nib ... 
+2024-03-04 06:14:23 +0000  6526 bytes for ./Payload/DemoApp.app/SearchResTblViewCell.nib
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/Info.plist ... 
+2024-03-04 06:14:23 +0000  1490 bytes for ./Payload/DemoApp.app/Info.plist
+2024-03-04 06:14:23 +0000  copying file ./Payload/DemoApp.app/PkgInfo ... 
+2024-03-04 06:14:23 +0000  8 bytes for ./Payload/DemoApp.app/PkgInfo
+2024-03-04 06:14:23 +0000  /usr/bin/ditto exited with 0
+2024-03-04 06:14:23 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2024-03-04 06:14:23 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2024-03-04 06:14:23 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2024-03-04 06:14:23 +0000  IDEDistributionItem init <DVTFilePath:0x6000258aa920:'/var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app/Frameworks/SideMenu.framework'>
+2024-03-04 06:14:23 +0000  IDEDistributionItem init <DVTFilePath:0x6000258aa300:'/var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app/Frameworks/SDWebImage.framework'>
+2024-03-04 06:14:23 +0000  IDEDistributionItem init <DVTFilePath:0x6000258ec1c0:'/var/folders/z2/55r3cfmd5wdb9dcsc1w9pzp80000gn/T/XcodeDistPipeline.~~~RkodWt/Root/Payload/DemoApp.app'>
+2024-03-04 06:14:23 +0000  Processing step: IDEDistributionCreateManifestStep
