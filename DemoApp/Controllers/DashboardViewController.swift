@@ -12,6 +12,21 @@ class DashboardViewController: UIViewController{
  
     var menu : SideMenuNavigationController?
    // @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    let identifier = "my-first-notification"
+    let identifierContainer = ["my-first-notification","my-second-notification","my-third-notification","my-fourth-notification"]
+   // let identifier2 = "beta-first-notification"
+    let titleText = "This is my second notificaiton sent!"
+    let titleContainer = ["This is my first notification sent!","This is my second notification sent!","This is my third notificaiton sent!","This is my fourth notification sent!"]
+    let body = "Hello I am elon musk, the battery of my tesla ran out send me 50$ for uber i will send you 5000$ after i reach home"
+    let bodyContainer = ["Hello I am elon musk, the battery of my tesla ran out, send me 10$ for uber i will send you 1000$ after i reach home","Hello I am elon musk, the battery of my tesla ran out, send me 20$ for uber i will send you 2000$ after i reach home","Hello I am elon musk, the battery of my tesla ran out, send me 30$ for uber i will send you 3000$ after i reach home","Hello I am elon musk, the battery of my tesla ran out, send me 40$ for uber i will send you 4000$ after i reach home","Hello I am elon musk, the battery of my tesla ran out, send me 50$ for uber i will send you 5000$ after i reach home"]
+   // let hour = 10
+    //let minute = 02
+    let time = (hour:16,minute:53,second:00)
+    let timeContainer = [(hour:12,minute:21,second:00),(hour:12,minute:21,second:08),(hour:12,minute:21,second:16),(hour:12,minute:21,second:24)]
+    //let time2 = (17,03)
+    let isDaily = true
+    
+
     var newcellDataSource : [Movie] = []
     var fakeResponseCellData : [FakeStoreResponseElement] = []
     var cellDataSource : [DashboardTblCellViewModel] = []
@@ -40,7 +55,14 @@ class DashboardViewController: UIViewController{
                 do{
                     notificationCenter.requestAuthorization(options: [.alert,.sound]) { didAllow, error in
                         if(didAllow){
-                            self.dispatchNotification()
+                            if(didAllow){
+                            //   self.dispatchNotification()
+   
+                              for (index,item) in self.titleContainer.enumerated(){
+                    NotificatioHandler.dispatchNotification(self.timeContainer[index], self.titleContainer[index], self.bodyContainer[index], self.isDaily)
+                               }
+                            }
+
                         }
                         
                     }
@@ -48,14 +70,29 @@ class DashboardViewController: UIViewController{
             case .denied:
                 return
             case .authorized:
-                self.dispatchNotification()
+                do{
+                    notificationCenter.requestAuthorization(options: [.alert,.sound]) { didAllow, error in
+                        if(didAllow){
+                            if(didAllow){
+                            //   self.dispatchNotification()
+   
+                              for (index,item) in self.titleContainer.enumerated(){
+                    NotificatioHandler.dispatchNotification(self.timeContainer[index], self.titleContainer[index], self.bodyContainer[index], self.isDaily)
+                               }
+                            }
+
+                        }
+                        
+                    }
+                }
+              
             default:
                 return
             }
         }
     }
     
-    func dispatchNotification(){
+    /*func dispatchNotification(){
         let identifier = "my-first-notification"
         let title = "This is my first notificaiton sent!"
         let body = "Hello I am elon musk the battery of my tesla ran out send me 20$ for uber i will send you 2000$"
@@ -79,7 +116,7 @@ class DashboardViewController: UIViewController{
         
         notificationCenter.removePendingNotificationRequests(withIdentifiers: [identifier])
         notificationCenter.add(request)
-    }
+    }*/
         
     func APICall() {
         
