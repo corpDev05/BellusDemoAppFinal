@@ -395,7 +395,6 @@
 		83F82B282AC19998001A9116 = {
 			isa = PBXGroup;
 			children = (
-				48034D192B9AEA4F00DF743A /* Notification */,
 				83F82B332AC19998001A9116 /* DemoApp */,
 				83F82B322AC19998001A9116 /* Products */,
 				7C0E68BBE74538CFAB6AE84A /* Pods */,
@@ -414,6 +413,7 @@
 		83F82B332AC19998001A9116 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				48034D192B9AEA4F00DF743A /* Notification */,
 				835EDEA92B0F4D3100CE706E /* Manager */,
 				83644E7F2B0E274600C200B6 /* Repository */,
 				83CECFE32B0CDC7700E8664F /* CoreData */,

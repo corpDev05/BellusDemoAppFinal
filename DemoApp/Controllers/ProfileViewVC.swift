@@ -12,8 +12,9 @@ class ProfileViewVC : UIViewController , ProfileTVCellDelegate ,ProfileVCCellEdi
     
     var profileViewModel : ProfileViewModel = ProfileViewModel()
     
+    @IBOutlet weak var profileName: UILabel!
     
-  //  var cellVC = ProfileVCTableViewCell()
+    //  var cellVC = ProfileVCTableViewCell()
     public let personalInfoManager = PersonalInfoManager()
     public let skillSetManager = SkillSetManager()
     public let currentProjectManager = CurrentProjectManager()
@@ -31,7 +32,7 @@ class ProfileViewVC : UIViewController , ProfileTVCellDelegate ,ProfileVCCellEdi
     var menu : SideMenuNavigationController?
     var edit : Bool  = false
     var section : Int = 0
-   // var  profileViewModel : ProfileCellModel
+    // var  profileViewModel : ProfileCellModel
     @IBOutlet var profileTable: UITableView!
     
     override func viewDidLoad() {
@@ -40,26 +41,28 @@ class ProfileViewVC : UIViewController , ProfileTVCellDelegate ,ProfileVCCellEdi
         setupSideControllerMenu()
         setupTableView()
         createDatabase()
-       // cellVC.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(changeProfileName(_ :)), name: NSNotification.Name("Notify"), object: nil)
+
+        // cellVC.delegate = self
         // Do any additional setup after loading the view.
     }
-   /* override func viewWillAppear(_ animated: Bool) {
-        profileTable.estimatedRowHeight = 100
-        profileTable.rowHeight = UITableView.automaticDimension
-      //  profileTable.autoresizesSubviews = true
-        }*/
+    /* override func viewWillAppear(_ animated: Bool) {
+     profileTable.estimatedRowHeight = 100
+     profileTable.rowHeight = UITableView.automaticDimension
+     //  profileTable.autoresizesSubviews = true
+     }*/
     
     func createDatabase(){
-         personalInfo  = PersonalInformation(firstName: "John", middleName: "", lastName: "Doe", bio: "I create visual concepts,develops overall layout & communication ideas that inspire,inform and captivate consumers", dateOfBirth: DateFormatter().date(from:"DD/MM/YYYY"), designation: "Designer", department: "Information Technology", yearsOfExperience: 15, contactNumber: 2563365825, emailID: "JohnDoe@Example.com")
-         skill = [SkillSet(skill: "DSA"),SkillSet(skill: "OOP"),SkillSet(skill: "iOS Development"),SkillSet(skill: "Swift"),SkillSet(skill: "Core Data"),SkillSet(skill: "API integration")]
+        personalInfo  = PersonalInformation(firstName: "John", middleName: "", lastName: "Doe", bio: "I create visual concepts,develops overall layout & communication ideas that inspire,inform and captivate consumers", dateOfBirth: DateFormatter().date(from:"DD/MM/YYYY"), designation: "Designer", department: "Information Technology", yearsOfExperience: 15, contactNumber: 2563365825, emailID: "JohnDoe@Example.com")
+        skill = [SkillSet(skill: "DSA"),SkillSet(skill: "OOP"),SkillSet(skill: "iOS Development"),SkillSet(skill: "Swift"),SkillSet(skill: "Core Data"),SkillSet(skill: "API integration")]
         
-         currProj = CurrentProject(projectName: "ORCA", reportingManager: "Jane Doe", rolesResp: ["UI Designing","Prototyping","Wireframing","UX Research"])
+        currProj = CurrentProject(projectName: "ORCA", reportingManager: "Jane Doe", rolesResp: ["UI Designing","Prototyping","Wireframing","UX Research"])
         
         prevExp  = [PreviousExperience(organisation: "ABC Technologies", name: "ORCA", roleRespons: ["Designing user interfaces and clickable prototypes"]),PreviousExperience(organisation: "ABC Technologies", name: "Telemedicine", roleRespons: ["Designing user interfaces and clickable prototypes"]),PreviousExperience(organisation: "ABC Technologies", name: "Poker - Anuvaka", roleRespons: ["Designing user interfaces and clickable prototypes"])]
         
         interest_Hobbies = [Interest_Hobbies(interestName: "Excercising"),Interest_Hobbies(interestName: "Watching Movies/Shows"),Interest_Hobbies(interestName: "Tennis"),Interest_Hobbies(interestName: "Exploring new places"),Interest_Hobbies(interestName: "Learning new things"),Interest_Hobbies(interestName: "Hiking"),Interest_Hobbies(interestName: "Exploring new places")]
         
-         academicInfo = [AcademicInfo(course: "Post Graduation", specialization: "XYZ"),AcademicInfo(course: "B.Tech", specialization: "Electronics")]
+        academicInfo = [AcademicInfo(course: "Post Graduation", specialization: "XYZ"),AcademicInfo(course: "B.Tech", specialization: "Electronics")]
         
         training = [Training_Certificate(nameOfTraining: "DSA"),Training_Certificate(nameOfTraining: "Object-Oriented Programming"),Training_Certificate(nameOfTraining: "Protocol-Oriented Programming"),Training_Certificate(nameOfTraining: "iOS Development"),Training_Certificate(nameOfTraining: "Swift")]
         for acad in academicInfo {
@@ -82,7 +85,7 @@ class ProfileViewVC : UIViewController , ProfileTVCellDelegate ,ProfileVCCellEdi
         }
         personalInfoManager.create(record: personalInfo!)
     }
-
+    
     
     func setupNavBar(){
         
@@ -98,21 +101,28 @@ class ProfileViewVC : UIViewController , ProfileTVCellDelegate ,ProfileVCCellEdi
         
         UINavigationBar.appearance().backgroundColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 1.0)
         
-      /*  let appearence = UINavigationBarAppearance()
-        appearence.configureWithOpaqueBackground()
-        let nav  = UINavigationController(rootViewController: DashboardViewController())
-        appearence.backgroundColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 1.0)
+        /*  let appearence = UINavigationBarAppearance()
+         appearence.configureWithOpaqueBackground()
+         let nav  = UINavigationController(rootViewController: DashboardViewController())
+         appearence.backgroundColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 1.0)
+         
+         nav.navigationBar.standardAppearance = appearence
+         nav.navigationBar.compactAppearance = appearence
+         nav.navigationBar.scrollEdgeAppearance = appearence
+         
+         nav.navigationBar.tintColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 1.0)
+         nav.navigationBar.barTintColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 1.0)
+         */
         
-        nav.navigationBar.standardAppearance = appearence
-        nav.navigationBar.compactAppearance = appearence
-        nav.navigationBar.scrollEdgeAppearance = appearence
-        
-        nav.navigationBar.tintColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 1.0)
-        nav.navigationBar.barTintColor = UIColor(displayP3Red: 225/255, green: 253/255, blue: 255/255, alpha: 1.0)
-    */
         
         
-        
+    }
+    
+   
+    
+    @objc func changeProfileName(_ notification:Notification){
+        self.profileName.text = "Devesh"
+        debugPrint("Notification received successfully")
     }
     
     @objc private func presentSideMenu(){

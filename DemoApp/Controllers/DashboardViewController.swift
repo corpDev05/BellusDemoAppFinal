@@ -22,7 +22,7 @@ class DashboardViewController: UIViewController{
    // let hour = 10
     //let minute = 02
     let time = (hour:16,minute:53,second:00)
-    let timeContainer = [(hour:12,minute:21,second:00),(hour:12,minute:21,second:08),(hour:12,minute:21,second:16),(hour:12,minute:21,second:24)]
+    let timeContainer = [(hour:14,minute:49,second:00),(hour:14,minute:49,second:08),(hour:14,minute:49,second:16),(hour:14,minute:49,second:24)]
     //let time2 = (17,03)
     let isDaily = true
     
@@ -136,7 +136,7 @@ class DashboardViewController: UIViewController{
                    // debugPrint("\(self?.newcellDataSource[0].firstAirDate)")
                   
                 }
-            }
+            } 
             debugPrint("Exiting the get Trending Movies")
             group.leave()
             
@@ -148,25 +148,25 @@ class DashboardViewController: UIViewController{
         let bp2 = BlockOperation{
             debugPrint("Entering the get Fake Response")
             debugPrint("The count of data from Trending movies is \(self.newcellDataSource.count)")
-            APICaller.getFakeResponse { [weak self] result in
-                switch result{
-                case .success(let data) :
-                    do{
-                        self?.fakeResponseCellData = data
-                        debugPrint("Api data count from fake response is \(self?.fakeResponseCellData.count)")
-                        
+            APICaller.getSearchData("electronics", completionHandler: {[weak self] result in
+                    switch result{
+                    case .success(let data) :
+                        do{
+                            self?.fakeResponseCellData = data
+                            debugPrint("Api data count from fake response is \(self?.fakeResponseCellData.count)")
+                            
+                            
+                        }
+                    case .failure(let error):
+                        do{
+                            debugPrint("Error fetching data from API with description: \(error.localizedDescription)")
+                        }
                         
                     }
-                case .failure(let error):
-                    do{
-                        debugPrint("Error fetching data from API with description: \(error.localizedDescription)")
-                    }
+                    debugPrint("Existing the get Fake Response")
+                    self?.reloadTableView()
                     
-                }
-                debugPrint("Existing the get Fake Response")
-                self?.reloadTableView()
-                
-            }
+            })
         }
         
        // group.notify(queue: .main) {

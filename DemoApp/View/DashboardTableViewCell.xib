@@ -138,7 +138,7 @@
                                             <constraint firstItem="nsh-lF-5Cc" firstAttribute="top" secondItem="e0d-Gy-V93" secondAttribute="top" id="wgI-jy-6IV"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CnM-En-0C7">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CnM-En-0C7">
                                         <rect key="frame" x="0.0" y="415" width="380" height="48"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="likeImg" translatesAutoresizingMaskIntoConstraints="NO" id="MO9-Oq-enF">
@@ -148,6 +148,14 @@
                                                     <constraint firstAttribute="width" constant="28" id="cpa-im-C7H"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELb-qx-W14">
+                                                <rect key="frame" x="76" y="6" width="230" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Notify Button"/>
+                                                <connections>
+                                                    <action selector="notify:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Y5r-aS-gbf"/>
+                                                </connections>
+                                            </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shareImg" translatesAutoresizingMaskIntoConstraints="NO" id="mx8-eq-Mhj">
                                                 <rect key="frame" x="326" y="20" width="28" height="28"/>
                                                 <constraints>
@@ -172,11 +180,15 @@
                                             <constraint firstItem="mx8-eq-Mhj" firstAttribute="centerY" secondItem="MO9-Oq-enF" secondAttribute="centerY" id="Biw-fd-bwX"/>
                                             <constraint firstItem="mx8-eq-Mhj" firstAttribute="top" secondItem="CnM-En-0C7" secondAttribute="top" constant="20" id="Fgz-Dj-d1J"/>
                                             <constraint firstItem="WRL-xi-gnu" firstAttribute="top" secondItem="CnM-En-0C7" secondAttribute="top" constant="20" id="GzZ-MQ-863"/>
+                                            <constraint firstAttribute="bottom" secondItem="ELb-qx-W14" secondAttribute="bottom" constant="7" id="JEm-sV-3Xd"/>
                                             <constraint firstItem="WRL-xi-gnu" firstAttribute="centerY" secondItem="mx8-eq-Mhj" secondAttribute="centerY" id="LG1-ve-FwV"/>
+                                            <constraint firstItem="ELb-qx-W14" firstAttribute="top" secondItem="CnM-En-0C7" secondAttribute="top" constant="6" id="Odk-3g-J4e"/>
                                             <constraint firstItem="WRL-xi-gnu" firstAttribute="leading" secondItem="CnM-En-0C7" secondAttribute="leading" constant="68" id="QNN-GN-jtj"/>
+                                            <constraint firstItem="ELb-qx-W14" firstAttribute="leading" secondItem="MO9-Oq-enF" secondAttribute="trailing" constant="20" id="UBA-4W-hfl"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="VTQ-ZV-Vfw"/>
                                             <constraint firstItem="mx8-eq-Mhj" firstAttribute="leading" secondItem="MO9-Oq-enF" secondAttribute="trailing" constant="270" id="cpS-hJ-822"/>
                                             <constraint firstItem="MO9-Oq-enF" firstAttribute="top" secondItem="CnM-En-0C7" secondAttribute="top" constant="20" id="ilO-p4-ceK"/>
+                                            <constraint firstItem="mx8-eq-Mhj" firstAttribute="leading" secondItem="ELb-qx-W14" secondAttribute="trailing" constant="20" id="r7e-Ey-LLo"/>
                                         </constraints>
                                     </view>
                                 </subviews>

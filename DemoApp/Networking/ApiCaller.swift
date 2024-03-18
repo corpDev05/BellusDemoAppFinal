@@ -52,7 +52,7 @@ open class APICaller {
         {
             completionHandler(.failure(.urlError))
             return
-       }
+        }
         
         URLSession.shared.dataTask(with: url) { dataResponse, urlResponse, err in
             if err == nil, let data = dataResponse,
@@ -67,9 +67,9 @@ open class APICaller {
         }.resume()
     }
     
-   
-    static func getFakeResponse(completionHandler: @escaping(_ result:Result<FakeStoreResponse,NetworkError>) -> Void){
     
+    static func getFakeResponse(completionHandler: @escaping(_ result:Result<FakeStoreResponse,NetworkError>) -> Void){
+        
         let url = URL(string: "https://fakestoreapi.com/products")
         guard let reqURL = url else {
             completionHandler(.failure(NetworkError.urlError))
@@ -87,4 +87,62 @@ open class APICaller {
         }.resume()
         
     }
+    
+    static func getSearchData(_ parameter:String ,completionHandler: @escaping(_ result:Result<FakeStoreResponse,NetworkError>)->Void){
+        
+        debugPrint("Inside the Api Caller")
+        
+        let urlString = "https://fakestoreapi.com/products/category/" + parameter
+        debugPrint("The url is \(urlString)")
+        let url = URL(string: urlString)
+        guard let url = url else{
+            debugPrint("Url Error")
+            completionHandler(.failure(.urlError))
+            return
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "get"
+        
+        URLSession.shared.dataTask(with: urlRequest) { responseData, networkResponse, error in
+            
+            if error == nil,let data = responseData,
+               let result = try? JSONDecoder().decode(FakeStoreResponse.self, from: data)
+            {
+                //debugPrint("Api Success data is \(result)")
+                completionHandler(.success(result))
+            }
+            else{
+                debugPrint("Api call failed")
+                completionHandler(.failure(.canNotParseData))
+                
+            }
+            
+        }.resume()
+        
+        
+    }
+    //Function for using POST request using URLSession with URLRequest
+    /*func registerUser(){
+        
+        var urlRequest = URLRequest(url: URL(string: "EndpointForRegisteringUser")!)
+        urlRequest.httpMethod = "post"
+        //Creating data to be sent , you can modifiy it accordingly to your needs.
+        let dataDictionary = ["name":"Devesh Pandey","email":"pdevesh669@gmail.com","password":"1234"]
+        
+        do {
+            let requestBody =  try JSONSerialization.data(withJSONObject: dataDictionary, options: .prettyPrinted)
+        } catch let error {
+            debugPrint(error.localizedDescription)
+        }
+        
+        URLSession.shared.dataTask(with: urlRequest){( data,httpResponse,error) in
+            if(data != nil && data?.count != 0)
+            {
+                let response = String(data:data!,encoding:.utf8)
+                debugPrint(response!)
+            }
+            
+        }.resume()
+    } */
 }

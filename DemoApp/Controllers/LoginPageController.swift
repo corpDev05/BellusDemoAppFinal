@@ -28,6 +28,7 @@ class LoginPageController: UIViewController ,UITextFieldDelegate {
        // emailTextField.layer.cornerRadius = 4.0
         setup()
         let value = UserDefaults.standard.string(forKey: "Email")
+        //let secoondValue = UserDefaults.standard.
           if value != nil
           {
             navigation()

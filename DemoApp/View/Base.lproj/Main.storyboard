@@ -309,6 +309,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="52K-6A-AjN"/>
                     <connections>
+                        <outlet property="profileName" destination="ejS-Ol-MuN" id="aeD-h3-q12"/>
                         <outlet property="profileTable" destination="c1N-Zv-9m3" id="Lhl-Qp-QlK"/>
                     </connections>
                 </viewController>

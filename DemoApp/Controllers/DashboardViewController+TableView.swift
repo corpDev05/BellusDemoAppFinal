@@ -54,6 +54,8 @@ extension  DashboardViewController : UITableViewDelegate,UITableViewDataSource {
       
         let customTableViewCellNib = UINib(nibName: "DashboardTableViewCell", bundle: nil)
            dashboardTableView.register(customTableViewCellNib, forCellReuseIdentifier: "dashBoardTblCell")
+       // dashboardTableView.register(DashboardTableViewCell.self,forCellReuseIdentifier: "dashBoardTblCell")
+        
         //dashboardTableView.register(DashboardTableViewCell.self,forCellReuseIdentifier: //"dashBoardTblCell")
         //dashboardTableView.register(UITableViewCell.self, forCellReuseIdentifier: "dashBoardTblCell")
     }
