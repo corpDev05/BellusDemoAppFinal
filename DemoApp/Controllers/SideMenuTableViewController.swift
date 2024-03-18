@@ -48,6 +48,7 @@ class SideMenuTableViewController: UITableViewController {
         {
             
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: "dashboardVC") as? DashboardViewController
+            
             self.navigationController?.pushViewController(vc!, animated: false)
         }
         else if list[indexPath.row] == "My Profile"

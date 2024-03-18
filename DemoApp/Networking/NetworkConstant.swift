@@ -30,4 +30,15 @@ class NetworkConstant {
             return "https://image.tmdb.org/t/p/w500/"
         }
     }
+    
+    public var  searchBaseUrl : String {
+        get{
+            return "https://api-dev-scus-demo.azurewebsites.net/api/"
+        }
+    }
+    public var smarthPhonePath : String {
+        get{
+            return  "Product/GetSmartPhone"
+        }
+    }
 }

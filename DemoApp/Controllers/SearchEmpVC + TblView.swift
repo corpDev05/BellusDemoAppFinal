@@ -29,6 +29,10 @@ extension  SearchEmpViewController : UITableViewDelegate,UITableViewDataSource {
         searchResultTbl.reloadData()
         
     }
+    func reloadResultTable(_ result : [Datum])
+    {
+        searchResultTbl.reloadData()
+    }
     func registerCell(){
         let customTableViewCellNib = UINib(nibName: "SearchResTblViewCell", bundle: nil)
         searchResultTbl.register(customTableViewCellNib, forCellReuseIdentifier: "searchResult")
@@ -52,7 +56,7 @@ extension  SearchEmpViewController : UITableViewDelegate,UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchEmployeeViewModel.employeeSearchModel.count
+        return cellData.count //searchEmployeeViewModel.employeeSearchModel.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -61,38 +65,13 @@ extension  SearchEmpViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = searchResultTbl.dequeueReusableCell(withIdentifier: "searchResult",for : indexPath) as! SearchResTblViewCell
         
-        if indexPath.row == 0 {
-            cell.resultName.text = searchEmployeeViewModel.employeeSearchModel[indexPath.row].name
-            cell.resultEmail.text = searchEmployeeViewModel.employeeSearchModel[indexPath.row].email
-            cell.resultDesignation.text = searchEmployeeViewModel.employeeSearchModel[indexPath.row].designation
-            cell.resultContact.text =  String(searchEmployeeViewModel.employeeSearchModel[indexPath.row].contactNo ?? 91)
+        cell.resultName.text = cellData[indexPath.row].name //searchEmployeeViewModel.employeeSearchModel[indexPath.row].name
+        cell.resultEmail.text = cellData[indexPath.row].color
+        // searchEmployeeViewModel.employeeSearchModel[indexPath.row].email
+        cell.resultDesignation.text = cellData[indexPath.row].manufacturer// searchEmployeeViewModel.employeeSearchModel[indexPath.row].designation
+        cell.resultContact.text =  cellData[indexPath.row].operatingSystem// String(searchEmployeeViewModel.employeeSearchModel[indexPath.row].contactNo ?? 91)
             return cell
-        }
-        if indexPath.row == 1 {
-            cell.resultName.text = searchEmployeeViewModel.employeeSearchModel[indexPath.row].name
-            cell.resultEmail.text = searchEmployeeViewModel.employeeSearchModel[indexPath.row].email
-            cell.resultDesignation.text = searchEmployeeViewModel.employeeSearchModel[indexPath.row].designation
-            cell.resultContact.text =  String(searchEmployeeViewModel.employeeSearchModel[indexPath.row].contactNo ?? 91)
-            return cell
-        }
-        if indexPath.row == 2 {
-            cell.resultName.text = searchEmployeeViewModel.employeeSearchModel[indexPath.row].name
-            cell.resultEmail.text = searchEmployeeViewModel.employeeSearchModel[indexPath.row].email
-            cell.resultDesignation.text = searchEmployeeViewModel.employeeSearchModel[indexPath.row].designation
-            cell.resultContact.text =  String(searchEmployeeViewModel.employeeSearchModel[indexPath.row].contactNo ?? 91)
-            return cell
-        }
-
-        if indexPath.row == 3 {
-            cell.resultName.text = searchEmployeeViewModel.employeeSearchModel[indexPath.row].name
-            cell.resultEmail.text = searchEmployeeViewModel.employeeSearchModel[indexPath.row].email
-            cell.resultDesignation.text = searchEmployeeViewModel.employeeSearchModel[indexPath.row].designation
-            cell.resultContact.text =  String(searchEmployeeViewModel.employeeSearchModel[indexPath.row].contactNo ?? 91)
-            return cell
-        }
-
-
-        return UITableViewCell()
+       
     }
     
     

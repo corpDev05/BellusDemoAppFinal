@@ -10,6 +10,9 @@ import Foundation
 
 class SearchEmployeeViewModel {
     var employeeSearchModel : [Employees] = []
+    var  isLoading : Observable<Bool> = Observable(false)
+    var  celldata : Observable<[Datum]> = Observable(nil)
+    var  dataSource : SearchResponseResultModel?
     /*public init(employeeRes : [Employees]?)
     {
         guard employeeRes != nil else {
@@ -28,5 +31,24 @@ class SearchEmployeeViewModel {
                 print("Top Trending Counts: \(data.results.count)")
             }
         }
+    }
+    
+    func getSearchData(_ name: String ,_ color: String){
+        APICaller.searchProduct(name, color) { result in
+            switch result {
+            case .success(let data):
+                self.dataSource = data
+                self.mapData()
+            case .failure(let error):
+                print(error)
+    
+              }
+    
+        }
+       
+       }
+    func mapData()
+    {
+        self.celldata.value = self.dataSource?.data ?? []
     }
 }

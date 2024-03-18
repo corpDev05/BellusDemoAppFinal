@@ -42,7 +42,14 @@ class DashboardTableViewCell: UITableViewCell {
           //self.uploadedImage.sd_setImage(with: viewModel.imageUrl, completed: nil)
           
       }
-
+    
+    
+    @IBAction func notify(_ sender: Any) {
+        
+        NotificationCenter.default.post(name: NSNotification.Name("Notify"), object: self)
+    }
+    
+    
 
     
 }

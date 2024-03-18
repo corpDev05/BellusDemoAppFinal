@@ -23,7 +23,10 @@ class Observable<T> {
     private var listener : ((T?) -> Void)?
     
     func bind(_ listener : @escaping ((T?) -> Void)){
-        listener(value)
+        listener(self.value)
         self.listener = listener
     }
 }
+
+
+
